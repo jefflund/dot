@@ -1,0 +1,156 @@
+" First, be iMproved
+set nocompatible
+
+" Load Vundle plugins
+filetype off
+set runtimepath+=~/.vim/bundle/vundle
+call vundle#rc()
+Bundle 'scrooloose/nerdtree'
+Bundle 'majutsushi/tagbar'
+Bundle 'MarcWeber/vim-addon-mw-utils'
+Bundle 'tomtom/tlib_vim'
+Bundle 'garbas/vim-snipmate'
+Bundle 'Valloric/YouCompleteMe'
+Bundle 'tpope/vim-fugitive'
+Bundle 'scrooloose/syntastic'
+
+" Turn on file type based options
+syntax on
+filetype on
+filetype indent on
+filetype plugin on
+let g:tex_flavor="latex"
+
+" Turn on a few more options
+set title
+set backspace=2
+set scrolloff=2
+set showcmd
+set showmode
+set guioptions=ace
+set colorcolumn=81
+
+" In memory buffers
+set nobackup
+set noswapfile
+set hidden
+
+" Switch up the colors
+set t_Co=256
+set t_ut=
+colorscheme yendor
+
+" Setup statusline
+set laststatus=2
+set statusline=%<
+set statusline+=%t
+set statusline+=\ %([%Y%R%H%W]%)
+set statusline+=%m
+set statusline+=%{fugitive#statusline()}
+set statusline+=\ %{&spell?\"SPELL\ \":\"\"}
+set statusline+=%{&paste?\"PASTE\":\"\"}
+set statusline+=%=
+set statusline+=%-14.(%l,%v%)
+set statusline+=\ %P
+
+" Setup cursorline
+autocmd WinEnter * setlocal cursorline
+autocmd BufEnter * setlocal cursorline
+autocmd WinLeave * setlocal nocursorline
+setlocal cursorline
+
+" Change the mapleader
+let mapleader="-"
+
+" Better whitespace
+set list listchars=tab:»\ ,trail:·,nbsp:·
+set expandtab
+set textwidth=79
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set autoindent
+
+" Handle trailing whitespace
+nmap <silent> <leader><space> :call StripTrailingWhitespace()<cr>
+function! StripTrailingWhitespace()
+    let l=line(".")
+    let c=col(".")
+    execute '%s/\s\+$//e'
+    call cursor(l, c)
+endfunction
+
+" Setup search
+set hlsearch
+set incsearch
+set ignorecase
+set smartcase
+nmap <silent> <leader><leader> :nohlsearch<cr>
+
+" Set up NERDTree
+autocmd VimEnter * if !argc() | NERDTree | endif
+nmap <silent> <leader>n :NERDTreeToggle<cr>
+let NERDTreeIgnore=[]
+let NERDTreeIgnore+=['\.pyc$', '__pycache__']
+let NERDTreeIgnore+=['\.o$', '\.d$']
+let NERDTreeIgnore+=['\.aux$', '\.log$']
+let NERDTreeIgnore+=['\.class$']
+let NERDTreeQuitOnOpen=1
+let NERDTreeChDirMode=2
+
+" Set up Tagbar
+nmap <silent> <leader>t :TagbarToggle<cr>
+let g:tagbar_autoclose=1
+let g:tagbar_left=1
+let g:tagbar_sort=0
+
+" Set up YouCompleteMe
+let g:ycm_autoclose_preview_window_after_insertion=1
+let g:ycm_key_list_select_completion=[]
+let g:ycm_key_list_previous_completion=[]
+
+" Set up Syntastic
+let g:syntastic_enable_signs=0
+
+" Set up golang run commands
+nmap <silent> <leader>gr :!go run %<cr>
+
+" Set up python run commands
+nmap <silent> <leader>pp :!PYTHONPATH=. python %<cr>
+nmap <silent> <leader>pi :!PYTHONPATH=. ipython -i %<cr><cr>
+nmap <silent> <leader>pu :!PYTHONPATH=. python -m unittest discover -v<cr>
+nmap <silent> <leader>pt :!PYTHONPATH=. python -m cProfile -s cumulative %<cr>
+
+" Set up pypy run commands
+nmap <silent> <leader>PP :!PYTHONPATH=. pypy %<cr>
+nmap <silent> <leader>PI :!PYTHONPATH=. ipypy -i %<cr><cr>
+nmap <silent> <leader>PU :!PYTHONPATH=. pypy -m unittest discover -v<cr>
+nmap <silent> <leader>PT :!PYTHONPATH=. pypy -m cProfile -s cumulative %<cr>
+
+" Set up make run commands
+nmap <silent> <leader>mm :!make<cr>
+nmap <silent> <leader>ma :!make all<cr>
+nmap <silent> <leader>mc :!make clean<cr>
+nmap <silent> <leader>mr :!make run<cr>
+nmap <silent> <leader>mt :!make test<cr>
+nmap <silent> <leader>mv :!make memcheck<cr>
+
+" Set up latex run commands
+nmap <silent> <leader>lp :!pdflatex -interaction=nonstopmode %:r<cr>
+nmap <silent> <leader>lb :!bibtex %:r<cr>
+nmap <silent> <leader>ld :!latex -interaction=nonstopmode %:r<cr>
+nmap <silent> <leader>le :!evince %:r.pdf &<cr><cr>
+
+" Navigation shortcuts
+nmap <leader>l <c-w>l
+nmap <leader>h <c-w>h
+nmap <leader>k <c-w>k
+nmap <leader>j <c-w>j
+
+" Other shortcuts
+nmap <silent> <leader>b "=strftime("%c")<cr>p
+nmap <silent> <leader>s :set invspell<cr>
+nmap <silent> <leader>v :set invpaste<cr>
+nmap <silent> <leader>R :edit %<cr>
+nmap <space> za
+vmap <space> zf

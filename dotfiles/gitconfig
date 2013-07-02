@@ -1,0 +1,17 @@
+[user]
+    name = Jeff Lund
+    email = jefflund@gmail.com
+[core]
+    editor = vim
+[color]
+    ui = true
+[alias]
+    st = status -sb
+    ci = commit
+    br = branch
+    co = checkout
+    df = diff
+    l = log --oneline
+    lg = log --oneline --graph
+[push]
+    default = current
