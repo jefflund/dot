@@ -1,0 +1,21 @@
+#!/usr/bin/env python
+
+import os
+from os import path
+
+config_dir = path.normpath(path.join(path.dirname(__file__), '..'))
+script_dirs = ['homedir',
+               'ubuntu',
+               'vim']
+
+scripts = []
+for script_dir in script_dirs:
+    for root, _, filenames in os.walk(path.join(config_dir, script_dir)):
+        for filename in filenames:
+            filename = path.join(root, filename)
+            if os.access(filename, os.X_OK):
+                scripts.append(filename)
+scripts = sorted(scripts, key=lambda filepath: path.basename(filepath))
+
+for script in scripts:
+    os.system(script)
