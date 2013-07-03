@@ -18,6 +18,7 @@ golang-go
 golang-src
 
 ipython
+pypy
 python-dev
 python-pygame
 python-numpy
