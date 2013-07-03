@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
+if [ -e "$HOME/.vim/bundle/YouCompleteMe/python/ycm_core.so" ]
+then
+    exit
+fi
+
 cd $HOME
 mkdir ycm_build
 cd ycm_build

@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
-go get github.com/jstemmer/gotags
-go get github.com/nsf/gocode
+go get -u github.com/jstemmer/gotags
+go get -u github.com/nsf/gocode
