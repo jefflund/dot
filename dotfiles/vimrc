@@ -182,3 +182,5 @@ nmap <silent> <leader>v :set invpaste<cr>
 nmap <silent> <leader>R :edit %<cr>
 vmap < <gv
 vmap > >gv
+nmap <leader>q :qa<cr>
+nmap <leader>w :wa<cr>
