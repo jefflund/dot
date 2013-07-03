@@ -315,7 +315,7 @@
     <!-- Launch a terminal on Ctrl + Alt + T-->
     <keybind key="C-A-T">
       <action name="Execute">
-        <command>x-terminal-emulator</command>
+        <command>lxterminal</command>
       </action>
     </keybind>
     <!-- Launch browsers on Ctrl + Alot + W and I-->
