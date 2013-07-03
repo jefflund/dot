@@ -141,18 +141,6 @@ let g:ycm_key_list_previous_completion=[]
 " Set up Syntastic
 let g:syntastic_enable_signs=0
 
-" Set up python run commands
-nmap <silent> <leader>pp :!PYTHONPATH=. python %<cr>
-nmap <silent> <leader>pi :!PYTHONPATH=. ipython -i %<cr><cr>
-nmap <silent> <leader>pu :!PYTHONPATH=. python -m unittest discover -v<cr>
-nmap <silent> <leader>pt :!PYTHONPATH=. python -m cProfile -s cumulative %<cr>
-
-" Set up pypy run commands
-nmap <silent> <leader>PP :!PYTHONPATH=. pypy %<cr>
-nmap <silent> <leader>PI :!PYTHONPATH=. ipypy -i %<cr><cr>
-nmap <silent> <leader>PU :!PYTHONPATH=. pypy -m unittest discover -v<cr>
-nmap <silent> <leader>PT :!PYTHONPATH=. pypy -m cProfile -s cumulative %<cr>
-
 " Set up make run commands
 nmap <silent> <leader>mm :!make<cr>
 nmap <silent> <leader>ma :!make all<cr>
