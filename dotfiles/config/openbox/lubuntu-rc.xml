@@ -318,6 +318,17 @@
         <command>x-terminal-emulator</command>
       </action>
     </keybind>
+    <!-- Launch browsers on Ctrl + Alot + W and I-->
+    <keybind key="C-A-W">
+      <action name="Execute">
+        <command>x-www-browser</command>
+      </action>
+    </keybind>
+    <keybind key="C-A-I">
+      <action name="Execute">
+        <command>x-www-browser --incognito</command>
+      </action>
+    </keybind>
     <!-- Launch a filemanager on Ctrl + Alt + D-->
     <keybind key="C-A-D">
       <action name="Execute">
