@@ -59,8 +59,9 @@ autocmd BufEnter * setlocal cursorline
 autocmd WinLeave * setlocal nocursorline
 setlocal cursorline
 
-" Change the mapleader
-let mapleader="-"
+" Set the leader keys
+let mapleader=" "
+let maplocalleader="-"
 
 " Better whitespace
 set list listchars=tab:»\ ,trail:·,nbsp:·
