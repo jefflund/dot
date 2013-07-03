@@ -4,11 +4,18 @@ gitg
 vim
 vim-gtk
 
+build-essential
+cmake
+libboost-dev
+clang
+llvm
+
 golang
 golang-dbg
 golang-doc
 golang-go
 golang-src
 
+python-dev
 python-pygame
 python-numpy

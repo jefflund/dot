@@ -13,6 +13,7 @@ Bundle 'garbas/vim-snipmate'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'tpope/vim-fugitive'
 Bundle 'scrooloose/syntastic'
+Bundle 'Blackrush/vim-gocode'
 
 " Turn on file type based options
 syntax on
