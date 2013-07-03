@@ -49,10 +49,13 @@ Plugin {
     type = launchbar
     Config {
         Button {
-            id=pcmanfm.desktop
+            id=/usr/share/applications/lxterminal.desktop
         }
         Button {
-            id=lubuntu-browser.desktop
+            id=/usr/share/applications/chromium-browser.desktop
+        }
+        Button {
+            id=/usr/share/applications/gvim.desktop
         }
     }
 }
