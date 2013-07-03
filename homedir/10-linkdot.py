@@ -18,14 +18,19 @@ def ensure_removed(filename):
 	except OSError:
 		pass
 
-for root, dirnames, filenames in os.walk(dotfiles):
-	for filename in filenames:
-		filename = path.join(root, filename)
-		src = path.abspath(filename)
-		dst = path.join(home, src.replace(dotfiles + '/', '.'))
+def link_exists(src, dst):
+    return (os.path.exists(dst) and 
+            os.path.islink(dst) and 
+            os.path.realpath(dst) == src)
 
-        if not os.path.islink(dst) or os.path.realpath(dst) != src:
-            print dst, '=>', src
+for root, _, filenames in os.walk(dotfiles):
+    for filename in filenames:
+        filename = path.join(root, filename)
+        src = path.abspath(filename)
+        dst = path.join(home, src.replace(dotfiles + '/', '.'))
+
+        if not link_exists(src, dst):
+            print 'Linking', dst, '=>', src
             ensure_path(dst)
             ensure_removed(dst)
             os.symlink(src, dst)
