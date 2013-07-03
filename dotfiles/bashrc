@@ -3,7 +3,7 @@
 # for examples
 
 export GOPATH=$HOME/go
-export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:$GOPATH/bin:$HOME/.local/bin
 
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
