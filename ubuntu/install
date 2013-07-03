@@ -6,10 +6,15 @@ vim-gtk
 
 build-essential
 cmake
-libboost-dev
 clang
 llvm
 exuberant-ctags
+valgrind
+
+libprotobuf-dev
+protobuf-compiler
+libboost-dev
+libncurses5-dev
 
 golang
 golang-dbg
@@ -22,3 +27,8 @@ pypy
 python-dev
 python-pygame
 python-numpy
+python-nltk
+python-scipy
+python-django
+python-imaging
+python-protobuf
