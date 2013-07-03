@@ -153,5 +153,3 @@ nmap <silent> <leader>b "=strftime("%c")<cr>p
 nmap <silent> <leader>s :set invspell<cr>
 nmap <silent> <leader>v :set invpaste<cr>
 nmap <silent> <leader>R :edit %<cr>
-nmap <space> za
-vmap <space> zf
