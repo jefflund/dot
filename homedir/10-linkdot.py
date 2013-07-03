@@ -30,7 +30,7 @@ for root, _, filenames in os.walk(dotfiles):
         dst = path.join(home, src.replace(dotfiles + '/', '.'))
 
         if not link_exists(src, dst):
-            print 'Linking', dst, '=>', src
+            print 'Linking', path.relpath(dst)
             ensure_path(dst)
             ensure_removed(dst)
             os.symlink(src, dst)
