@@ -85,9 +85,4 @@ function cdls()
 }
 alias cd='cdls'
 
-function greper()
-{
-    grep -r --include="$1" $2 .
-}
-
 alias untar='tar -xf'
