@@ -42,7 +42,7 @@
                   'Active' - where the active window is -->
   </placement>
   <theme>
-    <name>Lubuntu-default</name>
+    <name>Mikachu</name>
     <titleLayout>NLIMC</titleLayout>
     <!--
       available characters are NDSLIMC, each can occur at most once.
@@ -325,39 +325,19 @@
     <!-- Keybindings for window tiling -->
     <keybind key="W-Left">        # HalfLeftScreen
       <action name="UnmaximizeFull"/>
-      <action name="MoveResizeTo">
-        <x>0</x>
-        <y>0</y>
-        <height>97%</height>
-        <width>50%</width>
-      </action>
+      <action name="MoveResizeTo"><x>0</x><y>0</y><height>97%</height><width>50%</width></action>
     </keybind>
     <keybind key="W-Right">        # HalfRightScreen
       <action name="UnmaximizeFull"/>
-      <action name="MoveResizeTo">
-        <x>-0</x>
-        <y>0</y>
-        <height>97%</height>
-        <width>50%</width>
-      </action>
+      <action name="MoveResizeTo"><x>-0</x><y>0</y><height>97%</height><width>50%</width></action>
     </keybind>
     <keybind key="W-Up">        # HalfUpperScreen
       <action name="UnmaximizeFull"/>
-      <action name="MoveResizeTo">
-        <x>0</x>
-        <y>0</y>
-        <width>100%</width>
-        <height>50%</height>
-      </action>
+      <action name="MoveResizeTo"><x>0</x><y>0</y><width>100%</width><height>50%</height></action>
     </keybind>
     <keybind key="W-Down">        # HalfLowerScreen
       <action name="UnmaximizeFull"/>
-      <action name="MoveResizeTo">
-        <x>0</x>
-        <y>-0</y>
-        <width>100%</width>
-        <height>50%</height>
-      </action>
+      <action name="MoveResizeTo"><x>0</x><y>-0</y><width>100%</width><height>50%</height></action>
     </keybind>
     <!-- Keybindings for running applications on Home + E -->
     <keybind key="W-e">
@@ -425,19 +405,19 @@
     </keybind>
     <!-- Keybinding for Volume management -->
     <keybind key="XF86AudioRaiseVolume">
-        <action name="Execute">
-            <command>amixer -q sset Master 3%+ unmute</command>
-        </action>
+      <action name="Execute">
+        <command>amixer -q sset Master 3%+ unmute</command>
+      </action>
     </keybind>
     <keybind key="XF86AudioLowerVolume">
-        <action name="Execute">
-            <command>amixer -q sset Master 3%- unmute</command>
-        </action>
+      <action name="Execute">
+        <command>amixer -q sset Master 3%- unmute</command>
+      </action>
     </keybind>
     <keybind key="XF86AudioMute">
-        <action name="Execute">
-            <command>amixer -q sset Master toggle</command>
-        </action>
+      <action name="Execute">
+        <command>amixer -q sset Master toggle</command>
+      </action>
     </keybind>
     <!-- Keybinding for terminal button-->
     <keybind key="XF86WWW">
@@ -831,7 +811,6 @@
     <!-- default menu file (or custom one in $HOME/.config/openbox/) -->
     <file>/usr/share/lubuntu/openbox/menu.xml</file>
     <file>menu.xml</file>
-
     <hideDelay>200</hideDelay>
     <!-- if a press-release lasts longer than this setting (in milliseconds), the
        menu is hidden again -->
@@ -942,6 +921,5 @@
       <maximized>true</maximized>
     </application>
     -->
-
   </applications>
 </openbox_config>
