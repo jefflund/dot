@@ -161,12 +161,6 @@ nmap <silent> <leader>mr :!make run<cr>
 nmap <silent> <leader>mt :!make test<cr>
 nmap <silent> <leader>mv :!make memcheck<cr>
 
-" Set up latex run commands
-nmap <silent> <leader>lp :!pdflatex -interaction=nonstopmode %:r<cr>
-nmap <silent> <leader>lb :!bibtex %:r<cr>
-nmap <silent> <leader>ld :!latex -interaction=nonstopmode %:r<cr>
-nmap <silent> <leader>le :!evince %:r.pdf &<cr><cr>
-
 " Navigation shortcuts
 nmap <leader>l <c-w>l
 nmap <leader>h <c-w>h
