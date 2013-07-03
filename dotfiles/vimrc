@@ -147,6 +147,8 @@ nmap <leader>l <c-w>l
 nmap <leader>h <c-w>h
 nmap <leader>k <c-w>k
 nmap <leader>j <c-w>j
+nmap j gj
+nmap k gk
 
 " Other shortcuts
 nmap <silent> <leader>b "=strftime("%c")<cr>p
