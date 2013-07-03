@@ -9,6 +9,7 @@ cmake
 libboost-dev
 clang
 llvm
+exuberant-ctags
 
 golang
 golang-dbg
