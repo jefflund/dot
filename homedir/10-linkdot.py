@@ -19,9 +19,9 @@ def ensure_removed(filename):
 		pass
 
 def link_exists(src, dst):
-    return (os.path.exists(dst) and 
-            os.path.islink(dst) and 
-            os.path.realpath(dst) == src)
+    return (path.exists(dst) and
+            path.islink(dst) and
+            path.samefile(src, dst))
 
 for root, _, filenames in os.walk(dotfiles):
     for filename in filenames:
