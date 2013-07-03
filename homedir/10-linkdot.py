@@ -24,7 +24,8 @@ for root, dirnames, filenames in os.walk(dotfiles):
 		src = path.abspath(filename)
 		dst = path.join(home, src.replace(dotfiles + '/', '.'))
 
-		print dst, '=>', src
-		ensure_path(dst)
-		ensure_removed(dst)
-		os.symlink(src, dst)
+        if not os.path.islink(dst) or os.path.realpath(dst) != src:
+            print dst, '=>', src
+            ensure_path(dst)
+            ensure_removed(dst)
+            os.symlink(src, dst)
