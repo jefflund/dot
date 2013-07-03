@@ -142,12 +142,12 @@ let g:ycm_key_list_previous_completion=[]
 let g:syntastic_enable_signs=0
 
 " Set up make run commands
-nmap <silent> <leader>mm :!make<cr>
-nmap <silent> <leader>ma :!make all<cr>
-nmap <silent> <leader>mc :!make clean<cr>
-nmap <silent> <leader>mr :!make run<cr>
-nmap <silent> <leader>mt :!make test<cr>
-nmap <silent> <leader>mv :!make memcheck<cr>
+nmap <leader>mm :!make<cr>
+nmap <leader>ma :!make all<cr>
+nmap <leader>mc :!make clean<cr>
+nmap <leader>mr :!make run<cr>
+nmap <leader>mt :!make test<cr>
+nmap <leader>mv :!make memcheck<cr>
 
 " Navigation shortcuts
 nmap <leader>l <c-w>l
