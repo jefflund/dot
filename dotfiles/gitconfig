@@ -11,7 +11,7 @@
     br = branch
     co = checkout
     df = diff
-    l = log --oneline
-    lg = log --oneline --graph
+    l = log --oneline --decorate --name-status
+    lg = log --oneline --decorate --name-status --graph
 [push]
     default = current
