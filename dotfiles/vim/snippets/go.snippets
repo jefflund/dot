@@ -33,6 +33,10 @@ snippet main
 	func main() {
 		${1}
 	}
+snippet init
+	func init() {
+		${1}
+	}
 snippet func
 	func ${1:name}(${2:args...}) ${3:ret} {
 		${4}
@@ -52,10 +56,6 @@ snippet constructp
 # function level helpers
 snippet var
 	var ${1:name} ${2:type}
-snippet iferr
-	if ${1:err := call();} err != nil {
-		${2:return err}
-	}
 snippet print
 	fmt.Print("${1}")
 snippet printf
@@ -76,6 +76,10 @@ snippet el
 snippet elif
 	else if ${1:cond} {
 		${2}
+	}
+snippet iferr
+	if ${1:err := call();} err != nil {
+		${2:return err}
 	}
 # Loops
 snippet wh
