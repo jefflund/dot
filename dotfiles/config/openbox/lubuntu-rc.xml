@@ -126,7 +126,7 @@
       <name>Primary</name>
       <name>Secondary</name>
       <name>Tertiary</name>
-      <name>Quatrinary</name>
+      <name>Quaternary</name>
     </names>
     <popupTime>875</popupTime>
     <!-- The number of milliseconds to show the popup for when switching
@@ -315,7 +315,7 @@
     <!-- Launch a terminal on Ctrl + Alt + T-->
     <keybind key="C-A-T">
       <action name="Execute">
-        <command>lxterminal</command>
+        <command>lxterminal --geometry=80x24</command>
       </action>
     </keybind>
     <!-- Launch browsers on Ctrl + Alot + W and I-->

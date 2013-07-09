@@ -1,0 +1,105 @@
+# templates
+snippet hello
+	package main
+
+	import (
+		"fmt"
+	)
+
+	func main() {
+		${1:fmt.Println("Hello World")}
+	}
+# file level declarations
+snippet pack
+	package ${1:name}
+snippet imp
+	import "${1:fmt}"
+snippet imps
+	import (
+		"${1:fmt}"
+	)
+snippet const
+	const ${1:name} = ${2:value}
+snippet consts
+	const (
+		${1:name} = ${2:value}
+	)
+snippet vars
+	var (
+		${1:name} = ${2:value}
+	)
+# functions
+snippet main
+	func main() {
+		${1}
+	}
+snippet func
+	func ${1:name}(${2:args...}) ${3:ret} {
+		${4}
+	}
+snippet meth
+	func (${1:recevier}) ${2:name}(${3:args...}) ${4:ret} {
+		${5}
+	}
+snippet construct
+	func New${1:Name}(${2:args}) $1 {
+		return $1{${3}}
+	}
+snippet constructp
+	func New${1:Name}(${2:args}) *$1 {
+		return $1{${3}}
+	}
+# function level helpers
+snippet var
+	var ${1:name} ${2:type}
+snippet iferr
+	if ${1:err := call();} err != nil {
+		${2:return err}
+	}
+snippet print
+	fmt.Print("${1}")
+snippet printf
+	fmt.Printf("${1}", ${2})
+snippet println
+	fmt.Println("${1}")
+snippet make
+	make(${1:type})
+# conditionals
+snippet if
+	if ${1:cond} {
+		${2}
+	}
+snippet el
+	else {
+		${1}
+	}
+snippet elif
+	else if ${1:cond} {
+		${2}
+	}
+# Loops
+snippet wh
+	for ${1:cond} {
+		${2}
+	}
+snippet fori
+	for ${1:i} := 0; $1 < ${2:max}; $1++ {
+		${3}
+	}
+snippet forr
+	for ${1:x} := range ${2:vals} {
+		${3}
+	}
+snippet forkv
+	for ${1:k}, ${2:v} := range ${3:vals} {
+		${4}
+	}
+# types
+snippet inter
+	type ${1:Name} interface {
+		${2}
+	}
+snippet struct
+	type ${1:Name} struct {
+		${2}
+	}
