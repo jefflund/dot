@@ -85,7 +85,16 @@ snippet iferr
 	if ${1:err := call();} err != nil {
 		${2:return err}
 	}
-# Loops
+# switches
+snippet sw
+	switch ${1:value} {
+	${2}
+	}
+snippet ma
+	switch {
+	${1}
+	}
+# loops
 snippet wh
 	for ${1:cond} {
 		${2}
