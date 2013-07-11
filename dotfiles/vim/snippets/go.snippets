@@ -41,9 +41,17 @@ snippet func
 	func ${1:name}(${2:args...}) ${3:ret} {
 		${4}
 	}
-snippet meth
+snippet proc
+	func ${1:name}(${2:args...}) {
+		${3}
+	}
+snippet rfunc
 	func (${1:recevier}) ${2:name}(${3:args...}) ${4:ret} {
 		${5}
+	}
+snippet rproc
+	func (${1:recevier}) ${2:name}(${3:args...}) {
+		${4}
 	}
 snippet construct
 	func New${1:Name}(${2:args}) $1 {
