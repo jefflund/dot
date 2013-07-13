@@ -59,7 +59,7 @@ snippet construct
 	}
 snippet constructp
 	func New${1:Name}(${2:args}) *$1 {
-		return $1{${3}}
+		return &$1{${3}}
 	}
 # function level helpers
 snippet var
