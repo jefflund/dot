@@ -13,5 +13,6 @@
     df = diff
     l = log --oneline --decorate --name-status
     lg = log --oneline --decorate --name-status --graph
+    lo = log --oneline
 [push]
     default = current
