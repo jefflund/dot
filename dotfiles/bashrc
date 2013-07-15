@@ -86,3 +86,4 @@ function cdls()
 alias cd='cdls'
 
 alias untar='tar -xf'
+alias godoch='godoc --http=:8080'
