@@ -10,6 +10,7 @@ clang
 llvm
 exuberant-ctags
 valgrind
+ack
 
 libprotobuf-dev
 protobuf-compiler
