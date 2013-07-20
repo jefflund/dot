@@ -5,8 +5,8 @@ if exists("syntax_on")
 endif
 let colors_name="yendor"
 
-highlight Normal         guifg=#DADADA ctermfg=253  guibg=#3A3A3A ctermbg=235
-highlight Comment        guifg=#585858 ctermfg=240                             gui=NONE      cterm=NONE
+highlight Normal         guifg=#DADADA ctermfg=253  guibg=#3A3A3A ctermbg=232
+highlight Comment        guifg=#585858 ctermfg=245                             gui=NONE      cterm=NONE
 highlight Constant       guifg=#87D7D7 ctermfg=116                             gui=NONE      cterm=NONE
 highlight String         guifg=#AFD787 ctermfg=150                             gui=NONE      cterm=NONE
 highlight Character      guifg=#AFD787 ctermfg=150                             gui=NONE      cterm=NONE
@@ -47,12 +47,12 @@ highlight SpellRare                                 guibg=#FF55FF ctermbg=13   g
 highlight SpellLocal                                guibg=#44FFFF ctermbg=14   gui=undercurl cterm=undercurl
 highlight Cursor         guifg=bg      ctermfg=bg   guibg=#AFD7FF ctermbg=153
 highlight CursorIM       guifg=bg      ctermfg=bg   guibg=#87D7D7 ctermbg=116
-highlight CursorColumn   guifg=NONE    ctermfg=NONE guibg=#303030 ctermbg=236  gui=NONE      cterm=NONE
-highlight CursorLine     guifg=NONE    ctermfg=NONE guibg=#303030 ctermbg=236  gui=NONE      cterm=NONE
-highlight ColorColumn                               guibg=#303030 ctermbg=236
+highlight CursorColumn   guifg=NONE    ctermfg=NONE guibg=#303030 ctermbg=233  gui=NONE      cterm=NONE
+highlight CursorLine     guifg=NONE    ctermfg=NONE guibg=#303030 ctermbg=233  gui=NONE      cterm=NONE
+highlight ColorColumn                               guibg=#303030 ctermbg=233
 highlight Directory      guifg=#AFD7AF ctermfg=151                             gui=NONE      cterm=NONE
 highlight ErrorMsg       guifg=#FF0000 ctermfg=196  guibg=NONE    ctermbg=NONE gui=NONE      cterm=NONE
-highlight VertSplit      guifg=#6C6C6C ctermfg=242  guibg=#3A3A3A ctermbg=237  gui=NONE      cterm=NONE
+highlight VertSplit      guifg=#6C6C6C ctermfg=242  guibg=#3A3A3A ctermbg=233  gui=NONE      cterm=NONE
 highlight SignColumn     guifg=#AFAFAF ctermfg=145  guibg=#121212 ctermbg=233  gui=NONE      cterm=NONE
 highlight LineNr         guifg=#878787 ctermfg=102  guibg=#3A3A3A ctermbg=237
 highlight MatchParen     guifg=#5FD75F ctermfg=77   guibg=NONE    ctermbg=NONE gui=NONE      cterm=NONE
