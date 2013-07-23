@@ -164,3 +164,6 @@ nmap <silent> <leader>Q :qa<cr>
 nmap <silent> <leader>q :q<cr>
 nmap <silent> <leader>w :w<cr>
 nmap <silent> <leader>W :wa<cr>
+
+" Disable Ex mode
+map Q <nop>
