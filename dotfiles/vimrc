@@ -160,5 +160,7 @@ nmap <silent> <leader>z :sh<cr>
 nmap <silent> <leader>R :edit %<cr>
 vmap < <gv
 vmap > >gv
-nmap <leader>q :qa<cr>
-nmap <leader>w :wa<cr>
+nmap <silent> <leader>Q :qa<cr>
+nmap <silent> <leader>q :q<cr>
+nmap <silent> <leader>w :w<cr>
+nmap <silent> <leader>W :wa<cr>
