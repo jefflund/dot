@@ -91,7 +91,7 @@ set hlsearch
 set incsearch
 set ignorecase
 set smartcase
-nmap <leader>/ :nohlsearch<cr>
+nmap <silent> <leader>/ :nohlsearch<cr>
 
 " Set up NERDTree
 autocmd VimEnter * if !argc() | NERDTree | endif
