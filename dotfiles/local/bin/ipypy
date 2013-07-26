@@ -1,0 +1,12 @@
+#!/usr/bin/env pypy
+"""Terminal-based IPython entry point.
+"""
+
+import sys
+sys.path.append('/usr/lib/python2.7')
+sys.path.append('/usr/lib/python2.7/dist-packages')
+sys.path.append('/usr/lib/python2.7/dist-packages/IPython/extensions')
+
+from IPython.frontend.terminal.ipapp import launch_new_instance
+
+launch_new_instance()
