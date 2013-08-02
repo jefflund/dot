@@ -1,5 +1,5 @@
 set background=dark
-hi clear
+highlight clear
 if exists("syntax_on")
     syntax reset
 endif
