@@ -81,8 +81,8 @@ snippet elif
 	else if ${1:cond} {
 		${2}
 	}
-snippet iferr
-	if ${1:err := call();} err != nil {
+snippet ife
+	if err := ${1:call()}; err != nil {
 		${2:return err}
 	}
 # switches
