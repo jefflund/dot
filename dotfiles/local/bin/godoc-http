@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+chromium-browser localhost:8080 &
+godoc --http=:8080
