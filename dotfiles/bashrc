@@ -21,7 +21,7 @@ HISTSIZE=10000
 HISTFILESIZE=100000
 
 # bash history can ignore common commands I won't search for
-export HISTIGNORE="&:ls*:ll*:la*:cd*:clear*:vim*:git*"
+export HISTIGNORE="&:ls:ll:la:cd:cd *:clear:vim:git*"
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
@@ -89,4 +89,3 @@ function cdls()
 alias cd='cdls'
 
 alias untar='tar -xf'
-alias godoch='godoc --http=:8080'
