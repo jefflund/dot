@@ -321,12 +321,12 @@
     <!-- Launch browsers on Ctrl + Alot + W and I-->
     <keybind key="C-A-W">
       <action name="Execute">
-        <command>x-www-browser</command>
+        <command>google-chrome</command>
       </action>
     </keybind>
     <keybind key="C-A-I">
       <action name="Execute">
-        <command>x-www-browser --incognito</command>
+        <command>google-chrome --incognito</command>
       </action>
     </keybind>
     <!-- Launch a filemanager on Ctrl + Alt + D-->
