@@ -52,7 +52,7 @@ Plugin {
             id=/usr/share/applications/lxterminal.desktop
         }
         Button {
-            id=/usr/share/applications/chromium-browser.desktop
+            id=/usr/share/applications/google-chrome.desktop
         }
         Button {
             id=/usr/share/applications/gvim.desktop
