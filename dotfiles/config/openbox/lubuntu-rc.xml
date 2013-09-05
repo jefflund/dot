@@ -329,6 +329,11 @@
         <command>google-chrome --incognito</command>
       </action>
     </keybind>
+    <keybind key="C-A-Z">
+      <action name="Execute">
+        <command>zim</command>
+      </action>
+    </keybind>
     <!-- Launch a filemanager on Ctrl + Alt + D-->
     <keybind key="C-A-D">
       <action name="Execute">
