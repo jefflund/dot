@@ -2,6 +2,7 @@
 
 import os
 from os import path
+import argparse
 
 config_dir = path.normpath(path.join(path.dirname(__file__), '..'))
 script_dirs = ['homedir',
@@ -17,5 +18,15 @@ for script_dir in script_dirs:
                 scripts.append(filename)
 scripts = sorted(scripts, key=lambda filepath: path.basename(filepath))
 
-for script in scripts:
-    os.system(script)
+parser = argparse.ArgumentParser(description='Run each setup scripts in order')
+parser.add_argument('--list', '-l',
+                    action='store_true', default=False,
+                    help='List the setup scripts rather than run')
+args = parser.parse_args()
+
+if args.list:
+    for script in scripts:
+        print script
+else:
+    for script in scripts:
+        os.system(script)
