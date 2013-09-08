@@ -12,9 +12,9 @@ rm_dirs = ['Documents',
            'Public',
            'Templates',
            'Videos']
-mk_dirs = ['library',
-              'desktop',
-              'go']
+mk_dirs = ['desktop',
+           'go',
+           'research']
 
 for rm_dir in rm_dirs:
 	print 'Removing', rm_dir
