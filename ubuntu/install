@@ -37,8 +37,6 @@ python-protobuf
 
 irssi
 
-zim
-
 texlive
 texlive-latex-base
 texlive-latex-extra
@@ -52,3 +50,7 @@ texlive-pictures
 texlive-publishers
 texlive-font-utils
 texlive-extra-utils
+
+zim
+dvipng
+graphviz
