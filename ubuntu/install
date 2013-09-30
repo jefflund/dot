@@ -37,4 +37,20 @@ python-protobuf
 
 irssi
 
+texlive
+texlive-latex-base
+texlive-latex-extra
+texlive-latex-recommended
+texlive-generic-recommended
+texlive-math-extra
+texlive-science
+texlive-plain-extra
+texlive-music
+texlive-pictures
+texlive-publishers
+texlive-font-utils
+texlive-extra-utils
+
 zim
+dvipng
+graphviz
