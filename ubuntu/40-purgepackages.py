@@ -1,7 +1,11 @@
 #!/usr/bin/env python
 
 import os
+import package
 from os import path
+
+if package.dist()[0] != 'ubuntu':
+    exit()
 
 lines = open(path.join(path.dirname(__file__), 'purge')).readlines()
 lines = [line.strip() for line in lines]

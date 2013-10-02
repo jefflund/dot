@@ -1,7 +1,11 @@
 #!/usr/bin/env python
 
 import os
+import platform
 from os import path
+
+if platform.dist()[0] != 'ubuntu':
+    exit()
 
 lines = open(path.join(path.dirname(__file__), 'install')).readlines()
 lines = [line.strip() for line in lines]
