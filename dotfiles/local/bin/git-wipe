@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
 git clean -fd
-git reset --hard 
+git reset --hard
