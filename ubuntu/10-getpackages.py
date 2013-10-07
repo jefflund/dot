@@ -4,7 +4,7 @@ import os
 import platform
 from os import path
 
-if platform.dist()[0] != 'ubuntu':
+if platform.dist()[0] != 'Ubuntu':
     exit()
 
 lines = open(path.join(path.dirname(__file__), 'install')).readlines()

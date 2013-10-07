@@ -5,7 +5,7 @@ if exists("syntax_on")
 endif
 let colors_name="yendor"
 
-highlight Normal         guifg=#DADADA ctermfg=253  guibg=#080808 ctermbg=232
+highlight Normal         guifg=#DADADA ctermfg=253  guibg=#1C1C1C ctermbg=234
 highlight Comment        guifg=#8A8A8A ctermfg=245                             gui=NONE      cterm=NONE
 highlight Constant       guifg=#87D7D7 ctermfg=116                             gui=NONE      cterm=NONE
 highlight String         guifg=#AFD787 ctermfg=150                             gui=NONE      cterm=NONE

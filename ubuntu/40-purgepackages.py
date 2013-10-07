@@ -4,7 +4,7 @@ import os
 import package
 from os import path
 
-if package.dist()[0] != 'ubuntu':
+if package.dist()[0] != 'Ubuntu':
     exit()
 
 lines = open(path.join(path.dirname(__file__), 'purge')).readlines()
