@@ -5,7 +5,9 @@ import pwd
 from os import path
 import argparse
 
-assert os.getuid() == 0 and os.getgid() == 0, 'Must be root'
+assert os.getlogin() != 'root', 'Must run as user with sudo'
+assert os.getuid() == 0 and os.getgid() == 0, 'Must use sudo'
+
 login = os.getlogin()
 pwd_entry = pwd.getpwnam(login)
 uid = pwd_entry[2]
