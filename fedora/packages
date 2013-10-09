@@ -1,0 +1,118 @@
+%packages --ignoremissing
+
+# Version Control
+git-all
+gitg
+gitk
+mercurial
+subversion
+
+# Vim
+vim-X11
+vim-enhanced
+
+# Python
+Django
+Django-doc
+PyOpenGL
+ipython
+numpy
+opencv-python
+protobuf-python
+pyaudio
+pydot
+pygame
+pypy
+pytest
+python-BeautifulSoup
+python-cjson
+python-devel
+python-docs
+python-docutils
+python-matplotlib
+python-nltk
+python-nose
+python-pygments
+python-rope
+python-setuptools
+python-sphinx
+python-sqlalchemy
+python-virtualenv
+scipy
+sympy
+
+# C/C++
+SDL
+SDL-devel
+SDL_ttf
+SDL_ttf-devel
+boost
+boost-filesystem
+boost-math
+boost-random
+boost-regex
+cmake
+ctags
+ncurses
+ncurses-devel
+valgrind-devel
+
+# Go
+golang
+golang-vim
+
+# Tools
+Zim
+ack
+bash-completion
+beep
+cowsay
+dia
+gnuplot
+graphviz
+irssi
+nspluginwrapper
+pssh
+rubber
+screen
+transmission-gtk
+xfig
+
+# Graphics
+evince
+gimp
+gimp-help
+
+# Latex
+tex-biblatex
+tex-biblatex-doc
+tex-biblatex-ieee
+tex-custom-bib
+tex-custom-bib-doc
+tex-epstopdf
+tex-hypernat
+tex-latex
+tex-multirow
+tex-oberdiek
+tex-pdfjam
+tex-pgf-doc
+tex-pgfplots
+tex-pgfplots-doc
+tex-siunitx
+tex-siunitx-doc
+tex-subfig-doc
+tex-tocbibind
+texlive
+texlive-bbm
+texlive-collection-documentation-english
+texlive-collection-fontsrecommended
+texlive-collection-latexextra
+texlive-collection-mathextra
+texlive-elsarticle
+texlive-release
+
+# Removal
+- abrt
+- clipit
+- iok
+
