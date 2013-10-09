@@ -111,8 +111,30 @@ texlive-collection-mathextra
 texlive-elsarticle
 texlive-release
 
+# Extras
+google-chrome-stable
+audacity
+audacity-cli
+ffmpeg
+mplayer
+libdvdcss
+libdvdnav
+libdvdnav
+libdvdread
+libquicktime
+gstreamer-ffmpeg
+gstreamer-plugins-bad
+gstreamer-plugins-bad-extras
+gstreamer-plugins-base
+gstreamer-plugins-good
+gstreamer-plugins-ugly
+lame
+mencoder
+mpg321
+vcl
+xmms-mp3
+
 # Removal
 - abrt
 - clipit
 - iok
-
