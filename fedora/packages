@@ -53,6 +53,8 @@ boost-random
 boost-regex
 cmake
 ctags
+gcc
+gcc-c++
 ncurses
 ncurses-devel
 valgrind-devel
