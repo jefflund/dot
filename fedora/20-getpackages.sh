@@ -1,7 +1,7 @@
 #!/bin/bash
 # Add repositories and install packages.
 
-configdir="$(dirname "$0")/../.."
+configdir="$(dirname "$0")/.."
 packagesfile="$(dirname "$0")/packages"
 
 while getopts "ksy" options

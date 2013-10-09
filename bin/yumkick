@@ -1,0 +1,131 @@
+#!/usr/bin/env python
+
+import argparse
+import subprocess
+import tempfile
+import textwrap
+
+def parse_args():
+    parser = argparse.ArgumentParser()
+
+    parser.description = textwrap.dedent("""\
+    Install packages using a kickstart-style packages list.
+    This program follows the kickstart format exactly except that it ignores
+    options and lines with "%packages" and "%end".
+    """)
+
+    parser.epilog = textwrap.dedent("""\
+    See the kickstart documentation for details of the format for specifying
+    packages:
+    http://fedoraproject.org/wiki/Anaconda/Kickstart#Chapter_3._Package_Selection
+    """)
+
+    parser.add_argument('-y', '--assumeyes',
+            dest='assumeyes', action='store_true', default=False,
+            help='Pass the assumeyes option to yum')
+    parser.add_argument('-x', '--extra-args', metavar='ARGS',
+            action=ShlexAction, type=str, dest='extra',
+            help='Extra command-line arguments, with processing for '
+            'spaces, quotes, and backslashes')
+    parser.add_argument('-X', '--extra-arg', dest='extra', action='append',
+            metavar='ARG', help='Extra command-line argument')
+    parser.add_argument('files', nargs='+', metavar='file',
+            help='File(s) listing packages (kickstart-style format)' )
+
+    args = parser.parse_args()
+    return args
+
+
+class ShlexAction(argparse.Action):
+    """An argparse action similar to the append action.
+
+    The given value is processed with shlex, and the resulting list is
+    concatenated to the option's dest list.
+    """
+    def __call__(self, parser, namespace, value, option_string=None):
+        lst = getattr(parser.values, self.dest)
+        if lst is None:
+            lst = []
+            setattr(parser.values, self.dest, lst)
+        lst.extend(shlex.split(value))
+
+
+def parse_file(f):
+    """Parses the given file and returns an (install, remove) pair of lists.
+
+    Note that yum install supports "@" (groups), so we don't have to do much
+    to support this.  However, it only supports "-" (remove) to blacklist a
+    package for installation.  The install command does not support removal.
+    For example, "yum install -- -sendmail" does not remove sendmail.
+    """
+    install = []
+    remove = []
+    for line in f:
+        # strip out comments and whitespace:
+        line, _, _ = line.partition('#')
+        line = line.strip()
+
+        if line:
+            first = line[0]
+            if first == '%':
+                continue
+
+            if first == '@':
+                # Remove any options
+                line, _, _ = line.partition('--')
+
+            if first == '-':
+                # Add the package (without the "-") to the remove list.  The
+                # line (with the "-") is still added to the install list.
+                package = line[1:].strip()
+                remove.append(package)
+            else:
+                install.append(line)
+    return (install, remove)
+
+def write_remove_command(f, remove_list):
+    """Writes a yum command to a file to remove a list of packages."""
+
+    if remove_list:
+        command = ['remove'] + ['"{}"'.format(p) for p in remove_list]
+        print >>f, ' '.join(command)
+
+def write_install_command(f, install_list, remove_list):
+    """Writes a yum command to a file to install from package lists.
+
+    The command installs all packages and groups (which start with "@") in the
+    install list and omits any packages included in the remove list.
+    """
+    command = ['install']
+    for package in install_list:
+        command.append('"{}"'.format(package))
+    for package in remove_list:
+        command.append('"-{}"'.format(package))
+    print >>f, ' '.join(command)
+
+def main():
+    args = parse_args()
+
+    install = []
+    remove = []
+    for filename in args.files:
+        file_install, file_remove = parse_file(open(filename))
+        install += file_install
+        remove += file_remove
+    with tempfile.NamedTemporaryFile() as f:
+        write_install_command(f, install, remove)
+        write_remove_command(f, remove)
+        print >>f, 'run'
+        f.flush()
+        yum_command = ['yum', 'shell', '--skip-broken']
+        if args.assumeyes:
+            yum_command.append('--assumeyes')
+        if args.extra:
+            yum_command.extend(args.extra)
+        yum_command.append(f.name)
+        subprocess.call(yum_command)
+
+if __name__ == '__main__':
+    main()
+
+# vim: et sw=4 sts=4
