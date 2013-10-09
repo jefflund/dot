@@ -22,13 +22,12 @@ Global {
     background=1
     backgroundfile=/usr/share/lxpanel/images/lubuntu-background.png
     iconsize=24
-    loglevel=2
 }
 
 Plugin {
     type = menu
     Config {
-        image=/usr/share/lubuntu/images/lubuntu-logo.png
+        image=/usr/share/lxpanel/images/my-computer.png
         system {
         }
         separator {
@@ -49,13 +48,16 @@ Plugin {
     type = launchbar
     Config {
         Button {
-            id=/usr/share/applications/lxterminal.desktop
+            id=/usr/share/applications/fedora-gvim.desktop
         }
         Button {
-            id=/usr/share/applications/google-chrome.desktop
+            id=/usr/share/applications/zim.desktop
         }
         Button {
-            id=/usr/share/applications/gvim.desktop
+            id=/usr/share/applications/fedora-lxterminal.desktop
+        }
+        Button {
+            id=/usr/local/share/applications/google-chrome.desktop
         }
     }
 }
@@ -101,18 +103,6 @@ Plugin {
 
 Plugin {
     type = tray
-}
-
-Plugin {
-    type = indicator
-    Config {
-        applications=1
-        datetime=0
-        messages=0
-        network=0
-        session=0
-        sound=0
-    }
 }
 
 Plugin {
