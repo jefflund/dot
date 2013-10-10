@@ -19,9 +19,10 @@ Global {
     fontsize=10
     fontcolor=#000000
     usefontsize=0
-    background=1
+    background=0
     backgroundfile=/usr/share/lxpanel/images/lubuntu-background.png
     iconsize=24
+    loglevel=2
 }
 
 Plugin {
@@ -86,14 +87,14 @@ Plugin {
     expand=1
     Config {
         tooltips=1
-        IconsOnly=0
+        IconsOnly=1
         ShowAllDesks=0
         UseMouseWheel=1
         UseUrgencyHint=1
         FlatButton=0
         MaxTaskWidth=150
         spacing=1
-        GroupedTasks=0
+        GroupedTasks=1
     }
 }
 
@@ -103,6 +104,22 @@ Plugin {
 
 Plugin {
     type = tray
+}
+
+Plugin {
+    type = batt
+    Config {
+        HideIfNoBattery=0
+        AlarmCommand=zenity --warning --text='Battery low'
+        AlarmTime=5
+        BackgroundColor=black
+        BorderWidth=1
+        ChargingColor1=#28f200
+        ChargingColor2=#22cc00
+        DischargingColor1=#ffee00
+        DischargingColor2=#d9ca00
+        Size=8
+    }
 }
 
 Plugin {
