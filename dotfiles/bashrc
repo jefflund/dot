@@ -48,11 +48,12 @@ alias ll='ls -l'
 alias la='ls -a'
 alias l='ls'
 
-# ssh alias
+# ssh aliases
 alias aml='ssh aml.cs.byu.edu'
 alias savant='ssh aml.cs.byu.edu -t ssh savant'
 alias coherence='ssh aml.cs.byu.edu -t ssh coherence'
 alias entropy='ssh entropy.cs.byu.edu'
+alias marylou='ssh ssh.fsl.byu.edu'
 
 # enable programmable completion features
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
@@ -91,5 +92,6 @@ alias cd='cdls'
 alias untar='tar -xf'
 alias todo='grep -r TODO *'
 
+# Insecure ssh aliases
 alias issh="ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o GlobalKnownHostsFile=/dev/null"
 alias ipssh="pssh -x '-o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o GlobalKnownHostsFile=/dev/null'"
