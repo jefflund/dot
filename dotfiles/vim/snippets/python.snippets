@@ -29,3 +29,10 @@ snippet cls
 		def __init__(self${4}):
 			"""${5:docstring for $1}"""
 			${6:pass}
+snippet prop
+	@property
+	def ${1:prop}(self):
+		${2:return self._$1}
+snippet dunder
+	def __${1:dunder}__(self${2}):
+		${3:pass}
