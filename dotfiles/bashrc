@@ -89,6 +89,7 @@ function cdls()
 alias cd='cdls'
 
 alias untar='tar -xf'
+alias todo='grep -r TODO *'
 
 alias issh="ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o GlobalKnownHostsFile=/dev/null"
 alias ipssh="pssh -x '-o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o GlobalKnownHostsFile=/dev/null'"
