@@ -9,3 +9,4 @@ nmap <buffer> <localleader>U :!pypy -m unittest discover -v<cr>
 nmap <buffer> <localleader>T :!pypy -m cProfile -s cumulative %<cr>
 
 nmap <buffer> <localleader>p :!pep8 %<cr>
+nmap <buffer> <localleader>l :!pylint %<cr>
