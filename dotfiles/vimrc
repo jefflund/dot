@@ -95,6 +95,7 @@ set smartcase
 nmap <silent> <leader>/ :nohlsearch<cr>
 
 " Set up NERDTree
+autocmd VimEnter * if !argc() | NERDTree | endif
 nmap <silent> <leader>n :NERDTreeToggle<cr>
 let NERDTreeIgnore=[]
 let NERDTreeIgnore+=['\.pyc$', '__pycache__']
@@ -105,7 +106,6 @@ let NERDTreeQuitOnOpen=1
 let NERDTreeChDirMode=2
 
 " Set up CtrlP
-autocmd VimEnter * if !argc() | CtrlP '.' | endif
 let g:ctrlp_custom_ignore = {
     \ 'dir':  '\v[\/]\.(git|hg|svn)$',
     \ 'file': '\v\.(pyc)$',
