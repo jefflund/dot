@@ -89,6 +89,11 @@ function cdls()
 }
 alias cd='cdls'
 
+function lc()
+{
+    find | grep \\.$1$ | xargs wc -l
+}
+
 alias untar='tar -xf'
 alias todo='grep -r TODO *'
 
