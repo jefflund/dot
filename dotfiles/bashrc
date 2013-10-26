@@ -91,7 +91,7 @@ alias cd='cdls'
 
 function lc()
 {
-    find | grep \\.$1$ | xargs wc -l
+    find | grep \\.$1$ | xargs wc -l | sort -b -g
 }
 
 alias untar='tar -xf'
