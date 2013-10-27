@@ -49,16 +49,16 @@ Plugin {
     type = launchbar
     Config {
         Button {
-            id=/usr/share/applications/fedora-gvim.desktop
+            id=/home/jlund3/config/panel/gvim.desktop
         }
         Button {
-            id=/usr/share/applications/zim.desktop
+            id=/home/jlund3/config/panel/zim.desktop
         }
         Button {
-            id=/usr/share/applications/fedora-lxterminal.desktop
+            id=/home/jlund3/config/panel/lxterminal.desktop
         }
         Button {
-            id=/usr/local/share/applications/google-chrome.desktop
+            id=/home/jlund3/config/panel/google-chrome.desktop
         }
     }
 }
@@ -104,22 +104,6 @@ Plugin {
 
 Plugin {
     type = tray
-}
-
-Plugin {
-    type = batt
-    Config {
-        HideIfNoBattery=0
-        AlarmCommand=zenity --warning --text='Battery low'
-        AlarmTime=5
-        BackgroundColor=black
-        BorderWidth=1
-        ChargingColor1=#28f200
-        ChargingColor2=#22cc00
-        DischargingColor1=#ffee00
-        DischargingColor2=#d9ca00
-        Size=8
-    }
 }
 
 Plugin {
