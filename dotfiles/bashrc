@@ -96,7 +96,14 @@ function lc()
 
 function clean()
 {
-    find | grep \\.$1$ | xargs rm
+    if [ $# -eq 0 ]; then
+        echo "Must supply extension"
+    else
+        for file in $(find | grep \\.$1$); do
+            echo "Removing $file"
+            rm $file
+        done
+    fi
 }
 
 alias untar='tar -xf'
