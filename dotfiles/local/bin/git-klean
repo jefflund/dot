@@ -1,3 +1,7 @@
 #!/usr/bin/env bash
 
-git clean -xf **.$1
+if [ $# -eq 0 ]; then
+    echo "Must supply extension"
+else
+    git clean -xf **.$1
+fi
