@@ -94,8 +94,13 @@ function lc()
     find | grep \\.$1$ | xargs wc -l | sort -b -g
 }
 
+function clean()
+{
+    find | grep \\.$1$ | xargs rm
+}
+
 alias untar='tar -xf'
-alias todo='grep -r TODO *'
+alias todo='grep -nr TODO *'
 
 # Insecure ssh aliases
 alias issh="ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o GlobalKnownHostsFile=/dev/null"
