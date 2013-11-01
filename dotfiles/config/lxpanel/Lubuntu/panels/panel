@@ -46,24 +46,6 @@ Plugin {
 }
 
 Plugin {
-    type = launchbar
-    Config {
-        Button {
-            id=/home/jlund3/config/panel/gvim.desktop
-        }
-        Button {
-            id=/home/jlund3/config/panel/zim.desktop
-        }
-        Button {
-            id=/home/jlund3/config/panel/lxterminal.desktop
-        }
-        Button {
-            id=/home/jlund3/config/panel/google-chrome.desktop
-        }
-    }
-}
-
-Plugin {
     type = space
     Config {
         Size=4
