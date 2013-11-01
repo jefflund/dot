@@ -106,6 +106,13 @@ function clean()
     fi
 }
 
+function repeat()
+{
+    while true; do
+        $@
+    done
+}
+
 alias untar='tar -xf'
 alias todo='grep -nr TODO *'
 
