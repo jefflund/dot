@@ -105,7 +105,6 @@ let NERDTreeQuitOnOpen=1
 let NERDTreeChDirMode=2
 
 " Set up CtrlP
-autocmd VimEnter * if !argc() | CtrlP '.' | endif
 let g:ctrlp_custom_ignore = {
     \ 'dir':  '\v[\/]\.(git|hg|svn)$',
     \ 'file': '\v\.(pyc)$',
