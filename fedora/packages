@@ -12,8 +12,8 @@ vim-X11
 vim-enhanced
 
 # Python
-Django
-Django-doc
+python-django
+python-django-doc
 PyOpenGL
 ipython
 numpy
