@@ -148,6 +148,8 @@ let g:ycm_autoclose_preview_window_after_insertion=1
 let g:ycm_key_list_select_completion=[]
 let g:ycm_key_list_previous_completion=[]
 let g:ycm_server_log_level='error'
+let g:ycm_key_detailed_diagnostics=''
+nmap <silent> <leader>g :YcmCompleter GoToDefinitionElseDeclaration<cr>
 
 " Set up Syntastic
 let g:syntastic_enable_signs=0
