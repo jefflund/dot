@@ -15,6 +15,7 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'scrooloose/syntastic'
 Bundle 'Blackrush/vim-gocode'
 Bundle 'kien/ctrlp.vim'
+Bundle 'scrooloose/nerdcommenter'
 
 " Turn on file type based options
 syntax on
