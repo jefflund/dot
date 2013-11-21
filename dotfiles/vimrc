@@ -5,17 +5,17 @@ set nocompatible
 filetype off
 set runtimepath+=~/.vim/bundle/vundle
 call vundle#rc()
-Bundle 'scrooloose/nerdtree'
-Bundle 'majutsushi/tagbar'
-Bundle 'MarcWeber/vim-addon-mw-utils'
-Bundle 'tomtom/tlib_vim'
-Bundle 'garbas/vim-snipmate'
-Bundle 'Valloric/YouCompleteMe'
-Bundle 'tpope/vim-fugitive'
-Bundle 'scrooloose/syntastic'
 Bundle 'Blackrush/vim-gocode'
+Bundle 'MarcWeber/vim-addon-mw-utils'
+Bundle 'Valloric/YouCompleteMe'
+Bundle 'garbas/vim-snipmate'
 Bundle 'kien/ctrlp.vim'
+Bundle 'majutsushi/tagbar'
 Bundle 'scrooloose/nerdcommenter'
+Bundle 'scrooloose/nerdtree'
+Bundle 'scrooloose/syntastic'
+Bundle 'tomtom/tlib_vim'
+Bundle 'tpope/vim-fugitive'
 
 " Turn on file type based options
 syntax on
