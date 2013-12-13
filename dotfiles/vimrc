@@ -150,6 +150,7 @@ let g:ycm_key_list_select_completion=[]
 let g:ycm_key_list_previous_completion=[]
 let g:ycm_server_log_level='error'
 let g:ycm_key_detailed_diagnostics=''
+let g:ycm_path_to_python_interpreter = '/usr/bin/python'
 nmap <silent> <leader>g :YcmCompleter GoToDefinitionElseDeclaration<cr>
 
 " Set up Syntastic
