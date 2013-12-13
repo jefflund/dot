@@ -25,8 +25,7 @@ c = get_config()
 
 # lines of code to run at IPython startup.
 c.InteractiveShellApp.exec_lines = ['from __future__ import division',
-                                    'import os, sys, math, random',
-                                    'import numpy, pylab']
+                                    'import os, sys, math, random, numpy']
 
 # Enable GUI event loop integration ('qt', 'wx', 'gtk', 'glut', 'pyglet',
 # 'osx').
