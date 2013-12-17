@@ -156,6 +156,10 @@ nmap <silent> <leader>g :YcmCompleter GoToDefinitionElseDeclaration<cr>
 " Set up Syntastic
 let g:syntastic_enable_signs=0
 
+" Set up gocode
+let g:gocode_gofmt_tabs=''
+let g:gocode_gofmt_tabwidth=''
+
 " Navigation shortcuts
 nmap <leader>l <c-w>l
 nmap <leader>h <c-w>h
