@@ -115,6 +115,7 @@ function repeat()
 
 alias untar='tar -xf'
 alias todo='grep -nr "TODO\|FIXME\|XXX" *'
+alias browse='pcmanfm .'
 
 # Insecure ssh aliases
 alias issh="ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o GlobalKnownHostsFile=/dev/null"
