@@ -171,6 +171,7 @@ nmap k gk
 " Other shortcuts
 nmap <silent> <leader>s :set invspell<cr>
 nmap <silent> <leader>v :set invpaste<cr>
+nmap <silent> <leader>b :windo set scrollbind!<cr>
 nmap <silent> <leader>z :sh<cr>
 nmap <silent> <leader>R :edit %<cr>
 vmap < <gv
