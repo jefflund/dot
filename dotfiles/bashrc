@@ -119,7 +119,7 @@ alias browse='pcmanfm .'
 
 function brightness()
 {
-    sudo su -c "echo $1 > /sys/class/backlight/acpi_video0/brightness"
+    sudo bash -c "echo $1 > /sys/class/backlight/acpi_video0/brightness"
 }
 
 # Insecure ssh aliases
