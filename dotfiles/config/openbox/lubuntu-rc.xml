@@ -324,7 +324,7 @@
         <command>lxterminal --geometry=161x80</command>
       </action>
     </keybind>
-    <!-- Launch browsers on Ctrl + Alot + W and I-->
+    <!-- Launch browsers on Ctrl + Alt + W and I-->
     <keybind key="C-A-W">
       <action name="Execute">
         <command>google-chrome</command>
@@ -335,9 +335,16 @@
         <command>google-chrome --incognito</command>
       </action>
     </keybind>
+    <!-- Launch Zim on Ctrl + Alt + Z-->
     <keybind key="C-A-Z">
       <action name="Execute">
         <command>zim</command>
+      </action>
+    </keybind>
+    <!-- Launch Transmission on Ctrl + Alt + U-->
+    <keybind key="C-A-U">
+      <action name="Execute">
+         <command>gtk-transmission</command>
       </action>
     </keybind>
     <!-- Launch a filemanager on Ctrl + Alt + D-->
@@ -813,7 +820,7 @@
   # order that they appear in this list
 
 
-    # each rule element can be left out or set to 'default' to specify to not 
+    # each rule element can be left out or set to 'default' to specify to not
     # change that attribute of the window
 
     <decor>yes</decor>
