@@ -1,6 +1,5 @@
 # ~/.bashrc: executed by bash(1) for non-login shells.
-# see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
-# for examples
+# see /usr/share/doc/bash/examples/startup-files for examples
 
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin:$HOME/.local/bin
@@ -10,7 +9,6 @@ export PATH=$PATH:$GOPATH/bin:$HOME/.local/bin
 PS1="\u@\h:\W$ \[\e]2;\u@\H \w\a"
 
 # don't put duplicate lines or lines starting with space in the history.
-# See bash(1) for more options
 HISTCONTROL=ignoreboth
 
 # append to the history file, don't overwrite it
@@ -20,21 +18,19 @@ shopt -s histappend
 HISTSIZE=10000
 HISTFILESIZE=100000
 
-# bash history can ignore common commands I won't search for
-export HISTIGNORE="&:ls:ll:la:cd:cd *:clear:vim:git st"
+# make bash history ignore common commands I ever won't search for
+export HISTIGNORE="&:ls:ll:la:cd:cd *:clear:vim:git st:git wipe"
 
-# check the window size after each command and, if necessary,
-# update the values of LINES and COLUMNS.
+# check the window size after each command and update values LINES and COLUMNS
 shopt -s checkwinsize
 
-# If set, the pattern "**" used in a pathname expansion context will
-# match all files and zero or more directories and subdirectories.
+# the pattern "**" used in pathnames will match all files in subdirectories
 shopt -s globstar
 
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
-# add color to a few commands
+# add color to a grep commands
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
@@ -52,8 +48,9 @@ alias l='ls'
 alias aml='ssh aml.cs.byu.edu'
 alias savant='ssh aml.cs.byu.edu -t ssh savant'
 alias coherence='ssh aml.cs.byu.edu -t ssh coherence'
-alias entropy='ssh entropy.cs.byu.edu'
 alias marylou='ssh ssh.fsl.byu.edu'
+alias fsl='ssh ssh.fsl.byu.edu'
+alias schizo='ssh sczhio.cs.byu.edu'
 
 # enable programmable completion features
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
