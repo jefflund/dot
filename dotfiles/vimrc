@@ -152,6 +152,7 @@ let g:ycm_server_log_level='error'
 let g:ycm_key_detailed_diagnostics=''
 let g:ycm_path_to_python_interpreter = '/usr/bin/python'
 nmap <silent> <leader>g :YcmCompleter GoToDefinitionElseDeclaration<cr>
+nmap <leader>Y :YcmRestartServer<cr>
 
 " Set up Syntastic
 let g:syntastic_enable_signs=0
