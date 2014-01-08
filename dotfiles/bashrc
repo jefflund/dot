@@ -1,13 +1,20 @@
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files for examples
 
-# If not running interactively, don't do anything
+# Set up some paths
+if [[ ! "$PATH" =~ (^|:)"$HOME/.local/bin"(:|$) ]]
+then
+    export PATH="$PATH":"$HOME/.local/bin"
+fi
+if [[ ! "$PATH" =~ (^|:)"$HOME/go/bin"(:|$) ]]
+then
+    export PATH="$PATH":"$HOME/go/bin"
+fi
+export GOPATH=$HOME/go
+
+# If not running interactively, don't do anything else
 [ -z "$PS1" ] && return
 PS1="\u@\h:\W$ \[\e]2;\u@\H \w\a"
-
-# set some paths
-export GOPATH=$HOME/go
-export PATH=$PATH:$GOPATH/bin:$HOME/.local/bin
 
 # don't put duplicate lines or lines starting with space in the history.
 HISTCONTROL=ignoreboth
