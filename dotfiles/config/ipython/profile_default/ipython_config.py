@@ -25,7 +25,8 @@ c = get_config()
 
 # lines of code to run at IPython startup.
 c.InteractiveShellApp.exec_lines = ['from __future__ import division',
-                                    'import os, sys, math, random, numpy']
+                                    'import os, sys, math, random',
+                                    '%autoreload 2']
 
 # Enable GUI event loop integration ('qt', 'wx', 'gtk', 'glut', 'pyglet',
 # 'osx').
@@ -39,7 +40,7 @@ c.InteractiveShellApp.exec_lines = ['from __future__ import division',
 # c.InteractiveShellApp.pylab_import_all = True
 
 # A list of dotted module names of IPython extensions to load.
-# c.InteractiveShellApp.extensions = []
+c.InteractiveShellApp.extensions = ['autoreload']
 
 # Run the module as a script.
 # c.InteractiveShellApp.module_to_run = ''
