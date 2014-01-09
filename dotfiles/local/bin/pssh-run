@@ -1,0 +1,32 @@
+#!/usr/bin/env python
+
+import os
+import subprocess
+import argparse
+
+def main():
+    parser = argparse.ArgumentParser()
+    parser.description = 'An easier way to run pssh'
+    parser.add_argument('-p', '--potatoes', default='/config/potatoes/all',
+                        help='host file to use')
+    parser.add_argument('-n', '--name', required=True,
+                        help='name of the job')
+    parser.add_argument('-c', '--command', required=True,
+                        help='command to run')
+    args = parser.parse_args()
+
+    basedir = os.path.join(os.getenv('HOME'), 'scratch', args.name)
+    outdir = os.path.join(basedir, 'stdout')
+    errdir = os.path.join(basedir, 'stderr')
+
+    cmd = ['pssh',
+           '-h', args.potatoes,
+           '-o', os.path.join(basedir, 'stdout'),
+           '-e', os.path.join(basedir, 'stderr'),
+           '-t', '0',
+           args.command.replace('$n', args.name)]
+    subprocess.call(cmd)
+
+
+if __name__ == '__main__':
+    main()
