@@ -24,7 +24,7 @@ def main():
            '-o', os.path.join(basedir, 'stdout'),
            '-e', os.path.join(basedir, 'stderr'),
            '-t', '0',
-           args.command.replace('$n', args.name)]
+           args.command.replace('##', args.name)]
     subprocess.call(cmd)
 
 
