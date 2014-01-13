@@ -1,0 +1,2 @@
+#!/usr/bin/bash
+pssh -i -h /config/potatoes/all uptime
