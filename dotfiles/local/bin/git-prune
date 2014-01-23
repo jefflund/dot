@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
 
-git branch -D $1
-git push origin :$1
+echo $1
+#git branch -D $1
+#git push origin --delete $1
