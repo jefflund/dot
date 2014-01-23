@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 
-echo $1
-#git branch -D $1
-#git push origin --delete $1
+echo "Shearing $1"
+git branch -D $1
+git push origin --delete $1
