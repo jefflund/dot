@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
 
-echo "Shearing $1"
 git branch -D $1
 git push origin --delete $1
