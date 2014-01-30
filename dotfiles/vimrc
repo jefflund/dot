@@ -16,6 +16,7 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/syntastic'
 Bundle 'tomtom/tlib_vim'
 Bundle 'tpope/vim-fugitive'
+Bundle 'abeaumet/ack.vim'
 
 " Turn on file type based options
 syntax on
@@ -158,6 +159,11 @@ nmap <leader>Y :YcmRestartServer<cr>
 
 " Set up Syntastic
 let g:syntastic_enable_signs=0
+
+" Set up ack.vim
+let g:ack_autoclose=1
+nmap <leader>A :Ack <c-r><c-w><cr>
+nmap <leader>a :Ack ""<left>
 
 " Navigation shortcuts
 nmap <leader>l <c-w>l
