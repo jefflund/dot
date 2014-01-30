@@ -54,7 +54,7 @@ highlight Directory      guifg=#AFD7AF ctermfg=151                             g
 highlight ErrorMsg       guifg=#FF0000 ctermfg=196  guibg=NONE    ctermbg=NONE gui=NONE      cterm=NONE
 highlight VertSplit      guifg=#6C6C6C ctermfg=242  guibg=#121212 ctermbg=233  gui=NONE      cterm=NONE
 highlight SignColumn     guifg=#AFAFAF ctermfg=145  guibg=#121212 ctermbg=233  gui=NONE      cterm=NONE
-highlight LineNr         guifg=#878787 ctermfg=102  guibg=#3A3A3A ctermbg=237
+highlight LineNr         guifg=#878787 ctermfg=102  guibg=#3A3A3A ctermbg=232
 highlight MatchParen     guifg=#5FD75F ctermfg=77   guibg=NONE    ctermbg=NONE gui=NONE      cterm=NONE
 highlight MoreMsg        guifg=#00875F ctermfg=29                              gui=NONE      cterm=NONE
 highlight ModeMsg        guifg=#87D7FF ctermfg=117  guibg=NONE    ctermbg=NONE gui=NONE      cterm=NONE
