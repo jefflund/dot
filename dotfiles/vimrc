@@ -170,8 +170,8 @@ nmap <leader>l <c-w>l
 nmap <leader>h <c-w>h
 nmap <leader>k <c-w>k
 nmap <leader>j <c-w>j
-nmap <c-j> <c-f>
-nmap <c-k> <c-u>
+nmap <c-j> <c-f>zz
+nmap <c-k> <c-u>zz
 nmap j gj
 nmap k gk
 
