@@ -54,12 +54,12 @@ highlight Directory      ctermfg=151               cterm=NONE
 highlight ErrorMsg       ctermfg=196  ctermbg=NONE cterm=NONE
 highlight VertSplit      ctermfg=242  ctermbg=233  cterm=NONE
 highlight SignColumn     ctermfg=145  ctermbg=233  cterm=NONE
-highlight LineNr         ctermfg=238  ctermbg=234
-highlight CursorLineNr   ctermfg=239  ctermbg=234
+highlight LineNr         ctermfg=238  ctermbg=233
+highlight CursorLineNr   ctermfg=239  ctermbg=233
 highlight MatchParen     ctermfg=77   ctermbg=NONE cterm=NONE
 highlight MoreMsg        ctermfg=29                cterm=NONE
 highlight ModeMsg        ctermfg=117  ctermbg=NONE cterm=NONE
-highlight NonText        ctermfg=239               cterm=NONE
+highlight NonText        ctermfg=239  ctermbg=233  cterm=NONE
 highlight Question       ctermfg=fg                cterm=NONE
 highlight SpecialKey     ctermfg=239
 highlight Title          ctermfg=74                cterm=NONE
