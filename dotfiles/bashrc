@@ -60,6 +60,9 @@ alias marylou='ssh ssh.fsl.byu.edu'
 alias fsl='ssh ssh.fsl.byu.edu'
 alias schizo='ssh sczhio.cs.byu.edu'
 
+# for vim croquet
+alias vim='vim -w ~/.vimlog "$@"'
+
 # enable programmable completion features
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
