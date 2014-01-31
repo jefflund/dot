@@ -84,7 +84,7 @@ set shiftwidth=4
 set autoindent
 
 " Handle trailing whitespace
-nmap <silent> <leader><space> :call StripTrailingWhitespace()<cr>
+nnoremap <silent> <leader><space> :call StripTrailingWhitespace()<cr>
 function! StripTrailingWhitespace()
     let l=line(".")
     let c=col(".")
@@ -97,10 +97,10 @@ set hlsearch
 set incsearch
 set ignorecase
 set smartcase
-nmap <silent> <leader>/ :nohlsearch<cr>
+nnoremap <silent> <leader>/ :nohlsearch<cr>
 
 " Set up NERDTree
-nmap <silent> <leader>n :NERDTreeToggle<cr>
+nnoremap <silent> <leader>n :NERDTreeToggle<cr>
 let NERDTreeIgnore=[]
 let NERDTreeIgnore+=['\.pyc$', '__pycache__']
 let NERDTreeIgnore+=['\.o$', '\.d$']
@@ -116,7 +116,7 @@ let g:ctrlp_custom_ignore = {
     \ }
 
 " Set up Tagbar
-nmap <silent> <leader>t :TagbarToggle<cr>
+nnoremap <silent> <leader>t :TagbarToggle<cr>
 let g:tagbar_autoclose=1
 let g:tagbar_left=1
 let g:tagbar_sort=0
@@ -155,40 +155,40 @@ let g:ycm_key_list_previous_completion=[]
 let g:ycm_server_log_level='error'
 let g:ycm_key_detailed_diagnostics=''
 let g:ycm_path_to_python_interpreter = '/usr/bin/python'
-nmap <silent> <leader>g :YcmCompleter GoToDefinitionElseDeclaration<cr>
-nmap <leader>Y :YcmRestartServer<cr>
+nnoremap <silent> <leader>g :YcmCompleter GoToDefinitionElseDeclaration<cr>
+nnoremap <leader>Y :YcmRestartServer<cr>
 
 " Set up Syntastic
 let g:syntastic_enable_signs=0
 
 " Set up ack.vim
 let g:ack_autoclose=1
-nmap <leader>A :Ack <c-r><c-w><cr>
-nmap <leader>a :Ack ""<left>
+nnoremap <leader>A :Ack <c-r><c-w><cr>
+nnoremap <leader>a :Ack ""<left>
 
 " Navigation shortcuts
-nmap <leader>l <c-w>l
-nmap <leader>h <c-w>h
-nmap <leader>k <c-w>k
-nmap <leader>j <c-w>j
-nmap <c-j> <c-f>zz
-nmap <c-k> <c-u>zz
-nmap j gj
-nmap k gk
+nnoremap <leader>l <c-w>l
+nnoremap <leader>h <c-w>h
+nnoremap <leader>k <c-w>k
+nnoremap <leader>j <c-w>j
+nnoremap <c-j> <c-f>zz
+nnoremap <c-k> <c-u>zz
+nnoremap j gj
+nnoremap k gk
 
 " Other shortcuts
-nmap <silent> <leader>s :set invspell<cr>
-nmap <silent> <leader>v :set invpaste<cr>
-nmap <silent> <leader>b :windo set scrollbind!<cr>
-nmap <silent> <leader>z :sh<cr>
-nmap <silent> <leader>R :edit %<cr>
-vmap < <gv
-vmap > >gv
-nmap <silent> <leader>Q :qa<cr>
-nmap <silent> <leader>q :q<cr>
-nmap <silent> <leader>w :w<cr>
-nmap <silent> <leader>W :wa<cr>
-nmap ; :
+nnoremap <silent> <leader>s :set invspell<cr>
+nnoremap <silent> <leader>v :set invpaste<cr>
+nnoremap <silent> <leader>b :windo set scrollbind!<cr>
+nnoremap <silent> <leader>z :sh<cr>
+nnoremap <silent> <leader>R :edit %<cr>
+vnoremap < <gv
+vnoremap > >gv
+nnoremap <silent> <leader>Q :qa<cr>
+nnoremap <silent> <leader>q :q<cr>
+nnoremap <silent> <leader>w :w<cr>
+nnoremap <silent> <leader>W :wa<cr>
+nnoremap ; :
 
 " Disable Ex mode
 map Q <nop>
