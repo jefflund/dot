@@ -17,6 +17,7 @@ Bundle 'scrooloose/syntastic'
 Bundle 'tomtom/tlib_vim'
 Bundle 'tpope/vim-fugitive'
 Bundle 'abeaumet/ack.vim'
+Bundle 'jlund3/colorschemer'
 
 " Turn on file type based options
 syntax on
