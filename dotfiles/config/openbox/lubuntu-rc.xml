@@ -344,7 +344,7 @@
     <!-- Launch Transmission on Ctrl + Alt + U-->
     <keybind key="C-A-U">
       <action name="Execute">
-         <command>gtk-transmission</command>
+         <command>transmission-gtk</command>
       </action>
     </keybind>
     <!-- Launch a filemanager on Ctrl + Alt + D-->
