@@ -315,13 +315,13 @@
     <!-- Launch a terminal on Ctrl + Alt + T-->
     <keybind key="C-A-T">
       <action name="Execute">
-        <command>lxterminal --geometry=80x24</command>
+        <command>lxterminal --geometry=84x24</command>
       </action>
     </keybind>
     <!-- Launch a big terminal on Ctrl + Alt + Shift + T-->
     <keybind key="C-A-S-T">
       <action name="Execute">
-        <command>lxterminal --geometry=161x80</command>
+        <command>lxterminal --geometry=169x57</command>
       </action>
     </keybind>
     <!-- Launch browsers on Ctrl + Alt + W and I-->
@@ -377,17 +377,6 @@
     <keybind key="XF86AudioMute">
       <action name="Execute">
         <command>amixer -q sset Master toggle</command>
-      </action>
-    </keybind>
-    <!-- Keybinding for terminal button-->
-    <keybind key="XF86WWW">
-      <action name="Execute">
-        <command>x-terminal-emulator</command>
-      </action>
-    </keybind>
-    <keybind key="XF86Terminal">
-      <action name="Execute">
-        <command>x-terminal-emulator</command>
       </action>
     </keybind>
     <!-- Keybinding for calculator button-->
