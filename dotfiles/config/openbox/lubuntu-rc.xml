@@ -318,12 +318,6 @@
         <command>lxterminal --geometry=84x24</command>
       </action>
     </keybind>
-    <!-- Launch a big terminal on Ctrl + Alt + Shift + T-->
-    <keybind key="C-A-S-T">
-      <action name="Execute">
-        <command>lxterminal --geometry=169x57</command>
-      </action>
-    </keybind>
     <!-- Launch browsers on Ctrl + Alt + W and I-->
     <keybind key="C-A-W">
       <action name="Execute">
