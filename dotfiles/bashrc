@@ -27,7 +27,7 @@ HISTSIZE=10000
 HISTFILESIZE=100000
 
 # make bash history ignore common commands I ever won't search for
-export HISTIGNORE="&:ls:ll:la:cd:cd *:clear:vim:git st:git wipe"
+export HISTIGNORE="&:ls:ll:la:cd:cd ..:clear:vim:git st:git wipe"
 
 # check the window size after each command and update values LINES and COLUMNS
 shopt -s checkwinsize
