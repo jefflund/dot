@@ -80,6 +80,7 @@ nspluginwrapper
 pssh
 rubber
 screen
+tmux
 transmission-gtk
 xfig
 
