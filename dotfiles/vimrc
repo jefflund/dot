@@ -17,6 +17,7 @@ Bundle 'scrooloose/syntastic'
 Bundle 'tomtom/tlib_vim'
 Bundle 'tpope/vim-fugitive'
 Bundle 'abeaumet/ack.vim'
+Bundle 'christoomey/vim-tmux-navigator'
 Bundle 'jlund3/colorschemer'
 
 " Turn on file type based options
@@ -166,13 +167,16 @@ let g:ack_autoclose=1
 nnoremap <leader>A :Ack <c-r><c-w><cr>
 nnoremap <leader>a :Ack ""<left>
 
+" Set up vim-tmux-navigator
+let g:tmux_navigator_no_mappings=1
+nnoremap <silent> <c-h> :TmuxNavigateLeft<cr>
+nnoremap <silent> <c-l> :TmuxNavigateRight<cr>
+nnoremap <silent> <c-j> :TmuxNavigateDown<cr>
+nnoremap <silent> <c-k> :TmuxNavigateUp<cr>
+
 " Navigation shortcuts
-nnoremap <leader>l <c-w>l
-nnoremap <leader>h <c-w>h
-nnoremap <leader>k <c-w>k
-nnoremap <leader>j <c-w>j
-nnoremap <c-j> <c-f>zz
-nnoremap <c-k> <c-u>zz
+nnoremap <s-j> <c-f>zz
+nnoremap <s-k> <c-u>zz
 nnoremap j gj
 nnoremap k gk
 
