@@ -193,6 +193,7 @@ nnoremap <silent> <leader>q :q<cr>
 nnoremap <silent> <leader>w :w<cr>
 nnoremap <silent> <leader>W :wa<cr>
 nnoremap ; :
+nnoremap <silent> <c-l> :redraw!<cr><c-l>
 
 " Disable Ex mode
 map Q <nop>
