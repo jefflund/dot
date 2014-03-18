@@ -54,7 +54,7 @@ alias l='ls'
 
 # ssh aliases
 alias aml='ssh aml.cs.byu.edu'
-alias savant='ssh aml.cs.byu.edu -t ssh savant'
+alias wizard='ssh aml.cs.byu.edu -t ssh wizard'
 alias coherence='ssh aml.cs.byu.edu -t ssh coherence'
 alias marylou='ssh ssh.fsl.byu.edu'
 alias fsl='ssh ssh.fsl.byu.edu'
