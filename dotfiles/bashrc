@@ -71,12 +71,6 @@ fi
 # All other cli editors suck
 export EDITOR="vim"
 
-# Disable the bloody capslock
-setxkbmap us -option ctrl:nocaps
-
-# I hate popups from gnome-ssh-askpass
-export SSH_ASKPASS=""
-
 # some nifty functions and aliases
 
 function python {
