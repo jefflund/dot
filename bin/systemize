@@ -5,9 +5,6 @@ import pwd
 from os import path
 import argparse
 
-assert os.getlogin() != 'root', 'Must run as user with sudo'
-assert os.getuid() == 0 and os.getgid() == 0, 'Must use sudo'
-
 login = os.getlogin()
 pwd_entry = pwd.getpwnam(login)
 uid = pwd_entry[2]
@@ -42,6 +39,9 @@ if args.list:
     for script in user_scripts:
         print '<{}>'.format(login), script
 else:
+    assert os.getlogin() != 'root', 'Must run as user with sudo'
+    assert os.getuid() == 0 and os.getgid() == 0, 'Must use sudo'
+
     for script in root_scripts:
         os.system(script)
     os.setgid(gid)
