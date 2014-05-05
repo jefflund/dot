@@ -1,1 +1,4 @@
-/home/jlund3/.vim/bundle/YouCompleteMe/install.sh
+#!/usr/bin/env bash
+
+cd ~/.vim/bundle/YouCompleteMe
+~/.vim/bundle/YouCompleteMe/install.sh
