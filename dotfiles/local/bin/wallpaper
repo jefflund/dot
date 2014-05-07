@@ -1,0 +1,3 @@
+#!/usr/bin/bash
+
+pcmanfm -w "$(find ~/config/backgrounds -type f | shuf -n1)"
