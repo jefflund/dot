@@ -4,7 +4,7 @@ import os
 from os import path
 
 home = os.environ['HOME']
-dotfiles = path.abspath(path.join(home, 'config/dotfiles'))
+dotfiles = path.abspath(path.join(home, 'config', 'dotfiles'))
 
 def ensure_path(filename):
     try:
