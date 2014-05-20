@@ -82,17 +82,10 @@ function python {
     fi
 }
 
-function cdls()
+function cd()
 {
-    if [ $# = 0 ]
-    then
-        cd
-    else
-        cd "$@"
-    fi
-    ls
+    builtin cd "$@" && ls
 }
-alias cd='cdls'
 
 function lc()
 {
