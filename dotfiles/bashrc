@@ -11,6 +11,7 @@ then
     export PATH="$PATH":"$HOME/go/bin"
 fi
 export GOPATH=$HOME/go
+export GOROOT=/usr/lib/golang
 
 # If not running interactively, don't do anything else
 [ -z "$PS1" ] && return
