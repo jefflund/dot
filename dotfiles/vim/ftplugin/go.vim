@@ -1,4 +1,5 @@
-set noexpandtab softtabstop=0
+setlocal noexpandtab softtabstop=0
+setlocal textwidth=99
 
 nnoremap <buffer> <localleader>r :!go run %<cr>
 nnoremap <buffer> <localleader>m :!go run main.go<cr>
