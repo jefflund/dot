@@ -41,7 +41,10 @@ set relativenumber
 " Even more options for vsplits
 set winwidth=84
 autocmd WinEnter * setlocal number relativenumber
+autocmd WinEnter * setlocal wrap
+autocmd WinEnter * wincmd =
 autocmd WinLeave * setlocal nonumber norelativenumber
+autocmd WinLeave * setlocal nowrap
 
 " In memory buffers
 set nobackup
