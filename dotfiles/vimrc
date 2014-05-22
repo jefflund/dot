@@ -37,13 +37,12 @@ set guioptions=ace
 set colorcolumn=81
 set number
 set relativenumber
+set wrap
 
 " Even more options for vsplits
 set winwidth=84
-autocmd WinEnter * setlocal number relativenumber
-autocmd WinEnter * setlocal wrap
-autocmd WinLeave * setlocal nonumber norelativenumber
-autocmd WinLeave * setlocal nowrap
+autocmd WinEnter * setlocal number relativenumber wrap
+autocmd WinLeave * setlocal nonumber norelativenumber nowrap
 
 " In memory buffers
 set nobackup
