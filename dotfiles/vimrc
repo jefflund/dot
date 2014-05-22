@@ -38,6 +38,11 @@ set colorcolumn=81
 set number
 set relativenumber
 
+" Even more options for vsplits
+set winwidth=84
+autocmd WinEnter * setlocal number relativenumber
+autocmd WinLeave * setlocal nonumber norelativenumber
+
 " In memory buffers
 set nobackup
 set noswapfile
@@ -100,7 +105,7 @@ set ignorecase
 set smartcase
 nnoremap <silent> <leader>/ :nohlsearch<cr>
 
-" Set up NERDTree
+" Setup NERDTree
 nnoremap <silent> <leader>n :NERDTreeToggle<cr>
 let NERDTreeIgnore=[]
 let NERDTreeIgnore+=['\.pyc$', '__pycache__']
@@ -110,13 +115,13 @@ let NERDTreeIgnore+=['\.class$']
 let NERDTreeQuitOnOpen=1
 let NERDTreeChDirMode=2
 
-" Set up CtrlP
+" Setup CtrlP
 let g:ctrlp_custom_ignore = {
     \ 'dir':  '\v[\/]\.(git|hg|svn)$',
     \ 'file': '\v\.(pyc)$',
     \ }
 
-" Set up Tagbar
+" Setup Tagbar
 nnoremap <silent> <leader>t :TagbarToggle<cr>
 let g:tagbar_autoclose=1
 let g:tagbar_left=1
@@ -149,7 +154,7 @@ let g:tagbar_type_go = {
     \ 'ctagsargs' : '-sort -silent'
 \ }
 
-" Set up YouCompleteMe
+" Setup YouCompleteMe
 let g:ycm_autoclose_preview_window_after_insertion=1
 let g:ycm_key_list_select_completion=[]
 let g:ycm_key_list_previous_completion=[]
@@ -159,15 +164,15 @@ let g:ycm_path_to_python_interpreter = '/usr/bin/python'
 nnoremap <silent> <leader>g :YcmCompleter GoToDefinitionElseDeclaration<cr>
 nnoremap <leader>Y :YcmRestartServer<cr>
 
-" Set up Syntastic
+" Setup Syntastic
 let g:syntastic_enable_signs=0
 
-" Set up ack.vim
+" Setup ack.vim
 let g:ack_autoclose=1
 nnoremap <leader>A :Ack <c-r><c-w><cr>
 nnoremap <leader>a :Ack ""<left>
 
-" Set up vim-tmux-navigator
+" Setup vim-tmux-navigator
 let g:tmux_navigator_no_mappings=1
 nnoremap <silent> <c-h> :TmuxNavigateLeft<cr>
 nnoremap <silent> <c-l> :TmuxNavigateRight<cr>
