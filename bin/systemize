@@ -2,6 +2,7 @@
 
 import os
 import pwd
+import glob
 from os import path
 import argparse
 
@@ -17,11 +18,9 @@ user_script_dirs = ['homedir', 'vim', 'hook']
 def get_scripts(script_dirs):
     scripts = []
     for script_dir in script_dirs:
-        for root, _, filenames in os.walk(path.join(config_dir, script_dir)):
-            for filename in filenames:
-                filename = path.join(root, filename)
-                if os.access(filename, os.X_OK):
-                    scripts.append(filename)
+        for filename in glob.glob(path.join(config_dir, script_dir, '*')):
+            if path.isfile(filename) and os.access(filename, os.X_OK):
+                scripts.append(filename)
     return sorted(scripts, key=lambda filepath: path.basename(filepath))
 
 root_scripts = get_scripts(root_script_dirs)
