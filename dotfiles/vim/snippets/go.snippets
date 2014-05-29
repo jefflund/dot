@@ -57,6 +57,10 @@ snippet conp
 	func New${1:Name}(${2:args}) *$1 {
 		return &$1{${3}}
 	}
+snippet rpc
+	func (${1:recevier}) ${2:name}(${3:arg}, ${4:*ret}) error {
+		${5}
+	}
 # function level helpers
 snippet print
 	fmt.Print("${1}")
