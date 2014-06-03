@@ -134,6 +134,5 @@ alias play-dubstep="mplaylist http://yp.shoutcast.com/sbin/tunein-station.pls?id
 alias play-dance="mplaylist http://yp.shoutcast.com/sbin/tunein-station.pls?id=12786"
 alias play-pop="mplaylist http://yp.shoutcast.com/sbin/tunein-station.pls?id=99182106"
 alias play-oldtime="mplaylist http://yp.shoutcast.com/sbin/tunein-station.pls?id=9476464"
-alias play-nature="mplaylist http://yp.shoutcast.com/sbin/tunein-station.pls?id=96875"
 alias play-office="mplaylist http://yp.shoutcast.com/sbin/tunein-station.pls?id=26002"
 alias play-bbc="mplaylist http://www.bbc.co.uk/radio/listen/live/r1_heaacv2.pls"
