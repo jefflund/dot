@@ -61,13 +61,6 @@ snippet rpc
 	func (${1:recevier}) ${2:name}(${3:arg}, ${4:*ret}) error {
 		${5}
 	}
-# function level helpers
-snippet print
-	fmt.Print("${1}")
-snippet printf
-	fmt.Printf("${1}", ${2})
-snippet println
-	fmt.Println("${1}")
 # conditionals
 snippet if
 	if ${1:cond} {
@@ -94,9 +87,19 @@ snippet sw
 	switch ${1:value} {
 	${2}
 	}
+snippet ty
+	switch ${1:t} := $1.(type) {
+	case ${2:type}:
+		${3}
+	}
 snippet ma
 	switch {
 	${1}
+	}
+snippet sel
+	select {
+	case ${1}:
+		${2}
 	}
 # loops
 snippet wh
@@ -114,6 +117,10 @@ snippet forr
 snippet forkv
 	for ${1:k}, ${2:v} := range ${3:vals} {
 		${4}
+	}
+snippet fork
+	for ${1:k} := range ${2:vals} {
+		${3}
 	}
 snippet forv
 	for _, ${1:v} := range ${2:vals} {
