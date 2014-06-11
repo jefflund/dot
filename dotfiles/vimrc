@@ -189,6 +189,7 @@ nnoremap k gk
 " Other shortcuts
 nnoremap <silent> <leader>s :set invspell<cr>
 nnoremap <silent> <leader>v :set invpaste<cr>
+nnoremap <silent> <leader>C :SyntasticToggleMode<cr>
 nnoremap <silent> <leader>b :windo set scrollbind!<cr>
 nnoremap <silent> <leader>z :sh<cr>
 nnoremap <silent> <leader>R :edit %<cr>
