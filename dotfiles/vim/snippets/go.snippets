@@ -61,6 +61,11 @@ snippet rpc
 	func (${1:recevier}) ${2:name}(${3:arg}, ${4:*ret}) error {
 		${5}
 	}
+# goroutines
+snippet gof
+	go func() {
+		${1:}
+	}()
 # conditionals
 snippet if
 	if ${1:cond} {
