@@ -56,10 +56,10 @@ alias l='ls'
 # ssh aliases
 alias aml='ssh aml.cs.byu.edu'
 alias wizard='ssh aml.cs.byu.edu -t ssh wizard'
+alias sage='ssh aml.cs.byu.edu -t ssh sage'
 alias coherence='ssh aml.cs.byu.edu -t ssh coherence'
 alias marylou='ssh ssh.fsl.byu.edu'
 alias fsl='ssh ssh.fsl.byu.edu'
-alias schizo='ssh sczhio.cs.byu.edu'
 
 # enable programmable completion features
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
