@@ -16,6 +16,8 @@ snippet im
 	import (
 		"${1:fmt}"
 	)
+snippet gh
+	"github.com/jlund3/${1:pkg}"
 snippet consts
 	const (
 		${1:name} = ${2:value}
@@ -93,9 +95,9 @@ snippet sw
 	${2}
 	}
 snippet ty
-	switch ${1:t} := $1.(type) {
-	case ${2:type}:
-		${3}
+	switch ${1:t} := ${2:v}.(type) {
+	case ${3:type}:
+		${4}
 	}
 snippet ma
 	switch {
