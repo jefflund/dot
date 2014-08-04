@@ -86,6 +86,7 @@ screen
 tmux
 transmission-gtk
 xfig
+arandr
 
 # Graphics
 evince
@@ -142,6 +143,7 @@ mencoder
 mpg321
 unrar
 xmms-mp3
+dkms
 
 # Removal
 - abrt
