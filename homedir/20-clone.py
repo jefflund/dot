@@ -21,13 +21,14 @@ repos = {'git@github.com:jlund3/data': 'research/data',
          'git@github.com:jlund3/evilplot': 'research/evilplot',
          'aml.cs.byu.edu:/aml/git/jlund3/notes': 'research/documents',
 
-         'git@github.com:jlund3/ruinrl': 'hobby/ruinrl',
-         'git@github.com:jlund3/pyre': 'hobby/pyre',
-         'git@github.com:jlund3/airl': 'hobby/airl'}
+         'git@github.com:jlund3/ruinrl': 'go/src/github.com/jlund3/ruinrl',
+         'git@github.com:jlund3/pyre': 'hobby/pyre'}
 
 
 links = {'go/src/github.com/jlund3/modelt': 'research/modelt',
-         'go/src/github.com/jlund3/ford': 'research/ford'}
+         'go/src/github.com/jlund3/ford': 'research/ford',
+
+         'go/src/github.com/jlund3/ruinrl': 'hobby/ruinrl'}
 
 for repo, path in repos.iteritems():
     clone(repo, path)
