@@ -12,7 +12,7 @@ uid = pwd_entry[2]
 gid = pwd_entry[3]
 
 config_dir = path.normpath(path.join(path.dirname(__file__), '..'))
-root_script_dirs = ['install']
+root_script_dirs = ['prelim', 'install']
 user_script_dirs = ['homedir', 'vim', 'hook']
 
 def get_scripts(script_dirs):
