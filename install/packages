@@ -26,7 +26,6 @@ pylint
 pypy
 pytest
 python-BeautifulSoup
-python-cjson
 python-devel
 python-docs
 python-docutils
@@ -114,16 +113,13 @@ tex-subfig-doc
 tex-tocbibind
 texlive
 texlive-bbm
-texlive-collection-documentation-english
 texlive-collection-fontsrecommended
 texlive-collection-latexextra
 texlive-collection-mathextra
 texlive-elsarticle
-texlive-release
 
 # Extras
 audacity
-audacity-cli
 dkms
 ffmpeg
 google-chrome-stable
