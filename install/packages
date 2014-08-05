@@ -120,7 +120,6 @@ texlive-elsarticle
 
 # Extras
 audacity
-dkms
 ffmpeg
 google-chrome-stable
 gstreamer-ffmpeg
