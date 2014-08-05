@@ -1,3 +1,4 @@
 #!/usr/bin/bash
 
-sudo git install -t wget git-all
+sudo remove -y vim-minimal
+sudo install -y vim-enhanced wget git-all

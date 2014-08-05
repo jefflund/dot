@@ -122,16 +122,11 @@ texlive-elsarticle
 texlive-release
 
 # Extras
-google-chrome-stable
 audacity
 audacity-cli
+dkms
 ffmpeg
-mplayer
-libdvdcss
-libdvdnav
-libdvdnav
-libdvdread
-libquicktime
+google-chrome-stable
 gstreamer-ffmpeg
 gstreamer-plugins-bad
 gstreamer-plugins-bad-extras
@@ -139,14 +134,21 @@ gstreamer-plugins-base
 gstreamer-plugins-good
 gstreamer-plugins-ugly
 lame
+libdvdcss
+libdvdnav
+libdvdnav
+libdvdread
+libquicktime
 mencoder
 mpg321
+mplayer
+sudo
 unrar
 xmms-mp3
-dkms
 
 # Removal
 - abrt
 - clipit
 - iok
+- vim-minimal
 - xpad
