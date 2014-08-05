@@ -45,5 +45,6 @@ else:
         os.system(script)
     os.setgid(gid)
     os.setuid(uid)
+    os.putenv('HOME', pwd_entry[5])
     for script in user_scripts:
         os.system(script)
