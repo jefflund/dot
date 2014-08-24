@@ -69,6 +69,7 @@ golang-vim
 
 # Tools
 Zim
+asciinema
 ack
 bash-completion
 beep
