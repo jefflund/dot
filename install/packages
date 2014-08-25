@@ -141,6 +141,7 @@ mplayer
 sudo
 unrar
 xmms-mp3
+vlc
 
 # Removal
 - abrt
