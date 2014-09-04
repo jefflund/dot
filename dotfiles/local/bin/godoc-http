@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-
-google-chrome localhost:8080/pkg &
-godoc --http=:8080
