@@ -172,6 +172,7 @@ let g:syntastic_enable_signs=0
 let g:ack_autoclose=1
 nnoremap <leader>A :Ack <c-r><c-w><cr>
 nnoremap <leader>a :Ack ""<left>
+nnoremap <silent> <leader>d :Ack "TODO\|FIXME\|XXX"<cr>
 
 " Setup vim-tmux-navigator
 let g:tmux_navigator_no_mappings=1
