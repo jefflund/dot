@@ -137,7 +137,4 @@ alias play-office="mplaylist http://yp.shoutcast.com/sbin/tunein-station.pls?id=
 alias play-bbc="mplaylist http://www.bbc.co.uk/radio/listen/live/r1_heaacv2.pls"
 
 # Golang Crosscompile
-source ~/.gol
-
-# Golang Crosscompile
 source ~/.crosscompile.bash
