@@ -135,3 +135,9 @@ alias play-dance="mplaylist http://yp.shoutcast.com/sbin/tunein-station.pls?id=1
 alias play-oldtime="mplaylist http://yp.shoutcast.com/sbin/tunein-station.pls?id=9476464"
 alias play-office="mplaylist http://yp.shoutcast.com/sbin/tunein-station.pls?id=26002"
 alias play-bbc="mplaylist http://www.bbc.co.uk/radio/listen/live/r1_heaacv2.pls"
+
+# Golang Crosscompile
+source ~/.gol
+
+# Golang Crosscompile
+source ~/.crosscompile.bash
