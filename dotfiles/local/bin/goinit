@@ -1,0 +1,5 @@
+#!/usr/bin/bash
+
+git init ~/go/src/github.com/jlund3/$1
+ln -s ~/go/src/github.com/jlund3/$1
+
