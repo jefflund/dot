@@ -49,6 +49,7 @@ SDL_ttf
 SDL_ttf-devel
 automake
 boost
+boost-devel
 boost-filesystem
 boost-math
 boost-random
