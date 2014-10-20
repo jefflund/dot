@@ -74,15 +74,6 @@ export EDITOR="vim"
 
 # some nifty functions and aliases
 
-function python {
-    if [ $# = 0 ]
-    then
-        ipython || /usr/bin/python
-    else
-        /usr/bin/python "$@"
-    fi
-}
-
 function cd()
 {
     builtin cd "$@" && ls
