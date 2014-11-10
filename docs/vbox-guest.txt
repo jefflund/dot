@@ -1,0 +1,10 @@
+To install Virtual Box guest additions run the following as root:
+
+KERN_DIR=/usr/src/kernels/<latest version>.fc20.x86_64
+export KERN_DIR
+cd /run/media/jlund3/VBOXADDITIONS_<version>/
+./VBoxLinuxAdditions.run
+reboot
+
+Note that all those commands need to be run in the same session, so use su to
+become root rather than use sudo to gain root privileges.
