@@ -81,6 +81,10 @@ Plugin {
 }
 
 Plugin {
+    type = volumealsa
+}
+
+Plugin {
     type = tray
 }
 
