@@ -12,7 +12,7 @@ uid = pwd_entry[2]
 gid = pwd_entry[3]
 
 config_dir = path.normpath(path.join(path.dirname(__file__), '..'))
-root_script_dirs = ['prelim', 'install']
+root_script_dirs = ['install']
 user_script_dirs = ['homedir', 'vim', 'hook']
 
 def get_scripts(script_dirs):
@@ -27,6 +27,8 @@ root_scripts = get_scripts(root_script_dirs)
 user_scripts = get_scripts(user_script_dirs)
 
 parser = argparse.ArgumentParser(description='Run each setup scripts in order')
+parser.add_argument('hostname', default=None, type=str,
+                    help='Update the machine hostname')
 parser.add_argument('--list', '-l',
                     action='store_true', default=False,
                     help='List the setup scripts rather than run')
@@ -41,10 +43,19 @@ else:
     assert os.getlogin() != 'root', 'Must run as user with sudo'
     assert os.getuid() == 0 and os.getgid() == 0, 'Must use sudo'
 
+    # run root scripts
     for script in root_scripts:
         os.system(script)
+
+    # try update hostname
+    if args.hostname:
+        os.system('hostnamectl set-hostname {}'.format(args.hostname))
+
+    # switch to user
     os.setgid(gid)
     os.setuid(uid)
     os.putenv('HOME', pwd_entry[5])
+
+    # run user scripts
     for script in user_scripts:
         os.system(script)
