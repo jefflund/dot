@@ -1,4 +1,9 @@
-To install Virtual Box guest additions run the following as root:
+Make sure that kernel-devel is installed. Also ensure that you've recently run
+a yum update so that the installed kernel source matches the kernel you are
+actually using.
+
+To install Virtual Box guest additions start by mounting the guest additions CD.
+Then run the following as root:
 
 KERN_DIR=/usr/src/kernels/<latest version>.fc20.x86_64
 export KERN_DIR
