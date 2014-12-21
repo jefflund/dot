@@ -27,7 +27,7 @@ root_scripts = get_scripts(root_script_dirs)
 user_scripts = get_scripts(user_script_dirs)
 
 parser = argparse.ArgumentParser(description='Run each setup scripts in order')
-parser.add_argument('hostname', default=None, type=str,
+parser.add_argument('hostname', default=None, type=str, nargs='?',
                     help='Update the machine hostname')
 parser.add_argument('--list', '-l',
                     action='store_true', default=False,
