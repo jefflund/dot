@@ -26,10 +26,7 @@ repos = {'git@github.com:jlund3/data': 'research/data',
 
          'git@github.com:jlund3/ruinrl': 'go/src/github.com/jlund3/ruinrl',
          'git@github.com:jlund3/goldfish': 'go/src/github.com/jlund3/goldfish',
-         'git@github.com:jlund3/pyre': 'hobby/pyre',
-
-         'git@github.com:nsf/termbox-go': 'go/src/github.com/nfs/termbox-go'}
-
+         'git@github.com:jlund3/pyre': 'hobby/pyre'}
 
 links = {'go/src/github.com/jlund3/modelt': 'research/modelt',
          'go/src/github.com/jlund3/ford': 'research/ford',
