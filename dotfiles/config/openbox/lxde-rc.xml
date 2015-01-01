@@ -346,6 +346,15 @@
         <width>50%</width>
       </action>
     </keybind>
+    <keybind key="W-S-C-Up">
+        <action name="UnmaximizeFull"/>
+        <action name="MoveResizeTo">
+            <x>0</x>
+            <y>0</y>
+            <height>100%</height>
+            <width>100%</width>
+        </action>
+    </keybind>
     <!-- Keybindings for running Run menu from Lxpanel on Home + R-->
     <keybind key="A-F2">
       <action name="Execute">
