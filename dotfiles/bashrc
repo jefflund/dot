@@ -39,6 +39,9 @@ shopt -s globstar
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
+# remove terminal scroll locking
+stty -ixon
+
 # add color to a grep commands
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
