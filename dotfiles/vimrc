@@ -195,8 +195,12 @@ nnoremap <silent> <c-k> :TmuxNavigateUp<cr>
 " Navigation shortcuts
 nnoremap <s-j> <c-f>zz
 nnoremap <s-k> <c-u>zz
+vnoremap <s-j> <c-f>zz
+vnoremap <s-k> <c-u>zz
 nnoremap j gj
 nnoremap k gk
+vnoremap j gj
+vnoremap k gk
 
 " Other shortcuts
 nnoremap <silent> <leader>s :set invspell<cr>
