@@ -19,12 +19,17 @@ def main():
     outdir = os.path.join(basedir, 'stdout')
     errdir = os.path.join(basedir, 'stderr')
 
-    cmd = ['pssh',
-           '-h', args.potatoes,
-           '-o', os.path.join(basedir, 'stdout'),
-           '-e', os.path.join(basedir, 'stderr'),
-           '-t', '0',
-           args.command.replace('##', args.name)]
+    potatoes = []
+    for hostfile in args.potatoes.split(';'):
+        potatoes.append('-h')
+        potatoes.append(hostfile)
+
+    cmd = ['pssh']
+    cmd += potatoes
+    cmd += ['-o', os.path.join(basedir, 'stdout'),
+            '-e', os.path.join(basedir, 'stderr'),
+            '-t', '0',
+            args.command.replace('##', args.name)]
     subprocess.call(cmd)
 
 
