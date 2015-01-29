@@ -2,10 +2,6 @@
 # see /usr/share/doc/bash/examples/startup-files for examples
 
 # Set up some paths
-if [[ ! "$PATH" =~ (^|:)"$HOME/.local/bin"(:|$) ]]
-then
-    export PATH="$PATH":"$HOME/.local/bin"
-fi
 if [[ ! "$PATH" =~ (^|:)"$HOME/go/bin"(:|$) ]]
 then
     export PATH="$PATH":"$HOME/go/bin"
