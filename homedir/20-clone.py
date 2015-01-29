@@ -24,14 +24,16 @@ repos = {'git@github.com:jlund3/data': 'research/data',
          'git@github.com:jlund3/evilplot': 'research/evilplot',
          'git@bitbucket.org:jlund3/research': 'research/documents',
 
-         'git@github.com:jlund3/ruinrl': 'go/src/github.com/jlund3/ruinrl',
+         'git@github.com:jlund3/gorl': 'go/src/github.com/jlund3/gorl',
+         'git@github.com:jlund3/stones': 'go/src/github.com/jlund3/stones',
          'git@github.com:jlund3/goldfish': 'go/src/github.com/jlund3/goldfish',
          'git@github.com:jlund3/pyre': 'hobby/pyre'}
 
 links = {'go/src/github.com/jlund3/modelt': 'research/modelt',
          'go/src/github.com/jlund3/ford': 'research/ford',
 
-         'go/src/github.com/jlund3/ruinrl': 'hobby/ruinrl',
+         'go/src/github.com/jlund3/gorl': 'hobby/gorl',
+         'go/src/github.com/jlund3/stones': 'hobby/stones',
          'go/src/github.com/jlund3/goomba': 'hobby/goomba',
          'go/src/github.com/jlund3/goldfish': 'hobby/goldfish'}
 
