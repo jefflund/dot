@@ -1,3 +1,0 @@
-#!/usr/bin/bash
-
-pcmanfm -w "$(find ~/config/wallpaper -type f | shuf -n1)"
