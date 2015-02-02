@@ -221,3 +221,6 @@ nnoremap <silent> <F5> :redraw!<cr>
 
 " Disable Ex mode
 map Q <nop>
+
+" I don't anticpate ever using Modula-2, but I do use *.md for markdown
+autocmd BufNewFile,BufReadPost *.md set filetype=markdown
