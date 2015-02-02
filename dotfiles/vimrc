@@ -203,6 +203,8 @@ vnoremap j gj
 vnoremap k gk
 
 " Other shortcuts
+nnoremap <silent> <leader>l- :set formatoptions-=t<cr>
+nnoremap <silent> <leader>l+ :set formatoptions+=t<cr>
 nnoremap <silent> <leader>s :set invspell<cr>
 nnoremap <silent> <leader>v :set invpaste<cr>
 nnoremap <silent> <leader>C :SyntasticToggleMode<cr>
