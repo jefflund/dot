@@ -134,6 +134,7 @@ gstreamer-plugins-base
 gstreamer-plugins-good
 gstreamer-plugins-ugly
 lame
+levien-inconsolata-fonts
 libdvdcss
 libdvdnav
 libdvdnav
@@ -144,8 +145,8 @@ mpg321
 mplayer
 sudo
 unrar
-xmms-mp3
 vlc
+xmms-mp3
 
 # Removal
 - abrt
