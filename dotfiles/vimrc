@@ -5,12 +5,12 @@ set nocompatible
 filetype off
 set runtimepath+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-Plugin 'gmarik/Vundle.vim'
 Plugin 'Blackrush/vim-gocode'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'garbas/vim-snipmate'
+Plugin 'gmarik/Vundle.vim'
 Plugin 'jlund3/colorschemer'
 Plugin 'kien/ctrlp.vim'
 Plugin 'majutsushi/tagbar'
