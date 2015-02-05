@@ -231,6 +231,7 @@ vnoremap ; :
 nnoremap + <c-w>+
 nnoremap - <c-w>-
 nnoremap <silent> <F5> :redraw!<cr>
+vnoremap <silent> S :sort<cr>
 
 " Disable Ex mode
 map Q <nop>
