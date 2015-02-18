@@ -1,0 +1,69 @@
+#!/usr/bin/env python
+"""go-play lets you get some of the Go Playground in your terminal"""
+
+import tempfile
+import subprocess
+import time
+import argparse
+import os
+
+TEMPLATE = ('package main\n\n'
+            'import (\n\t"fmt"\n)\n\n'
+            'func main() {\n\tfmt.Println("Hello World!")\n}\n')
+CURSOR = 8
+
+
+def split():
+    """Starts a tmux session with the vim and the output in separate panes"""
+    _, workpath = tempfile.mkstemp('.go')
+    os.environ.pop('TMUX', None)
+    subprocess.call([
+        'tmux', 'new-session',
+        'python ' + __file__ + ' --vim ' + workpath, ';',
+        'split-window', '-v',
+        'python ' + __file__ + ' --out ' + workpath, ';',
+        'last-pane', ';',
+        'set-option', 'status', 'off', ';'])
+
+
+def vim(workpath):
+    """Runs vim on the workfile"""
+    with open(workpath, 'w') as workfile:
+        workfile.write(TEMPLATE)
+    subprocess.call(['vim', '+' + str(CURSOR), workpath])
+    os.remove(workpath)
+
+
+def out(workpath):
+    """Watches the workfile for changes, and displays the output"""
+    oldtime = None
+    while True:
+        try:
+            newtime = os.stat(workpath).st_mtime
+            if oldtime != newtime:
+                os.system('clear')
+                subprocess.Popen('go run ' + workpath, shell=True).wait()
+                oldtime = newtime
+            time.sleep(.1)
+        except OSError:
+            break # workfile was removed
+
+
+def main():
+    """Runs go-play"""
+    parser = argparse.ArgumentParser('go-play')
+    group = parser.add_mutually_exclusive_group()
+    group.add_argument('--vim', type=str, help=argparse.SUPPRESS)
+    group.add_argument('--out', type=str, help=argparse.SUPPRESS)
+    args = parser.parse_args()
+
+    if args.vim:
+        vim(args.vim)
+    elif args.out:
+        out(args.out)
+    else:
+        split()
+
+
+if __name__ == '__main__':
+    main()
