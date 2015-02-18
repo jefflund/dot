@@ -223,6 +223,8 @@ nnoremap <silent> <leader>z :sh<cr>
 nnoremap <silent> <leader>R :edit %<cr>
 vnoremap < <gv
 vnoremap > >gv
+nnoremap > >>
+nnoremap < <<
 nnoremap <silent> <leader>Q :qa<cr>
 nnoremap <silent> <leader>q :q<cr>
 nnoremap <silent> <leader>w :w<cr>
@@ -230,6 +232,7 @@ nnoremap <silent> <leader>W :wa<cr>
 nnoremap ; :
 vnoremap ; :
 nnoremap + <c-w>+
+nnoremap = <c-w>=
 nnoremap - <c-w>-
 nnoremap <silent> <F5> :redraw!<cr>
 vnoremap <silent> S :sort<cr>
