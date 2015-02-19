@@ -4,23 +4,23 @@ snippet #!
 
 #imports
 snippet imp
-	import ${1:module}
+	import ${0:module}
 snippet fimp
-	from ${1:package} import ${2:module}
+	from ${1:package} import ${0:module}
 snippet impa
-	import ${1:module} as ${2:alias}
+	import ${1:module} as ${0:alias}
 snippet fimpa
-	from ${1:package} import ${1:module} as ${3:alias}
+	from ${1:package} import ${1:module} as ${0:alias}
 #functions
 snippet main
 	if __name__ == '__main__':
-		${1:main()}
+		${0:main()}
 snippet def
 	def ${1:fname}(${2}):
 		"""${3:docstring for $1}"""
-		${4:pass}
+		${0:pass}
 snippet lam
-	lambda ${1:x}: ${2:x}
+	lambda ${1:x}: ${0:x}
 #classes
 snippet cls
 	class ${1:Name}(${2:object}):
@@ -28,11 +28,11 @@ snippet cls
 
 		def __init__(self${4}):
 			"""${5:docstring for $1}"""
-			${6:pass}
+			${0:pass}
 snippet prop
 	@property
 	def ${1:prop}(self):
-		${2:return self._$1}
+		${0:return self._$1}
 snippet dunder
 	def __${1:dunder}__(self${2}):
-		${3:pass}
+		${0:pass}

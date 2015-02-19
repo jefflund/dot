@@ -1,6 +1,6 @@
 snippet tmpl
 	bin = ${1:bin}
-	objs = ${2:main}.o
+	objs = ${0:main}.o
 
 	$(bin): $(objs)
 		g++ -Wall -o $@ $(objs)
