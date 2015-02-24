@@ -231,6 +231,7 @@ nnoremap <silent> <leader>w :w<cr>
 nnoremap <silent> <leader>W :wa<cr>
 nnoremap ; :
 vnoremap ; :
+nnoremap ! :!
 nnoremap + <c-w>+
 nnoremap = <c-w>=
 nnoremap - <c-w>-
