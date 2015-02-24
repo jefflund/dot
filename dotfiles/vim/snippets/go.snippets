@@ -22,12 +22,6 @@ snippet imgh
 	import (
 		"github.com/jlund3/${0:pkg}"
 	)
-snippet tb
-	"github.com/nsf/termbox-go"
-snippet imtb
-	import (
-		"github.com/nsf/termbox-go"
-	)
 snippet consts
 	const (
 		${1:name} = ${0:value}
@@ -167,3 +161,19 @@ snippet st
 # data structures
 snippet set
 	map[${0:Key}]struct{}
+# testing
+snippet imtest
+	import (
+		"testing"
+	)
+snippet test
+	func Test${1:Name}(t *testing.T) {
+		${0}
+	}
+# termbox shortcuts
+snippet tb
+	"github.com/nsf/termbox-go"
+snippet imtb
+	import (
+		"github.com/nsf/termbox-go"
+	)
