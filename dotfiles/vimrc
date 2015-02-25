@@ -200,8 +200,6 @@ vnoremap <s-j> <c-f>zz
 vnoremap <s-k> <c-u>zz
 nnoremap j gj
 nnoremap k gk
-vnoremap j gj
-vnoremap k gk
 
 " Simplfy toggling a flag
 function! ToggleFlag(option, flag)
@@ -236,7 +234,6 @@ nnoremap + <c-w>+
 nnoremap = <c-w>=
 nnoremap - <c-w>-
 nnoremap <silent> <F5> :redraw!<cr>
-vnoremap <silent> S :sort<cr>
 
 " Disable Ex mode
 map Q <nop>
