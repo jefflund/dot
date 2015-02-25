@@ -170,6 +170,12 @@ snippet test
 	func Test${1:Name}(t *testing.T) {
 		${0}
 	}
+snippet cases
+	cases := []struct{
+		${1:fields}
+	}{
+		{${2:cases}},
+	}
 # termbox shortcuts
 snippet tb
 	"github.com/nsf/termbox-go"
