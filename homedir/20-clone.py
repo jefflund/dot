@@ -26,6 +26,7 @@ repos = {'git@github.com:jlund3/data': 'research/data',
 
          'git@github.com:jlund3/gorl': 'go/src/github.com/jlund3/gorl',
          'git@github.com:jlund3/stones': 'go/src/github.com/jlund3/stones',
+         'git@github.com:jlund3/stones.wiki': 'go/src/github.com/jlund3/stones.wiki',
          'git@github.com:jlund3/goldfish': 'go/src/github.com/jlund3/goldfish',
          'git@github.com:jlund3/pyre': 'hobby/pyre'}
 
