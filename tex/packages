@@ -1,0 +1,26 @@
+%packages --ignoremissing
+
+tex-biblatex
+tex-biblatex-doc
+tex-biblatex-ieee
+tex-custom-bib
+tex-custom-bib-doc
+tex-epstopdf
+tex-hypernat
+tex-latex
+tex-multirow
+tex-oberdiek
+tex-pdfjam
+tex-pgf-doc
+tex-pgfplots
+tex-pgfplots-doc
+tex-siunitx
+tex-siunitx-doc
+tex-subfig-doc
+tex-tocbibind
+texlive
+texlive-bbm
+texlive-collection-fontsrecommended
+texlive-collection-latexextra
+texlive-collection-mathextra
+texlive-elsarticle

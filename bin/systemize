@@ -23,16 +23,22 @@ def get_scripts(script_dirs):
                 scripts.append(filename)
     return sorted(scripts, key=lambda filepath: path.basename(filepath))
 
-root_scripts = get_scripts(root_script_dirs)
-user_scripts = get_scripts(user_script_dirs)
-
 parser = argparse.ArgumentParser(description='Run each setup scripts in order')
 parser.add_argument('hostname', default=None, type=str, nargs='?',
                     help='Update the machine hostname')
 parser.add_argument('--list', '-l',
                     action='store_true', default=False,
                     help='List the setup scripts rather than run')
+parser.add_argument('--tex', '-t',
+                    action='store_true', default=False,
+                    help='Install texlive packages (very slow)')
 args = parser.parse_args()
+
+if args.tex:
+    root_script_dirs.append('tex')
+
+root_scripts = get_scripts(root_script_dirs)
+user_scripts = get_scripts(user_script_dirs)
 
 if args.list:
     for script in root_scripts:
