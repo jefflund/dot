@@ -41,10 +41,11 @@ root_scripts = get_scripts(root_script_dirs)
 user_scripts = get_scripts(user_script_dirs)
 
 if args.list:
+    pad = max(4, len(login)) + 2
     for script in root_scripts:
-        print '<root>', script
+        print '<root>'.ljust(pad), script
     for script in user_scripts:
-        print '<{}>'.format(login), script
+        print '<{}>'.format(login).ljust(pad), script
 else:
     assert os.getlogin() != 'root', 'Must run as user with sudo'
     assert os.getuid() == 0 and os.getgid() == 0, 'Must use sudo'
