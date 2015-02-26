@@ -174,7 +174,10 @@ snippet cases
 	cases := []struct{
 		${1:fields}
 	}{
-		{${2:cases}},
+		${2:cases}
+	}
+	for _, c := range cases {
+		${0}
 	}
 # termbox shortcuts
 snippet tb
