@@ -25,7 +25,6 @@ tex-xetex
 tex-xetex-def
 texlive
 texlive-bbm
-texlive-collection-documentation-english
 texlive-collection-fontsextra
 texlive-collection-fontsrecommended
 texlive-collection-latexextra
@@ -33,6 +32,5 @@ texlive-collection-mathextra
 texlive-elsarticle
 texlive-euenc
 texlive-latexdiff
-texlive-release
 
 %end
