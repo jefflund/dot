@@ -117,7 +117,6 @@ libquicktime
 mencoder
 mpg321
 mplayer
-sudo
 unrar
 vlc
 xmms-mp3
@@ -126,7 +125,6 @@ xmms-mp3
 - abrt
 - clipit
 - iok
-- vim-minimal
 - xpad
 - osmo
 - sylpheed
