@@ -1,0 +1,7 @@
+#!/usr/bin/bash
+
+sudo yum install -y git wget
+rsync -av aml.cs.byu.edu:/aml/home/jlund3/.ssh $HOME
+git clone git@github.com:jlund3/config $HOME/config
+cd $HOME/config
+sudo bin/systemize
