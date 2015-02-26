@@ -73,8 +73,9 @@ golang-vim
 
 # Tools
 Zim
-asciinema
 ack
+arandr
+asciinema
 bash-completion
 beep
 cowsay
@@ -85,12 +86,12 @@ graphviz
 irssi
 nspluginwrapper
 pssh
+psutil
 rubber
 screen
 tmux
 transmission-gtk
 xfig
-arandr
 
 # Graphics
 evince
@@ -129,3 +130,5 @@ xmms-mp3
 - midori
 - xfig
 - pidgin
+
+%end
