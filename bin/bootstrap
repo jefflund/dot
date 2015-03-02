@@ -8,11 +8,10 @@ echo "Fetching ssh keys from AML (probably requires AML password)"
 sleep .5
 rsync -av aml.cs.byu.edu:/aml/home/jlund3/.ssh $HOME
 
+echo "Fetching twitch key from AML"
+sleep .5
+rsync -av aml.cs.byu.edu:/aml/home/jlund3/.twitch_key $HOME
+
 echo "Cloning config repo"
 sleep .5
 git clone git@github.com:jlund3/config $HOME/config
-
-echo "Runnning systemize"
-sleep .5
-cd $HOME/config
-sudo bin/systemize
