@@ -170,6 +170,15 @@ snippet test
 	func Test${1:Name}(t *testing.T) {
 		${0}
 	}
+snippet example
+	func Example${1:Name}() {
+		${0}
+		// Output:
+	}
+snippet benchmark
+	func Benchmark${1:Name}(b *testing.B) {
+		${0}
+	}
 snippet cases
 	cases := []struct{
 		${1:fields}
