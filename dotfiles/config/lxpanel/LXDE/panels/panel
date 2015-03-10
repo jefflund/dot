@@ -81,6 +81,10 @@ Plugin {
 }
 
 Plugin {
+    type = volumealsa
+}
+
+Plugin {
     type = tray
 }
 
@@ -92,6 +96,21 @@ Plugin {
         BoldFont=0
         IconOnly=0
         CenterText=0
+    }
+}
+
+Plugin {
+    type = xkb
+    Config {
+        DisplayType=0
+        PerWinLayout=0
+        NoResetOpt=0
+        KeepSysLayouts=0
+        Model=pc105
+        LayoutsList=us,br
+        VariantsList=,
+        ToggleOpt=shift_caps_toggle
+        FlagSize=1
     }
 }
 
