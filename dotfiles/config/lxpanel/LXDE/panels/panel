@@ -85,6 +85,10 @@ Plugin {
 }
 
 Plugin {
+    type = volumealsa
+}
+
+Plugin {
     type = dclock
     Config {
         ClockFmt=%I:%M
