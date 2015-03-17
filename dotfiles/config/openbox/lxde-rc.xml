@@ -347,6 +347,9 @@
     <keybind key="W-S-C-Up">
         <action name="Maximize"/>
     </keybind>
+    <keybind key="W-S-C-Down">
+        <action name="Unmaximize"/>
+    </keybind>
     <!-- Keybindings for from Lxpanel run dialog-->
     <keybind key="A-F2">
       <action name="Execute">
