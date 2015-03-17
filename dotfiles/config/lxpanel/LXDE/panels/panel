@@ -89,17 +89,6 @@ Plugin {
 }
 
 Plugin {
-    type = dclock
-    Config {
-        ClockFmt=%I:%M
-        TooltipFmt=%A %x
-        BoldFont=0
-        IconOnly=0
-        CenterText=0
-    }
-}
-
-Plugin {
     type = xkb
     Config {
         DisplayType=0
@@ -111,6 +100,17 @@ Plugin {
         VariantsList=,
         ToggleOpt=shift_caps_toggle
         FlagSize=1
+    }
+}
+
+Plugin {
+    type = dclock
+    Config {
+        ClockFmt=%I:%M
+        TooltipFmt=%A %x
+        BoldFont=0
+        IconOnly=0
+        CenterText=0
     }
 }
 
