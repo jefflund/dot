@@ -345,10 +345,10 @@
       </action>
     </keybind>
     <keybind key="W-S-C-Up">
-        <action name="Maximize"/>
+      <action name="Maximize"/>
     </keybind>
     <keybind key="W-S-C-Down">
-        <action name="Unmaximize"/>
+      <action name="Unmaximize"/>
     </keybind>
     <!-- Keybindings for from Lxpanel run dialog-->
     <keybind key="A-F2">
