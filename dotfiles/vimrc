@@ -1,7 +1,7 @@
 " First, be iMproved
 set nocompatible
 
-" Figure out where we are (use `vim --cmd 'no google'` to skip)
+" Figure out where we are (use `vim --cmd 'let no_google=1'` to skip)
 if !exists('no_google') || !no_google
   let at_google = system('hostname') =~ 'google.com'
 else
