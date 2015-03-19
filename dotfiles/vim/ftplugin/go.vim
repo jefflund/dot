@@ -7,4 +7,6 @@ nnoremap <buffer> <localleader>i :GoInstall %<cr>
 nnoremap <buffer> <localleader>t :!go test<cr>
 nnoremap <buffer> <localleader>T :!go test ./...<cr>
 
-autocmd BufWritePre <buffer> Fmt
+if !at_google
+  autocmd BufWritePre <buffer> Fmt
+endif
