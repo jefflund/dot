@@ -124,3 +124,8 @@ alias ipssh="pssh -x '-o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/nul
 
 # Golang Crosscompile
 source ~/.crosscompile.bash
+
+# Location specific stuff
+if [ -f ~/.bashrc_google ]; then
+  . ~/.bashrc_google
+fi
