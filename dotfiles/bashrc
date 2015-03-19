@@ -122,16 +122,5 @@ function brightness()
 alias issh="ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o GlobalKnownHostsFile=/dev/null"
 alias ipssh="pssh -x '-o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o GlobalKnownHostsFile=/dev/null'"
 
-# Internet radio aliases
-alias mplaylist="mplayer -playlist"
-alias play-sertanejo="mplaylist http://yp.shoutcast.com/sbin/tunein-station.pls?id=25114"
-alias play-classical="mplaylist http://yp.shoutcast.com/sbin/tunein-station.pls?id=99187626"
-alias play-cathedral="mplaylist http://yp.shoutcast.com/sbin/tunein-station.pls?id=13362"
-alias play-dubstep="mplaylist http://yp.shoutcast.com/sbin/tunein-station.pls?id=338128"
-alias play-dance="mplaylist http://yp.shoutcast.com/sbin/tunein-station.pls?id=12786"
-alias play-oldtime="mplaylist http://yp.shoutcast.com/sbin/tunein-station.pls?id=9476464"
-alias play-office="mplaylist http://yp.shoutcast.com/sbin/tunein-station.pls?id=26002"
-alias play-bbc="mplaylist http://www.bbc.co.uk/radio/listen/live/r1_heaacv2.pls"
-
 # Golang Crosscompile
 source ~/.crosscompile.bash
