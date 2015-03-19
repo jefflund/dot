@@ -1,8 +1,12 @@
 " First, be iMproved
 set nocompatible
 
-" Figure out where we are
-let at_google = system('hostname') =~ 'google.com'
+" Figure out where we are (use `vim --cmd 'no google'` to skip)
+if !exists('no_google') || !no_google
+  let at_google = system('hostname') =~ 'google.com'
+else
+  let at_google = 0
+endif
 
 " Plugins load faster with this off
 filetype off
