@@ -64,6 +64,9 @@ alias coherence='ssh aml.cs.byu.edu -t ssh coherence'
 alias marylou='ssh ssh.fsl.byu.edu'
 alias fsl='ssh ssh.fsl.byu.edu'
 
+# vim aliases
+alias vimnogoogle="vim --cmd 'let no_google=1'"
+
 # enable programmable completion features
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
