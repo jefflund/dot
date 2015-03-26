@@ -127,7 +127,7 @@ alias ipssh="pssh -x '-o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/nul
 source ~/.crosscompile.bash
 
 # Location specific stuff
-alias vimnogoogle="vim --cmd 'let no_google=1'"
+alias vimnogoogle="vim --cmd 'let at_google=0'"
 
 if [ -f ~/.bashrc_google ]; then
   . ~/.bashrc_google
