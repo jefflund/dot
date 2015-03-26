@@ -49,7 +49,11 @@ alias egrep='egrep --color=auto'
 alias rgrep='rgrep --color=auto'
 
 # some ls aliases
-alias ls='ls --color=auto'
+if [ "$(uname)" == "Darwin" ]; then
+  alias ls='ls -G'
+else
+  alias ls='ls --color=auto'
+fi
 alias lal='ls -al'
 alias lla='ls -la'
 alias ll='ls -l'
