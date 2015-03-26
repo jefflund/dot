@@ -13,6 +13,10 @@ fi
 export GOPATH=$HOME/go
 export GOBIN=$HOME/go/bin
 
+if [ "$(uname)" == "Darwin" ]; then
+    export PATH="$HOME/homebrew/bin":"$PATH"
+fi
+
 # If not running interactively, don't do anything else
 [ -z "$PS1" ] && return
 PS1="\u@\h:\W$ \[\e]2;\u@\H \w\a"
@@ -34,7 +38,9 @@ export HISTIGNORE="&:ls:ll:la:cd:cd ..:clear:vim:git st:git wipe"
 shopt -s checkwinsize
 
 # the pattern "**" used in pathnames will match all files in subdirectories
-shopt -s globstar
+if [ "$(uname)" != "Darwin" ]; then
+    shopt -s globstar
+fi
 
 # make less more friendly for non-text input files
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
