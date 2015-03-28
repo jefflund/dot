@@ -1,5 +1,4 @@
-# ~/.bashrc: executed by bash(1) for non-login shells.
-# see /usr/share/doc/bash/examples/startup-files for examples
+# ~/.bashrc: executed by bash for non-login shells.
 
 # Set up some paths
 if [[ ! "$PATH" =~ (^|:)"$HOME/.local/bin"(:|$) ]]
@@ -87,45 +86,20 @@ fi
 # All other cli editors suck
 export EDITOR="vim"
 
-# some nifty functions and aliases
-
+# I always seem to ls right after a cd...
 function cd()
 {
     builtin cd "$@" && ls
 }
 
-function lc()
-{
-    find | grep \\.$1$ | xargs wc -l | sort -b -g
-}
-
-function clean()
-{
-    if [ $# -eq 0 ]; then
-        echo "Must supply extension"
-    else
-        for file in $(find | grep \\.$1$); do
-            echo "Removing $file"
-            rm $file
-        done
-    fi
-}
-
-function repeat()
-{
-    while true; do
-        $@
-    done
-}
-
-alias untar='tar -xf'
-alias todo='grep -nr "TODO\|FIXME\|XXX" *'
-alias browse='pcmanfm .'
-
+# Manaully adjust netbook backlight
 function brightness()
 {
     sudo bash -c "echo $1 > /sys/class/backlight/acpi_video0/brightness"
 }
+
+# I can never remember these flags...
+alias untar='tar -xf'
 
 # Insecure ssh aliases
 alias issh="ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o GlobalKnownHostsFile=/dev/null"
@@ -135,8 +109,6 @@ alias ipssh="pssh -x '-o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/nul
 source ~/.crosscompile.bash
 
 # Location specific stuff
-alias vimnogoogle="vim --cmd 'let at_google=0'"
-
 if [ -f ~/.bashrc_google ]; then
   . ~/.bashrc_google
 fi
