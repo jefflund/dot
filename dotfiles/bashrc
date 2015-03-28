@@ -12,7 +12,7 @@ fi
 export GOPATH=$HOME/go
 export GOBIN=$HOME/go/bin
 
-# Optionally add homebrew bin to path
+# Add homebrew bin to path when on a Mac
 # Note that it goes first, so that brew stuff overrides system stuff
 if [ "$(uname)" == "Darwin" ]; then
     export PATH="$HOME/homebrew/bin":"$PATH"
