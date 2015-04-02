@@ -37,7 +37,6 @@ Plugin 'scrooloose/syntastic'
 Plugin 'tomtom/tlib_vim'
 
 " Experimental movement plugins
-Plugin '0x0dea/vim-molasses'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'tpope/vim-repeat'
 
