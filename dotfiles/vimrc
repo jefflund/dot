@@ -224,20 +224,16 @@ nnoremap <silent> <c-k> :TmuxNavigateUp<cr>
 " Setup vim-easymotion
 let g:EasyMotion_do_mapping=0
 let g:EasyMotion_smartcase=1
-map f <Plug>(easymotion-f)
-map F <Plug>(easymotion-F)
-map t <Plug>(easymotion-t)
-map T <Plug>(easymotion-T)
-map w <Plug>(easymotion-w)
-map W <Plug>(easymotion-W)
-map b <Plug>(easymotion-b)
-map B <Plug>(easymotion-B)
-map e <Plug>(easymotion-e)
-map E <Plug>(easymotion-E)
-map j <Plug>(easymotion-j)
-map J <Plug>(easymotion-J)
-map b <Plug>(easymotion-k)
-map K <Plug>(easymotion-K)
+map ,f <Plug>(easymotion-f)
+map ,F <Plug>(easymotion-F)
+map ,t <Plug>(easymotion-t)
+map ,T <Plug>(easymotion-T)
+map ,w <Plug>(easymotion-w)
+map ,W <Plug>(easymotion-W)
+map ,b <Plug>(easymotion-b)
+map ,B <Plug>(easymotion-B)
+map ,e <Plug>(easymotion-e)
+map ,E <Plug>(easymotion-E)
 
 " Navigation shortcuts
 nnoremap <s-j> <c-f>zz
