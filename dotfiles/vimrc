@@ -36,6 +36,10 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
 Plugin 'tomtom/tlib_vim'
 
+" Experimental movement plugins
+Plugin '0x0dea/vim-molasses'
+Plugin 'Lokaltog/vim-easymotion'
+
 " Done loading plugins
 call vundle#end()
 
