@@ -23,6 +23,7 @@ else
 endif
 
 " Load remaining plugins
+Plugin 'Lokaltog/vim-easymotion'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'garbas/vim-snipmate'
@@ -35,9 +36,6 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
 Plugin 'tomtom/tlib_vim'
-
-" Experimental movement plugins
-Plugin 'Lokaltog/vim-easymotion'
 Plugin 'tpope/vim-repeat'
 
 " Done loading plugins
