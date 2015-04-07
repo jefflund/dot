@@ -1,9 +1,0 @@
-[NotebookList]
-Default=
-1=~/research/documents
-
-[Notebook 1]
-uri=~/research/documents
-name=Documents
-interwiki=None
-icon=None

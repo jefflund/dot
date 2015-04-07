@@ -72,7 +72,6 @@ golang-vet
 golang-vim
 
 # Tools
-Zim
 ack
 arandr
 asciinema
