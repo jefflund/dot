@@ -1,2 +1,14 @@
+Host aml
+    User jlund3
+    HostName aml.cs.byu
+
+Host fsl
+    User jlund3
+    HostName ssh.fsl.byu.edu
+
 Host *potato
-ForwardX11 no
+    ForwardX11 no
+
+Host github
+    HostName github.com
+    IdentityFile ~/.ssh/github
