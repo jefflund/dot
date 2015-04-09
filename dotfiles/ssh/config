@@ -1,6 +1,6 @@
 Host aml
     User jlund3
-    HostName aml.cs.byu
+    HostName aml.cs.byu.edu
 
 Host fsl
     User jlund3
