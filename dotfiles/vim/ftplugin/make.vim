@@ -4,4 +4,3 @@ nnoremap <buffer> <localleader>c :!make clean<cr>
 nnoremap <buffer> <localleader>r :!make run<cr>
 nnoremap <buffer> <localleader>t :!make test<cr>
 nnoremap <buffer> <localleader>v :!make memcheck<cr>
-

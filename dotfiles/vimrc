@@ -1,7 +1,7 @@
 " First, be iMproved
 set nocompatible
 
-" Figure out where we are (use `vim --cmd 'let at_google=0'` to skip)
+" Figure out where we are (run vim with `vim --cmd 'let at_google=0'` to skip)
 if !exists('at_google')
   let at_google = system('hostname') =~ 'google.com' && system('uname') != 'Darwin'
 endif
@@ -13,7 +13,7 @@ filetype off
 set runtimepath+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-" Load location specifc plugins
+" Load location specific plugins
 if at_google
   source ~/.vimrc_google
 else
