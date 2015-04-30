@@ -12,3 +12,7 @@ Host *potato
 Host github
     HostName github.com
     IdentityFile ~/.ssh/github
+
+Host bitbucket
+    HostName bitbucket.com
+    IdentityFile ~/.ssh/bitbucket
