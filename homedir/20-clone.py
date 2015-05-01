@@ -28,7 +28,9 @@ repos = {'git@github.com:jlund3/data': 'research/data',
          'git@github.com:jlund3/stones': 'go/src/github.com/jlund3/stones',
          'git@github.com:jlund3/stones.wiki': 'go/src/github.com/jlund3/stones.wiki',
          'git@github.com:jlund3/goldfish': 'go/src/github.com/jlund3/goldfish',
-         'git@github.com:jlund3/pyre': 'hobby/pyre'}
+         'git@github.com:jlund3/pyre': 'hobby/pyre',
+
+         'git@github.com:jlund3/goplay': 'tools/goplay'}
 
 links = {'go/src/github.com/jlund3/modelt': 'research/modelt',
          'go/src/github.com/jlund3/ford': 'research/ford',
@@ -36,7 +38,9 @@ links = {'go/src/github.com/jlund3/modelt': 'research/modelt',
          'go/src/github.com/jlund3/gorl': 'hobby/gorl',
          'go/src/github.com/jlund3/stones': 'hobby/stones',
          'go/src/github.com/jlund3/goomba': 'hobby/goomba',
-         'go/src/github.com/jlund3/goldfish': 'hobby/goldfish'}
+         'go/src/github.com/jlund3/goldfish': 'hobby/goldfish',
+
+         'tools/goplay/goplay', '.local/bin/goplay'}
 
 for repo, path in repos.iteritems():
     clone(repo, path)
