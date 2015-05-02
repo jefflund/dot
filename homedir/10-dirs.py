@@ -4,6 +4,7 @@ import os
 import shutil
 
 home = os.environ['HOME']
+
 rm_dirs = ['Documents',
            'Downloads',
            'Desktop',
@@ -20,12 +21,15 @@ mk_dirs = ['desktop',
            'tools']
 
 for rm_dir in rm_dirs:
-	print 'Removing', rm_dir
-	shutil.rmtree(os.path.join(home, rm_dir), True)
+    try:
+        shutil.rmtree(os.path.join(home, rm_dir))
+        print 'Removing', rm_dir
+    except OSError:
+        pass
 
 for mk_dir in mk_dirs:
-    print 'Adding', mk_dir
     try:
         os.makedirs(os.path.join(home, mk_dir))
+        print 'Made', mk_dir
     except OSError:
         pass

@@ -4,6 +4,9 @@ import platform
 import os
 import shutil
 
+if platform.system() == 'Darwin':
+    exit()
+
 srcdir = os.path.dirname(__file__)
 
 shutil.copy(os.path.join(srcdir, 'lib/BearLibTerminal.h'), '/usr/include/BearLibTerminal.h')

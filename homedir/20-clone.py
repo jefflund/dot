@@ -2,10 +2,12 @@
 
 import glob
 import os
-from os import path
 
 def clone(repo, path):
     path = os.path.join(os.environ['HOME'], path)
+    if os.path.exists(path):
+        return
+
     try:
         os.makedirs(path)
         os.system('git clone {} {}'.format(repo, path))
@@ -15,13 +17,15 @@ def clone(repo, path):
 def link(src, dst):
     src = os.path.join(os.environ['HOME'], src)
     dst = os.path.join(os.environ['HOME'], dst)
-    if not path.exists(dst):
+    if not os.path.exists(dst):
         os.system('ln -s {} {}'.format(src, dst))
+        print 'linking', src, dst
 
 def link_tools(src):
-    for tool in glob.glob(path.join(os.environ['HOME'], src, '*')):
-        if path.isfile(tool) and os.access(tool, os.X_OK):
-            link(tool, path.join('.local/bin', path.basename(tool)))
+    for tool in glob.glob(os.path.join(os.environ['HOME'], src, '*')):
+        dst = os.path.join('.local/bin', os.path.basename(tool))
+        if not os.path.exists(dst) and os.access(tool, os.X_OK):
+            link(tool, dst)
 
 repos = {'git@github.com:jlund3/data': 'research/data',
          'git@github.com:jlund3/modelt': 'go/src/github.com/jlund3/modelt',
@@ -36,7 +40,8 @@ repos = {'git@github.com:jlund3/data': 'research/data',
          'git@github.com:jlund3/goldfish': 'go/src/github.com/jlund3/goldfish',
          'git@github.com:jlund3/pyre': 'hobby/pyre',
 
-         'git@github.com:jlund3/goplay': 'tools/goplay'}
+         'git@github.com:jlund3/goplay': 'tools/goplay',
+         'git@github.com:jlund3/git-horror': 'tools/git-horror'}
 
 links = {'go/src/github.com/jlund3/modelt': 'research/modelt',
          'go/src/github.com/jlund3/ford': 'research/ford',

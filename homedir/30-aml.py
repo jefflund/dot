@@ -15,7 +15,6 @@ links = [('/aml/scratch/jlund3/data', 'data'),
          ('/aml/git/jlund3', 'git'),
          ('/local/jlund3', 'local')]
 
-
 if 'aml.cs.byu.edu' in socket.gethostname():
     for target, name in links:
         name = path.join(home, name)
