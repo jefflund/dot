@@ -32,9 +32,14 @@ parser.add_argument('--list', '-l',
 parser.add_argument('--tex', '-t',
                     action='store_true', default=False,
                     help='Install texlive packages (very slow)')
+parser.add_argument('--user-only', '-u',
+                    action='store_true', default=False,
+                    help='Only run user-level scripts')
 args = parser.parse_args()
 
-if args.tex:
+if args.user_only:
+    root_script_dirs = []
+elif args.tex:
     root_script_dirs.append('tex')
 
 root_scripts = get_scripts(root_script_dirs)
@@ -47,21 +52,22 @@ if args.list:
     for script in user_scripts:
         print '<{}>'.format(login).ljust(pad), script
 else:
-    assert os.getlogin() != 'root', 'Must run as user with sudo'
-    assert os.getuid() == 0 and os.getgid() == 0, 'Must use sudo'
+    if root_scripts:
+        assert os.getlogin() != 'root', 'Must run as user with sudo'
+        assert os.getuid() == 0 and os.getgid() == 0, 'Must use sudo'
 
-    # run root scripts
-    for script in root_scripts:
-        os.system(script)
+        # run root scripts
+        for script in root_scripts:
+            os.system(script)
 
-    # try update hostname
-    if args.hostname:
-        os.system('hostnamectl set-hostname {}'.format(args.hostname))
+        # try update hostname
+        if args.hostname:
+            os.system('hostnamectl set-hostname {}'.format(args.hostname))
 
-    # switch to user
-    os.setgid(gid)
-    os.setuid(uid)
-    os.putenv('HOME', pwd_entry[5])
+        # switch to user
+        os.setgid(gid)
+        os.setuid(uid)
+        os.putenv('HOME', pwd_entry[5])
 
     # run user scripts
     for script in user_scripts:
