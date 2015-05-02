@@ -4,8 +4,10 @@ if [ -f ~/.bashrc ]; then
 fi
 
 if [ -z "$SSH_AUTH_SOCK" ]; then
+{
     eval `ssh-agent -s`
     ssh-add
     ssh-add $HOME/.ssh/github
     ssh-add $HOME/.ssh/bitbucket
+} > /dev/null
 fi
