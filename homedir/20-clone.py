@@ -21,12 +21,6 @@ def link(src, dst):
         os.system('ln -s {} {}'.format(src, dst))
         print 'linking', src, dst
 
-def link_tools(src):
-    for tool in glob.glob(os.path.join(os.environ['HOME'], src, '*')):
-        dst = os.path.join('.local/bin', os.path.basename(tool))
-        if not os.path.exists(dst) and os.access(tool, os.X_OK):
-            link(tool, dst)
-
 repos = {'git@github.com:jlund3/modelt': 'go/src/github.com/jlund3/modelt',
          'git@github.com:jlund3/ford': 'go/src/github.com/jlund3/ford',
          'git@github.com:jlund3/goomba': 'go/src/github.com/jlund3/goomba',
@@ -50,12 +44,7 @@ links = {'go/src/github.com/jlund3/modelt': 'research/modelt',
          'go/src/github.com/jlund3/goomba': 'hobby/goomba',
          'go/src/github.com/jlund3/goldfish': 'hobby/goldfish'}
 
-tools = ['tools/goplay',
-         'tools/git-horror']
-
 for repo, path in repos.iteritems():
     clone(repo, path)
 for src, dst in links.iteritems():
     link(src, dst)
-for tool in tools:
-    link_tools(tool)

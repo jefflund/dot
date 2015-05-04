@@ -39,3 +39,15 @@ for root, _, filenames in os.walk(dotfiles):
 for perm, filename in perms:
     filename = path.join(dotfiles, filename)
     os.system('chmod {} {}'.format(perm, filename))
+
+def link_tools(src):
+    for tool in glob.glob(os.path.join(os.environ['HOME'], src, '*')):
+        dst = os.path.join('.local/bin', os.path.basename(tool))
+        if not os.path.exists(dst) and os.access(tool, os.X_OK):
+            link(tool, dst)
+
+tools = ['tools/goplay',
+         'tools/git-horror']
+
+for tool in tools:
+  link_tools(tool)
