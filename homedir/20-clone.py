@@ -25,7 +25,9 @@ repos = {'git@github.com:jlund3/modelt': 'go/src/github.com/jlund3/modelt',
          'git@github.com:jlund3/ford': 'go/src/github.com/jlund3/ford',
          'git@github.com:jlund3/goomba': 'go/src/github.com/jlund3/goomba',
          'git@github.com:jlund3/evilplot': 'research/evilplot',
-         'git@bitbucket.org:jlund3/research': 'research/documents',
+         'git@bitbucket.org:jlund3/research': 'research/writing',
+
+         'git@github.com:ezubaric/pinafore-papers': 'research/pinafore',
 
          'git@github.com:jlund3/gorl': 'go/src/github.com/jlund3/gorl',
          'git@github.com:jlund3/stones': 'go/src/github.com/jlund3/stones',
