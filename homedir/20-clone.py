@@ -27,8 +27,7 @@ def link_tools(src):
         if not os.path.exists(dst) and os.access(tool, os.X_OK):
             link(tool, dst)
 
-repos = {'git@github.com:jlund3/data': 'research/data', # TODO dont do this aml
-         'git@github.com:jlund3/modelt': 'go/src/github.com/jlund3/modelt',
+repos = {'git@github.com:jlund3/modelt': 'go/src/github.com/jlund3/modelt',
          'git@github.com:jlund3/ford': 'go/src/github.com/jlund3/ford',
          'git@github.com:jlund3/goomba': 'go/src/github.com/jlund3/goomba',
          'git@github.com:jlund3/evilplot': 'research/evilplot',

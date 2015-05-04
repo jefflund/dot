@@ -21,3 +21,13 @@ if 'aml.cs.byu.edu' in socket.gethostname():
         if not link_exists(target, name):
             print 'Linking', path.relpath(name)
             os.symlink(target, name)
+else:
+    # TODO remove code duplication between this and 20-clone
+    path = os.path.join(os.environ['HOME'], 'research/data')
+    if not os.path.exists(path):
+        try:
+            os.makedirs(path)
+            os.system('git clone git@github.com:jlund3/data',
+                       os.path.join(os.environ['HOME'], 'research/data'))
+        except OSError:
+            pass
