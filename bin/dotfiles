@@ -2,6 +2,7 @@
 
 import os
 from os import path
+import glob
 
 home = os.environ['HOME']
 dotfiles = path.abspath(path.join(home, 'config', 'dotfiles'))
@@ -39,6 +40,14 @@ for root, _, filenames in os.walk(dotfiles):
 for perm, filename in perms:
     filename = path.join(dotfiles, filename)
     os.system('chmod {} {}'.format(perm, filename))
+
+# TODO yet another code duplication of link - this needs to be a lib
+def link(src, dst):
+    src = os.path.join(os.environ['HOME'], src)
+    dst = os.path.join(os.environ['HOME'], dst)
+    if not os.path.exists(dst):
+        os.system('ln -s {} {}'.format(src, dst))
+        print 'linking', src, dst
 
 def link_tools(src):
     for tool in glob.glob(os.path.join(os.environ['HOME'], src, '*')):
