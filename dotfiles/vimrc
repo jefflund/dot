@@ -149,6 +149,7 @@ let g:ctrlp_custom_ignore = {
     \ 'dir':  '\v[\/]\.(git|hg|svn)$',
     \ 'file': '\v\.(pyc)$',
     \ }
+let g:ctrlp_working_path_mode = 'rc'
 
 " Setup Tagbar
 nnoremap <silent> <leader>t :TagbarToggle<cr>
