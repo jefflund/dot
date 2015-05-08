@@ -2,28 +2,14 @@
 
 import os
 import glob
-from os import path
+import imp
 
 home = os.environ['HOME']
-git_hook = path.abspath(path.join(home, 'config', '.git', 'hooks'))
-src_hook = path.abspath(path.join(path.dirname(__file__), 'scripts', '*'))
+lib = imp.load_source('lib', os.path.join(home, 'config', 'bin', 'common.py'))
 
-# TODO Refactor duplication between this and 10-linkdot.py
-
-def link_exists(src, dst):
-    return (path.exists(dst) and
-            path.islink(dst) and
-            path.samefile(src, dst))
-
-def ensure_removed(filename):
-    try:
-        os.remove(filename)
-    except OSError:
-        pass
+git_hook = os.path.join(home, 'config', '.git', 'hooks')
+src_hook = os.path.join(home, 'config', 'hook', 'scripts', '*')
 
 for src in glob.glob(src_hook):
-    dst = path.join(git_hook, path.split(src)[-1])
-    if not link_exists(src, dst):
-        print 'Linking', path.relpath(dst)
-        ensure_removed(dst)
-        os.symlink(src, dst)
+    dst = os.path.join(git_hook, os.path.basename(src))
+    lib.ensure_link(src, dst)
