@@ -1,62 +1,28 @@
 #!/usr/bin/env python
 
 import os
-from os import path
+import imp
 import glob
 
 home = os.environ['HOME']
-dotfiles = path.abspath(path.join(home, 'config', 'dotfiles'))
-perms = [('644', 'ssh/config')]
+lib = imp.load_source('lib', os.path.join(home, 'config', 'bin', 'common.py'))
 
-def ensure_path(filename):
-    try:
-        os.makedirs(path.dirname(filename))
-    except os.error:
-        pass
-
-def ensure_removed(filename):
-    try:
-        os.remove(filename)
-    except OSError:
-        pass
-
-def link_exists(src, dst):
-    return (path.exists(dst) and
-            path.islink(dst) and
-            path.samefile(src, dst))
-
+dotfiles = os.path.abspath(os.path.join(home, 'config', 'dotfiles'))
 for root, _, filenames in os.walk(dotfiles):
     for filename in filenames:
-        filename = path.join(root, filename)
-        src = path.abspath(filename)
-        dst = path.join(home, src.replace(dotfiles + '/', '.'))
+        filename = os.path.join(root, filename)
+        src = os.path.abspath(filename)
+        dst = os.path.join(home, src.replace(dotfiles + '/', '.'))
+        lib.ensure_link(src, dst)
 
-        if not link_exists(src, dst):
-            print 'Linking', path.relpath(dst)
-            ensure_path(dst)
-            ensure_removed(dst)
-            os.symlink(src, dst)
-
-for perm, filename in perms:
-    filename = path.join(dotfiles, filename)
-    os.system('chmod {} {}'.format(perm, filename))
-
-# TODO yet another code duplication of link - this needs to be a lib
-def link(src, dst):
-    src = os.path.join(os.environ['HOME'], src)
-    dst = os.path.join(os.environ['HOME'], dst)
-    if not os.path.exists(dst):
-        os.system('ln -s {} {}'.format(src, dst))
-        print 'linking', src, dst
-
-def link_tools(src):
-    for tool in glob.glob(os.path.join(os.environ['HOME'], src, '*')):
-        dst = os.path.join('.local/bin', os.path.basename(tool))
-        if not os.path.exists(dst) and os.access(tool, os.X_OK):
-            link(tool, dst)
+perms = [('ssh/config', 0664)]
+for filename, mode in perms:
+    os.chmod(os.path.join(dotfiles, filename), mode)
 
 tools = ['tools/goplay',
          'tools/git-horror']
-
 for tool in tools:
-  link_tools(tool)
+    for src in glob.glob(os.path.join(home, tool, '*')):
+        dst = os.path.join(home, '.local', 'bin', os.path.basename(src))
+        if os.access(src, os.X_OK):
+            lib.ensure_link(src, dst)
