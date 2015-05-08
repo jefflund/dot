@@ -15,7 +15,7 @@ for root, _, filenames in os.walk(dotfiles):
         dst = os.path.join(home, src.replace(dotfiles + '/', '.'))
         lib.ensure_link(src, dst)
 
-perms = [('ssh/config', 0664)]
+perms = [('ssh/config', 0644)]
 for filename, mode in perms:
     os.chmod(os.path.join(dotfiles, filename), mode)
 
