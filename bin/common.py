@@ -11,7 +11,10 @@ def ensure_filedir(filename):
 
 def ensure_removed(path):
     try:
-        os.remove(path)
+        if os.path.isdir(path):
+            os.rmdir(path)
+        else:
+            os.remove(path)
     except OSError:
         pass
 
@@ -24,7 +27,14 @@ def link_exists(src, dst):
 
 def ensure_link(src, dst):
     if not link_exists(src, dst):
-        print 'linking', dst
+        print 'Linking', dst
         ensure_filedir(dst)
         ensure_removed(dst)
         os.symlink(src, dst)
+
+
+def clone(repo, path):
+    path = os.path.join(home, path)
+    if not os.path.exists(path):
+        ensure_filedir(path)
+        os.system('git clone {} {}'.format(repo, path))
