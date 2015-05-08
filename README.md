@@ -6,7 +6,7 @@ including all of my dotfiles for vim, lxde, tmux, and bash,
 and setup scripts for Fedora.
 
 Before using these scripts, understand that the config repo
-*must* live in $HOME/config. Any other location will cause
+*must* live in ```$HOME/config```. Any other location will cause
 the install scripts to fail.
 
 To run the full setup, run ```sudo ./bin/systemize```. This
