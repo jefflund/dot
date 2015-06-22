@@ -12,12 +12,6 @@ fi
 export GOPATH=$HOME/go
 export GOBIN=$HOME/go/bin
 
-# Add homebrew bin to path when on a Mac
-# Note that it goes first, so that brew stuff overrides system stuff
-if [ "$(uname)" == "Darwin" ]; then
-    export PATH="$HOME/homebrew/bin":"$PATH"
-fi
-
 # If not running interactively, don't do anything else
 [ -z "$PS1" ] && return
 PS1="\u@\h:\W$ \[\e]2;\u@\H \w\a"
@@ -99,8 +93,3 @@ alias ipssh="pssh -x '-o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/nul
 
 # Golang Crosscompile
 source ~/.crosscompile.bash
-
-# Location specific stuff
-if [ -f ~/.bashrc_google ]; then
-  . ~/.bashrc_google
-fi

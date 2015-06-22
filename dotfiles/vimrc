@@ -1,11 +1,6 @@
 " First, be iMproved
 set nocompatible
 
-" Figure out where we are (run vim with `vim --cmd 'let at_google=0'` to skip)
-if !exists('at_google')
-  let at_google = system('hostname') =~ 'google.com' && system('uname') != 'Darwin'
-endif
-
 " Plugins load faster with this off
 filetype off
 
@@ -13,16 +8,10 @@ filetype off
 set runtimepath+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-" Load location specific plugins
-if at_google
-  source ~/.vimrc_google
-else
-  Plugin 'Blackrush/vim-gocode'
-  Plugin 'Valloric/YouCompleteMe'
-  Plugin 'tpope/vim-fugitive'
-endif
-
-" Load remaining plugins
+" Load plugins
+Plugin 'Blackrush/vim-gocode'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'tpope/vim-fugitive'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'christoomey/vim-tmux-navigator'
@@ -82,9 +71,7 @@ set statusline=%<
 set statusline+=%t
 set statusline+=\ %([%Y%R%H%W]%)
 set statusline+=%m
-if !at_google
-  set statusline+=%{fugitive#statusline()}
-endif
+set statusline+=%{fugitive#statusline()}
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=\ %{&spell?\"SPELL\ \":\"\"}
 set statusline+=%{&paste?\"PASTE\":\"\"}
@@ -107,11 +94,7 @@ let mapleader=" "
 let maplocalleader="-"
 
 " Better whitespace
-if at_google
-  set list listchars=tab:»\ ,nbsp:·
-else
-  set list listchars=tab:»\ ,trail:·,nbsp:·
-endif
+set list listchars=tab:»\ ,trail:·,nbsp:·
 set expandtab
 set textwidth=79
 set tabstop=4
