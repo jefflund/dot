@@ -85,10 +85,6 @@ Plugin {
 }
 
 Plugin {
-    type = volumealsa
-}
-
-Plugin {
     type = xkb
     Config {
         DisplayType=0
