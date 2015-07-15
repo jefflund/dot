@@ -161,6 +161,8 @@ snippet st
 # data structures
 snippet set
 	map[${0:Key}]struct{}
+snippet ap
+	${1:slice} = append($1, ${2:val})
 # testing
 snippet imtest
 	import (
@@ -188,10 +190,3 @@ snippet cases
 	for _, c := range cases {
 		${0}
 	}
-# library import snippets
-snippet tb
-	"github.com/nsf/termbox-go"
-snippet glt
-	"github.com/mpatraw/gopherlibterminal"
-snippet gorl
-	"github.com/jlund3/gorl${0}"
