@@ -7,6 +7,13 @@ snippet hello
 		cout << "Hello World" << endl;
 		return 0;
 	}
+snippet head
+	#ifndef ${1:HEADER}_H
+	#define $1_H
+
+	${0}
+
+	#endif // $1_H
 # conditional
 snippet if
 	if (${1:cond}) {
@@ -19,6 +26,11 @@ snippet elif
 snippet el
 	else {
 		${0}
+	}
+snippet sw
+	switch (${1:exp}) {
+	case ${2:case}:
+		${0:break}
 	}
 # loops
 snippet wh
@@ -41,3 +53,8 @@ snippet forx
 	for (${1:int} ${2:x} = ${3:min}; $2 <= ${4:max}; $2++) {
 		${0}
 	}
+# classes
+snippet cl
+	class ${1:Name} {
+		${0}
+	};
