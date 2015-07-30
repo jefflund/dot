@@ -8,3 +8,5 @@ nnoremap <buffer> <localleader>i :GoInstall<cr>
 nnoremap <buffer> <localleader>t :GoTest<cr>
 nnoremap <buffer> <localleader>T :GoTest ./...<cr>
 nnoremap <buffer> <localleader>b :GoBuild<cr>
+nnoremap <buffer> <localleader>v :GoVet<cr>
+nnoremap <buffer> <localleader>l :GoLint<cr>
