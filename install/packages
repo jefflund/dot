@@ -69,7 +69,6 @@ golang
 golang-godoc
 golang-googlecode-goprotobuf
 golang-vet
-golang-vim
 
 # Tools
 ack

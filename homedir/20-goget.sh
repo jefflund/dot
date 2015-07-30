@@ -4,6 +4,4 @@ export GOPATH=$HOME/go
 go get -u github.com/nsf/termbox-go
 go get -u github.com/skelterjohn/go.matrix
 go get -u github.com/dchest/stemmer/porter2
-if [ "$(uname)" != "Darwin" ]; then
-    go get -u github.com/mpatraw/gopherlibterminal
-fi
+go get -u github.com/mpatraw/gopherlibterminal
