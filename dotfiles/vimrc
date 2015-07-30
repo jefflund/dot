@@ -197,13 +197,16 @@ function! ToggleFlag(option, flag)
     endif
 endfunction
 
+" Easy autowrap toggle
+function! ToggleAutoWrap()
+    call ToggleFlag('formatoptions', 't')
+endfunction
+
 " Other shortcuts
-nnoremap <silent> <leader>l :call ToggleFlag('formatoptions', 't')<cr>
 nnoremap <silent> <leader>s :set invspell<cr>
 nnoremap <silent> <leader>v :set invpaste<cr>
-nnoremap <silent> <leader>C :SyntasticToggleMode<cr>
 nnoremap <silent> <leader>b :windo set scrollbind!<cr>
-nnoremap <silent> <leader>R :edit %<cr>
+nnoremap <silent> <leader>r :edit %<cr>
 vnoremap < <gv
 vnoremap > >gv
 nnoremap > >>
