@@ -103,13 +103,13 @@ set shiftwidth=4
 set autoindent
 
 " Handle trailing whitespace
-nnoremap <silent> <leader><space> :call StripTrailingWhitespace()<cr>
 function! StripTrailingWhitespace()
     let l=line(".")
     let c=col(".")
     execute '%s/\s\+$//e'
     call cursor(l, c)
 endfunction
+nnoremap <silent> <leader><space> :call StripTrailingWhitespace()<cr>
 
 " Setup search
 set hlsearch
@@ -154,8 +154,7 @@ let g:syntastic_check_on_open = 1
 
 " Setup ack.vim
 let g:ack_autoclose=1
-nnoremap <leader>A :Ack <c-r><c-w><cr>
-nnoremap <leader>a :Ack ""<left>
+nnoremap <leader>a :Ack <c-r><c-w><cr>
 nnoremap <silent> <leader>d :Ack "TODO\|FIXME\|XXX"<cr>
 
 " Setup vim-tmux-navigator
@@ -202,25 +201,26 @@ function! ToggleAutoWrap()
     call ToggleFlag('formatoptions', 't')
 endfunction
 
+" Easy quit and save
+nnoremap <silent> <leader>Q :qa<cr>
+nnoremap <silent> <leader>q :q<cr>
+nnoremap <silent> <leader>w :w<cr>
+nnoremap <silent> <leader>W :wa<cr>
+
+" Save some keystrokes
+vnoremap < <gv
+vnoremap > >gv
+nnoremap > >>
+nnoremap < <<
+nnoremap ; :
+vnoremap ; :
+nnoremap ! :!
+
 " Other shortcuts
 nnoremap <silent> <leader>s :set invspell<cr>
 nnoremap <silent> <leader>v :set invpaste<cr>
 nnoremap <silent> <leader>b :windo set scrollbind!<cr>
 nnoremap <silent> <leader>r :edit %<cr>
-vnoremap < <gv
-vnoremap > >gv
-nnoremap > >>
-nnoremap < <<
-nnoremap <silent> <leader>Q :qa<cr>
-nnoremap <silent> <leader>q :q<cr>
-nnoremap <silent> <leader>w :w<cr>
-nnoremap <silent> <leader>W :wa<cr>
-nnoremap ; :
-vnoremap ; :
-nnoremap ! :!
-nnoremap + <c-w>+
-nnoremap = <c-w>=
-nnoremap - <c-w>-
 nnoremap <silent> <F5> :redraw!<cr>
 
 " Disable Ex mode
@@ -228,4 +228,3 @@ map Q <nop>
 
 " I don't anticpate ever using Modula-2, but I do use *.md for markdown
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
-" TODO add syntax file for markdown (similar to wiki)
