@@ -37,6 +37,10 @@ snippet wh
 	while (${1:cond}) {
 		${0}
 	}
+snippet dowh
+	do {
+		${0}
+	} while (${1:cond});
 snippet loop
 	while (true) {
 		${0}
@@ -55,6 +59,10 @@ snippet forx
 	}
 snippet forr
 	for (${1:int} ${2:x+ = ${3:min}; $2 < ${4:max}; $2++) {
+		${0}
+	}
+snippet forit
+	for (${1:type}::iterator ${2:i} = ${3:container}.begin(); $2 != $3.end(); $2++) {
 		${0}
 	}
 # classes
