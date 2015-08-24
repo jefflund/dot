@@ -72,10 +72,15 @@ fi
 # All other cli editors suck
 export EDITOR="vim"
 
-# I always seem to ls right after a cd...
+# I always seem to ls right after things like cd and clear...
 function cd()
 {
     builtin cd "$@" && ls
+}
+function clear()
+{
+    /usr/bin/env clear
+    ls
 }
 
 # Manaully adjust netbook backlight
