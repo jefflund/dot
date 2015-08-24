@@ -1,0 +1,19 @@
+# functions
+snippet func
+	def ${1:name}(${2:args...}):
+		${0:pass}
+# loops
+snippet wh
+	while ${1:cond}:
+		${0}
+snippet for
+	for ${1:x} in ${2:vals}:
+		${0}
+snippet enum
+	for ${1:i}, ${2:val} in enumerate(${3:vals}):
+		${0}
+# comprehensions
+snippet comp
+	${1:exp} for ${2:x} in ${3:vals}
+snippet compi
+	${1:exp} for ${2:x} in ${3:vals} if ${4:cond}
