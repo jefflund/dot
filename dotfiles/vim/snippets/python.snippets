@@ -17,3 +17,10 @@ snippet comp
 	${1:exp} for ${2:x} in ${3:vals}
 snippet compi
 	${1:exp} for ${2:x} in ${3:vals} if ${4:cond}
+# templates
+snippet main
+	if __name__ == '__main__':
+		${0:main()}
+snippet wopen
+	with open(${1:filename}) as ${2:fileobj}:
+		${0}
