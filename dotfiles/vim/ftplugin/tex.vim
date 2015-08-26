@@ -1,4 +1,4 @@
-nnoremap <buffer> <localleader>p :!pdflatex -interaction=nonstopmode %:r<cr>
-nnoremap <buffer> <localleader>b :!bibtex %:r<cr>
-nnoremap <buffer> <localleader>d :!latex -interaction=nonstopmode %:r<cr>
-nnoremap <buffer> <localleader>e :!evince %:r.pdf &<cr><cr>
+nnoremap <buffer> <localleader>pd :!make document<cr>
+nnoremap <buffer> <localleader>pp :!make paper<cr>
+nnoremap <buffer> <localleader>ed :!evince document.pdf &<cr><cr>
+nnoremap <buffer> <localleader>ep :!evince paper.pdf &<cr><cr>
