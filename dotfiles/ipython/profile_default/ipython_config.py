@@ -24,7 +24,8 @@ c = get_config()
 # c.InteractiveShellApp.code_to_run = ''
 
 # lines of code to run at IPython startup.
-c.InteractiveShellApp.exec_lines = ['import os, sys, math, random',
+c.InteractiveShellApp.exec_lines = ['from __future__ import division',
+                                    'import os, sys, math, random',
                                     'import numpy, scipy',
                                     '%autoreload 2']
 
