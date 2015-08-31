@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
 cd ~/.vim/bundle/YouCompleteMe
-~/.vim/bundle/YouCompleteMe/install.sh
+~/.vim/bundle/YouCompleteMe/install.py
