@@ -12,8 +12,6 @@ vim-X11
 vim-enhanced
 
 # Python
-python-django
-python-django-doc
 PyOpenGL
 ipython
 numpy
@@ -24,9 +22,12 @@ pydot
 pygame
 pylint
 pypy
+pypy3
 pytest
 python-BeautifulSoup
 python-devel
+python-django
+python-django-doc
 python-docs
 python-docutils
 python-matplotlib
@@ -39,6 +40,17 @@ python-setuptools
 python-sphinx
 python-sqlalchemy
 python-virtualenv
+python3-docutils
+python3-ipython
+python3-matplotlib
+python3-nltk
+python3-numpy
+python3-pep8
+python3-pylint
+python3-pytest
+python3-scipy
+python3-setuptools
+python3-sympy
 scipy
 sympy
 
