@@ -1,0 +1,38 @@
+snippet hwtmpl
+	\documentclass[paper=a4, fontsize=11pt]{scrartcl}
+	\usepackage[T1]{fontenc}
+	\usepackage{fourier}
+	\usepackage[english]{babel}
+	\usepackage{amsmath}
+	\usepackage{amsfonts}
+	\usepackage{amsthm}
+	\usepackage{graphicx}
+	\usepackage{sectsty}
+	\allsectionsfont{\centering \normalfont\scshape}
+	\usepackage{fancyhdr}
+	\fancyhead{}
+	\fancyfoot[L]{}
+	\fancyfoot[C]{}
+	\fancyfoot[R]{\thepage}
+	\renewcommand{\headrulewidth}{0pt}
+	\renewcommand{\footrulewidth}{0pt}
+	\setlength{\headheight}{13.6pt}
+	\numberwithin{equation}{section}
+	\numberwithin{figure}{section}
+	\numberwithin{table}{section}
+	\setlength\parindent{0pt}
+	\newcommand{\horrule}[1]{\rule{\linewidth}{#1}}
+	\pagestyle{empty}
+	\renewcommand*{\titlepagestyle}{empty}
+	\title{\huge ${1:title}}
+	\author{Jeffrey Lund}
+	\date{\normalsize\today}
+
+	\begin{document}
+	\maketitle
+
+	\section{}
+
+	${0}
+
+	\end{document}
