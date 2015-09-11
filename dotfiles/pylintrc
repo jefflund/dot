@@ -101,6 +101,9 @@ zope=no
 # expressions are accepted.
 generated-members=REQUEST,acl_users,aq_parent
 
+# List of modules to ignore when performing type checking.
+ignored-modules = numpy, matplotlib, pylab, scipy, matplotlib.cm
+
 
 [BASIC]
 
