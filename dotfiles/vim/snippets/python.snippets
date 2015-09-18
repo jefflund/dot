@@ -24,3 +24,11 @@ snippet main
 snippet wopen
 	with open(${1:filename}) as ${2:fileobj}:
 		${0}
+# classes
+snippet cl
+	class ${1:Name}(${2:object}):
+		${0:pass}
+snippet prop
+	@property
+	def ${1:propname}(self):
+		${0:return prop}
