@@ -30,6 +30,7 @@ python-django
 python-django-doc
 python-docs
 python-docutils
+python-flask
 python-matplotlib
 python-nltk
 python-nose
