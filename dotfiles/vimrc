@@ -178,6 +178,11 @@ map ,B <Plug>(easymotion-B)
 map ,e <Plug>(easymotion-e)
 map ,E <Plug>(easymotion-E)
 
+" Setup vim-go
+let g:go_doc_keywordprg_enabled=0
+let g:go_def_mapping_enabled=0
+let g:go_textobj_enabled=0
+
 " Navigation shortcuts
 nnoremap <s-j> <c-f>zz
 nnoremap <s-k> <c-u>zz
