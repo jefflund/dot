@@ -1,3 +1,5 @@
 #!/usr/bin/env bash
 
-pip install -r pip-packages
+packagesfile="$(dirname "$0")/pip-packages"
+
+pip install -r "$packagesfile"
