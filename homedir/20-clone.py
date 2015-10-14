@@ -12,6 +12,7 @@ repos = {'git@github.com:jlund3/modelt': 'go/src/github.com/jlund3/modelt',
          'git@github.com:jlund3/goomba': 'go/src/github.com/jlund3/goomba',
          'git@github.com:jlund3/evilplot': 'research/evilplot',
          'git@bitbucket.org:jlund3/research': 'research/writing',
+         'git@github.com:jlund3/ankura': 'research/ankura',
 
          'git@github.com:ezubaric/pinafore-papers': 'research/pinafore',
 
