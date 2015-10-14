@@ -2,7 +2,7 @@
 # Add repositories and install packages.
 
 configdir="$(dirname "$0")/.."
-packagesfile="$(dirname "$0")/packages"
+packagesfile="$(dirname "$0")/dnf-packages"
 
 while getopts "ksy" options
 do

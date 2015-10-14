@@ -12,6 +12,7 @@ vim-X11
 vim-enhanced
 
 # Python
+Cython
 PyOpenGL
 ipython
 numpy
