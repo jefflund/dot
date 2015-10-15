@@ -25,7 +25,9 @@ repos = {'git@github.com:jlund3/modelt': 'go/src/github.com/jlund3/modelt',
          'git@github.com:jlund3/goplay': 'tools/goplay',
          'git@github.com:jlund3/git-horror': 'tools/git-horror',
 
-         'git@github.com:jlund3/cs142': 'documents/cs142'}
+         'git@github.com:jlund3/cs142': 'documents/cs142',
+         'ssh://aml.cs.byu.edu:/aml/git/jlund3/cs650': 'documents/cs650'}
+
 for repo, path in repos.iteritems():
     lib.clone(repo, path)
 
