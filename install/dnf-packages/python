@@ -18,6 +18,7 @@ python-docs
 python-docutils
 python-flask
 python-matplotlib
+python-networkx
 python-nltk
 python-nose
 python-pep8
