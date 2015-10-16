@@ -5,6 +5,7 @@ set nocompatible
 filetype off
 
 " Start Vundle loading
+
 set runtimepath+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
@@ -107,7 +108,7 @@ set autoindent
 function! StripTrailingWhitespace()
     let l=line(".")
     let c=col(".")
-    execute '%s/\s\+$//e'
+    execute '%s/\(\s\|\)\+$//e'
     call cursor(l, c)
 endfunction
 nnoremap <silent> <leader><space> :call StripTrailingWhitespace()<cr>
