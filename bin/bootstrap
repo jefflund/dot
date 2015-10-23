@@ -2,7 +2,7 @@
 
 echo "Install git and wget"
 sleep .5
-sudo dnf install -y git wget
+sudo dnf install -y git-core wget
 
 echo "Fetching ssh ids and hosts from AML (probably requires AML password)"
 sleep .5
