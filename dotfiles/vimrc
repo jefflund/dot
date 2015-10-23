@@ -65,7 +65,7 @@ set hidden
 " Switch up the colors
 set t_Co=256
 set t_ut=
-colorscheme lucid
+silent! colorscheme lucid
 
 " Setup statusline
 set laststatus=2
