@@ -1,0 +1,3 @@
+package @BASENAME@
+
+@CURSOR@
