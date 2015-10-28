@@ -24,6 +24,8 @@ python-nose
 python-pep8
 python-pygments
 python-rope
+python-scikit-image
+python-scikit-learn
 python-setuptools
 python-sphinx
 python-sqlalchemy
