@@ -186,6 +186,13 @@ let g:go_doc_keywordprg_enabled=0
 let g:go_def_mapping_enabled=0
 let g:go_textobj_enabled=0
 
+" Setup vim-skeleton
+let g:skeleton_replacements = {}
+function! g:skeleton_replacements.PACKNAME()
+    return expand('%:p:h:t')
+endfunction
+autocmd BufReadPost * if (line('$') == 1 && getline('$') == '' && filewriteable(expand('%')) | SkelInsert! | write | endif
+
 " Navigation shortcuts
 nnoremap <s-j> <c-f>zz
 nnoremap <s-k> <c-u>zz

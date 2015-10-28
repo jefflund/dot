@@ -1,3 +1,3 @@
-package @BASENAME@
+package @PACKNAME@
 
 @CURSOR@
