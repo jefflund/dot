@@ -191,7 +191,10 @@ let g:skeleton_replacements = {}
 function! g:skeleton_replacements.PACKNAME()
     return expand('%:p:h:t')
 endfunction
-autocmd BufReadPost * if line('$') == 1 && getline('$') == '' && filewritable(expand('%')) == 1 | SkelInsert! | write | endif
+autocmd BufReadPost *
+    \ if line('$') == 1 && getline('$') == '' && filewritable(expand('%')) == 1
+    \ | SkelInsert! | write
+    \ | endif
 
 " Navigation shortcuts
 nnoremap <s-j> <c-f>zz
