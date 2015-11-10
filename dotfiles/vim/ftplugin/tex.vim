@@ -1,5 +1,4 @@
 setlocal spell
-setlocal noautoindent
 
 nnoremap <buffer> <localleader>dp :!make document<cr>
 nnoremap <buffer> <localleader>pd :!make document<cr>
