@@ -3,66 +3,14 @@ snippet tmpl
 	objs = $1.o
 
 	$(bin): $(objs)
-		g++ -Wall -o $@ $(objs)
+		g++ -std=c++11 -Wall -o $@ $(objs)
 
 	deps = $(objs:.o=.d)
 
 	-include $(deps)
 
 	%.o: %.cpp
-		g++ -c -Wall -MMD -o $@ $<
-
-	all: $(bin)
-
-	run: $(bin)
-		./$(bin)
-
-	clean:
-		rm -f $(bin) $(objs) $(deps)
-
-	memcheck: $(bin)
-		valgrind --tool=memcheck ./$(bin)
-
-	.PHONY : all run clean memcheck
-snippet tmplcc
-	bin = ${1:bin}
-	objs = ${0:main}.o
-
-	$(bin): $(objs)
-		g++ -Wall -o $@ $(objs)
-
-	deps = $(objs:.o=.d)
-
-	-include $(deps)
-
-	%.o: %.cc
-		g++ -c -Wall -MMD -o $@ $<
-
-	all: $(bin)
-
-	run: $(bin)
-		./$(bin)
-
-	clean:
-		rm -f $(bin) $(objs) $(deps)
-
-	memcheck: $(bin)
-		valgrind --tool=memcheck ./$(bin)
-
-	.PHONY : all run clean memcheck
-snippet tmplcpp
-	bin = ${1:bin}
-	objs = ${0:main}.o
-
-	$(bin): $(objs)
-		g++ -Wall -o $@ $(objs)
-
-	deps = $(objs:.o=.d)
-
-	-include $(deps)
-
-	%.o: %.cpp
-		g++ -c -Wall -MMD -o $@ $<
+		g++ -std=c++11 -c -Wall -MMD -o $@ $<
 
 	all: $(bin)
 
