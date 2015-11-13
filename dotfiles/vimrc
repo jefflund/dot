@@ -4,12 +4,9 @@ set nocompatible
 " Plugins load faster with this off
 filetype off
 
-" Start Vundle loading
-
+" Load plugins via Vundle
 set runtimepath+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-
-" Load plugins
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'Valloric/YouCompleteMe'
@@ -29,8 +26,6 @@ Plugin 'scrooloose/syntastic'
 Plugin 'tomtom/tlib_vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-repeat'
-
-" Done loading plugins
 call vundle#end()
 
 " Turn on file type based options
