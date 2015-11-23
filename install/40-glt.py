@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 
 import os
+import platform
 import shutil
 
 srcdir = os.path.dirname(__file__)
