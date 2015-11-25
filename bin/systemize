@@ -14,13 +14,19 @@ gid = pwd_entry[3]
 config_dir = path.normpath(path.join(path.dirname(__file__), '..'))
 root_script_dirs = ['install', 'unserver']
 user_script_dirs = ['homedir', 'vim', 'hook']
+slow_scripts = ['install', 'vim/50-ycm.sh']
 
-def get_scripts(script_dirs):
+def get_scripts(script_dirs, blacklist):
     scripts = []
     for script_dir in script_dirs:
         for filename in glob.glob(path.join(config_dir, script_dir, '*')):
             if path.isfile(filename) and os.access(filename, os.X_OK):
                 scripts.append(filename)
+
+    if blacklist:
+        for black in blacklist:
+            scripts = [name for name in scripts if black not in name]
+
     return sorted(scripts, key=lambda filepath: path.basename(filepath))
 
 parser = argparse.ArgumentParser(description='Run each setup scripts in order')
@@ -35,6 +41,9 @@ parser.add_argument('--tex', '-t',
 parser.add_argument('--user-only', '-u',
                     action='store_true', default=False,
                     help='Only run user-level scripts')
+parser.add_argument('--fast-only', '-f',
+                    action='store_true', default=False,
+                    help='Skip all the slow stuff')
 args = parser.parse_args()
 
 if args.user_only:
@@ -42,8 +51,10 @@ if args.user_only:
 elif args.tex:
     root_script_dirs.append('tex')
 
-root_scripts = get_scripts(root_script_dirs)
-user_scripts = get_scripts(user_script_dirs)
+if not args.fast_only:
+    slow_scripts = None
+root_scripts = get_scripts(root_script_dirs, slow_scripts)
+user_scripts = get_scripts(user_script_dirs, slow_scripts)
 
 if args.list:
     pad = max(4, len(login)) + 2
