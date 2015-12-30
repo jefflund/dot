@@ -1,28 +1,34 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
+
+"""Symlinks all the dotfiles"""
 
 import os
 import imp
 import glob
 
-home = os.environ['HOME']
-lib = imp.load_source('lib', os.path.join(home, 'config', 'bin', 'common.py'))
+def link_dotfiles():
+    """Creates a symlink for every dotfile in the home directory"""
+    home = os.environ['HOME']
+    lib_path = os.path.join(home, 'config', 'bin', 'common.py')
+    lib = imp.load_source('lib', lib_path)
 
-dotfiles = os.path.abspath(os.path.join(home, 'config', 'dotfiles'))
-for root, _, filenames in os.walk(dotfiles):
-    for filename in filenames:
-        filename = os.path.join(root, filename)
-        src = os.path.abspath(filename)
-        dst = os.path.join(home, src.replace(dotfiles + '/', '.'))
-        lib.ensure_link(src, dst)
-
-perms = [('ssh/config', 0644)]
-for filename, mode in perms:
-    os.chmod(os.path.join(dotfiles, filename), mode)
-
-tools = ['tools/goplay',
-         'tools/git-horror']
-for tool in tools:
-    for src in glob.glob(os.path.join(home, tool, '*')):
-        dst = os.path.join(home, '.local', 'bin', os.path.basename(src))
-        if os.access(src, os.X_OK):
+    dotfiles = os.path.abspath(os.path.join(home, 'config', 'dotfiles'))
+    for root, _, filenames in os.walk(dotfiles):
+        for filename in filenames:
+            filename = os.path.join(root, filename)
+            src = os.path.abspath(filename)
+            dst = os.path.join(home, src.replace(dotfiles + '/', '.'))
             lib.ensure_link(src, dst)
+
+    os.chmod(os.path.join(dotfiles, 'ssh/config'), 0O644)
+
+    tools = ['tools/goplay',
+             'tools/git-horror']
+    for tool in tools:
+        for src in glob.glob(os.path.join(home, tool, '*')):
+            dst = os.path.join(home, '.local', 'bin', os.path.basename(src))
+            if os.access(src, os.X_OK):
+                lib.ensure_link(src, dst)
+
+if __name__ == '__main__':
+    link_dotfiles()

@@ -1,4 +1,6 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
+
+"""Runs the entire configuration"""
 
 import os
 import pwd
@@ -6,17 +8,14 @@ import glob
 from os import path
 import argparse
 
-login = os.getlogin()
-pwd_entry = pwd.getpwnam(login)
-uid = pwd_entry[2]
-gid = pwd_entry[3]
+ROOT_SCRIPT_DIRS = ['install', 'unserver']
+USER_SCRIPT_DIRS = ['homedir', 'vim', 'hook']
+SLOW_SCRIPTS = ['install', 'vim/50-ycm.sh']
 
-config_dir = path.normpath(path.join(path.dirname(__file__), '..'))
-root_script_dirs = ['install', 'unserver']
-user_script_dirs = ['homedir', 'vim', 'hook']
-slow_scripts = ['install', 'vim/50-ycm.sh']
 
 def get_scripts(script_dirs, blacklist):
+    """Gets a list of scripts from a directory, excluding blacklisted scripts"""
+    config_dir = path.normpath(path.join(path.dirname(__file__), '..'))
     scripts = []
     for script_dir in script_dirs:
         for filename in glob.glob(path.join(config_dir, script_dir, '*')):
@@ -27,59 +26,77 @@ def get_scripts(script_dirs, blacklist):
         for black in blacklist:
             scripts = [name for name in scripts if black not in name]
 
-    return sorted(scripts, key=lambda filepath: path.basename(filepath))
+    return sorted(scripts, key=path.basename)
 
-parser = argparse.ArgumentParser(description='Run each setup scripts in order')
-parser.add_argument('hostname', default=None, type=str, nargs='?',
-                    help='Update the machine hostname')
-parser.add_argument('--list', '-l',
-                    action='store_true', default=False,
-                    help='List the setup scripts rather than run')
-parser.add_argument('--tex', '-t',
-                    action='store_true', default=False,
-                    help='Install texlive packages (very slow)')
-parser.add_argument('--user-only', '-u',
-                    action='store_true', default=False,
-                    help='Only run user-level scripts')
-parser.add_argument('--fast-only', '-f',
-                    action='store_true', default=False,
-                    help='Skip all the slow stuff')
-args = parser.parse_args()
 
-if args.user_only:
-    root_script_dirs = []
-elif args.tex:
-    root_script_dirs.append('tex')
+def get_args():
+    """Gets the command line arguments for systemize"""
+    parser = argparse.ArgumentParser()
+    parser.description = 'Run each setup scripts in order'
+    parser.add_argument('hostname', default=None, type=str, nargs='?',
+                        help='Update the machine hostname')
+    parser.add_argument('--list', '-l',
+                        action='store_true', default=False,
+                        help='List the setup scripts rather than run')
+    parser.add_argument('--tex', '-t',
+                        action='store_true', default=False,
+                        help='Install texlive packages (very slow)')
+    parser.add_argument('--user-only', '-u',
+                        action='store_true', default=False,
+                        help='Only run user-level scripts')
+    parser.add_argument('--fast-only', '-f',
+                        action='store_true', default=False,
+                        help='Skip all the slow stuff')
+    return parser.parse_args()
 
-if not args.fast_only:
-    slow_scripts = None
-root_scripts = get_scripts(root_script_dirs, slow_scripts)
-user_scripts = get_scripts(user_script_dirs, slow_scripts)
 
-if args.list:
+def list_scripts(root_scripts, user_scripts):
+    """Prints a list of the given scripts"""
+    login = os.getlogin()
     pad = max(4, len(login)) + 2
     for script in root_scripts:
-        print '<root>'.ljust(pad), script
+        print('<root>'.ljust(pad), script)
     for script in user_scripts:
-        print '<{}>'.format(login).ljust(pad), script
-else:
-    if root_scripts:
-        assert os.getlogin() != 'root', 'Must run as user with sudo'
-        assert os.getuid() == 0 and os.getgid() == 0, 'Must use sudo'
+        print('<{}>'.format(login).ljust(pad), script)
 
-        # run root scripts
-        for script in root_scripts:
+
+def systemize(args):
+    """Runs the systemize process"""
+    pwd_entry = pwd.getpwnam(os.getlogin())
+    uid = pwd_entry[2]
+    gid = pwd_entry[3]
+
+    if args.user_only:
+        root_script_dirs = []
+    elif args.tex:
+        root_script_dirs.append('tex')
+
+    blacklist = SLOW_SCRIPTS if args.fast_only else None
+    root_scripts = get_scripts(ROOT_SCRIPT_DIRS, blacklist)
+    user_scripts = get_scripts(USER_SCRIPT_DIRS, blacklist)
+
+    if args.list:
+        list_scripts(root_scripts, user_scripts)
+    else:
+        if root_scripts:
+            assert os.getuid() == 0 and os.getgid() == 0, 'Must use sudo'
+
+            # run root scripts
+            for script in root_scripts:
+                os.system(script)
+
+            # try update hostname
+            if args.hostname:
+                os.system('hostnamectl set-hostname {}'.format(args.hostname))
+
+            # switch to user
+            os.setgid(gid)
+            os.setuid(uid)
+            os.putenv('HOME', pwd_entry[5])
+
+        # run user scripts
+        for script in user_scripts:
             os.system(script)
 
-        # try update hostname
-        if args.hostname:
-            os.system('hostnamectl set-hostname {}'.format(args.hostname))
-
-        # switch to user
-        os.setgid(gid)
-        os.setuid(uid)
-        os.putenv('HOME', pwd_entry[5])
-
-    # run user scripts
-    for script in user_scripts:
-        os.system(script)
+if __name__ == '__main__':
+    systemize(get_args())

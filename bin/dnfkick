@@ -1,10 +1,16 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
+
+"""Script for installing packages from a package list using dnf"""
 
 import os
 import subprocess
 import sys
 
 def parse_file(filename):
+    """Parses a kick file or directory of kick files
+
+    Each file should a list of package names, with one per line
+    """
     install, remove = [], []
     for line in open(filename):
         line = line.strip()
@@ -19,6 +25,7 @@ def parse_file(filename):
 
 
 def kick(path):
+    """Runs dnf kick on the given file path"""
     if os.path.isdir(path):
         for root, _, filenames in os.walk(path):
             for filename in filenames:
