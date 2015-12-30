@@ -1,13 +1,11 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
+
+"""Creates and deletes certain home directory paths"""
 
 import os
 import imp
-import shutil
 
-home = os.environ['HOME']
-lib = imp.load_source('lib', os.path.join(home, 'config', 'bin', 'common.py'))
-
-rm_dirs = ['Documents',
+RM_DIRS = ['Documents',
            'Downloads',
            'Desktop',
            'Music',
@@ -15,14 +13,25 @@ rm_dirs = ['Documents',
            'Public',
            'Templates',
            'Videos']
-for dirname in rm_dirs:
-    lib.ensure_removed(os.path.join(home, dirname))
-
-mk_dirs = ['desktop',
+MK_DIRS = ['desktop',
            'documents',
            'go',
            'research',
            'hobby',
            'tools']
-for dirname in mk_dirs:
-    lib.ensure_filedir(os.path.join(home, dirname) + os.path.sep)
+
+def main():
+    """Runs the home directory setup"""
+    home = os.environ['HOME']
+    lib_path = os.path.join(home, 'config', 'bin', 'common.py')
+    lib = imp.load_source('lib', lib_path)
+
+    for dirname in RM_DIRS:
+        lib.ensure_removed(os.path.join(home, dirname))
+
+    for dirname in MK_DIRS:
+        lib.ensure_filedir(os.path.join(home, dirname) + os.path.sep)
+
+
+if __name__ == '__main__':
+    main()
