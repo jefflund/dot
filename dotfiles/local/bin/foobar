@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+cd $HOME
+tmux new-session -d -s foobar
+tmux rename-window 'config'
+tmux send-keys "cd $HOME/config" C-m "clear" C-m
+tmux attach-session -t foobar
