@@ -13,8 +13,7 @@ def main():
     lib = imp.load_source('lib', lib_path)
 
     if 'aml.cs.byu.edu' in socket.gethostname():
-        links = [('/aml/scratch/jlund3/data', 'data'),
-                 ('/aml/scratch/jlund3', 'scratch'),
+        links = [('/aml/scratch/jlund3', 'scratch'),
                  ('/aml/git/jlund3', 'git'),
                  ('/local/jlund3', 'local')]
         for src, dst in links:
