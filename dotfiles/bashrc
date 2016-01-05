@@ -50,11 +50,7 @@ alias egrep='egrep --color=auto'
 alias rgrep='rgrep --color=auto'
 
 # some ls aliases
-if [ "$(uname)" == "Darwin" ]; then
-  alias ls='ls -G'
-else
-  alias ls='ls --color=auto'
-fi
+alias ls='ls --color=auto'
 alias lal='ls -al'
 alias lla='ls -la'
 alias ll='ls -l'
