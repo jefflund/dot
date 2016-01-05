@@ -15,7 +15,8 @@ REPOS = {'git@github.com:jlund3/evilplot': 'research/evilplot',
          'git@github.com:jlund3/stones.wiki': 'hobby/stones.wiki',
 
          'git@github.com:jlund3/goplay': 'tools/goplay',
-         'git@github.com:jlund3/git-horror': 'tools/git-horror'}
+         'git@github.com:jlund3/git-horror': 'tools/git-horror',
+         'git@github.com:byu-aml-lab/window': 'tools/window'}
 
 LINKS = {'go/src/github.com/jlund3/stones': 'hobby/stones'}
 
