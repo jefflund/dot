@@ -230,11 +230,11 @@ nnoremap ; :
 vnoremap ; :
 nnoremap ! :!
 
-" Other shortcuts
-nnoremap <silent> <leader>s :set invspell<cr>
-nnoremap <silent> <leader>v :set invpaste<cr>
-nnoremap <silent> <leader>b :windo set scrollbind!<cr>
-nnoremap <silent> <leader>r :edit %<cr>
+" Other shortcuts for fn keys
+nnoremap <silent> <F1> :YcmRestartServer<cr>
+nnoremap <silent> <F2> :set invspell<cr>
+nnoremap <silent> <F3> :set invpaste<cr>
+nnoremap <silent> <F4> :windo set scrollbind!<cr>
 nnoremap <silent> <F5> :redraw!<cr>
 
 " Disable Ex mode
