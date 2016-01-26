@@ -12,7 +12,7 @@ Host github.com
     IdentityFile ~/.ssh/id_rsa
     ForwardX11 no
 
-Host github-rauko
+Host gh-rauko
     User git
     HostName github.com
     IdentityFile ~/.ssh/id_rsa_rauko

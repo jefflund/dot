@@ -11,14 +11,14 @@ REPOS = {'git@github.com:jlund3/evilplot': 'research/evilplot',
          'git@bitbucket.org:jlund3/research': 'research/writing',
          'git@github.com:ezubaric/pinafore-papers': 'research/pinafore',
 
-         'git@github.com:jlund3/stones': 'go/src/github.com/jlund3/stones',
-         'git@github.com:jlund3/stones.wiki': 'hobby/stones.wiki',
+         'git@gh-rauko:rauko1753/stones': 'go/src/github.com/rauko1753/stones',
+         'git@gh-rauko:rauko1753/stones.wiki': 'hobby/stones.wiki',
 
          'git@github.com:jlund3/goplay': 'tools/goplay',
          'git@github.com:jlund3/git-horror': 'tools/git-horror',
          'git@github.com:byu-aml-lab/window': 'tools/window'}
 
-LINKS = {'go/src/github.com/jlund3/stones': 'hobby/stones'}
+LINKS = {'go/src/github.com/rauko1753/stones': 'hobby/stones'}
 
 
 def main():
