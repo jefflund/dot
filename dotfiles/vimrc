@@ -7,7 +7,6 @@ filetype off
 " Load plugins via Vundle
 set runtimepath+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-Plugin 'Lokaltog/vim-easymotion'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'christoomey/vim-tmux-navigator'
@@ -162,20 +161,6 @@ nnoremap <silent> <c-h> :TmuxNavigateLeft<cr>
 nnoremap <silent> <c-l> :TmuxNavigateRight<cr>
 nnoremap <silent> <c-j> :TmuxNavigateDown<cr>
 nnoremap <silent> <c-k> :TmuxNavigateUp<cr>
-
-" Setup vim-easymotion
-let g:EasyMotion_do_mapping=0
-let g:EasyMotion_smartcase=1
-map ,f <Plug>(easymotion-f)
-map ,F <Plug>(easymotion-F)
-map ,t <Plug>(easymotion-t)
-map ,T <Plug>(easymotion-T)
-map ,w <Plug>(easymotion-w)
-map ,W <Plug>(easymotion-W)
-map ,b <Plug>(easymotion-b)
-map ,B <Plug>(easymotion-B)
-map ,e <Plug>(easymotion-e)
-map ,E <Plug>(easymotion-E)
 
 " Setup vim-go
 let g:go_doc_keywordprg_enabled=0
