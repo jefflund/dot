@@ -216,11 +216,19 @@ nnoremap ; :
 vnoremap ; :
 nnoremap ! :!
 
+" Better windo (restors current window)
+function! WinDo(cmd)
+    let currwin=winnr()
+    execute 'windo ' . a:cmd
+    execute currwin . 'wincmd w'
+endfunction
+com! -nargs=+ -complete=command Windo call WinDo(<q-args>)
+
 " Other shortcuts for fn keys
 nnoremap <silent> <F1> :YcmRestartServer<cr>
 nnoremap <silent> <F2> :set invspell<cr>
 nnoremap <silent> <F3> :set invpaste<cr>
-nnoremap <silent> <F4> :windo set scrollbind!<cr>
+nnoremap <silent> <F4> :Windo set scrollbind!<cr>
 nnoremap <silent> <F5> :redraw!<cr>
 
 " Disable Ex mode
