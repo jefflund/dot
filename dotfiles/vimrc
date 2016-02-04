@@ -216,7 +216,7 @@ nnoremap ; :
 vnoremap ; :
 nnoremap ! :!
 
-" Better windo (restors current window)
+" Better windo (restores current window)
 function! WinDo(cmd)
     let currwin=winnr()
     execute 'windo ' . a:cmd
