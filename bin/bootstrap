@@ -6,7 +6,7 @@ sudo dnf install -y git-core wget
 
 echo "Fetching ssh ids and hosts from AML (probably requires AML password)"
 sleep .5
-rsync -av aml.cs.byu.edu:/aml/home/jlund3/.ssh $HOME
+rsync -av jlund3@aml.cs.byu.edu:/aml/home/jlund3/.ssh $HOME
 
 echo "Cloning config repo"
 sleep .5
