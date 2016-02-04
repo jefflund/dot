@@ -14,7 +14,7 @@ export GOBIN=$HOME/go/bin
 
 # If not running interactively, don't do anything else
 [ -z "$PS1" ] && return
-if [ "$(tmux display-message -p '#S')" = "foobar" ]; then
+if [ -n "$TMUX" ] && [ "$(tmux display-message -p '#S')" = "foobar" ]; then
     PS1="rauko@smilodon:\W$ "
 else
     PS1="\u@\h:\W$ "
