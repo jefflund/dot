@@ -13,12 +13,14 @@ REPOS = {'git@github.com:jlund3/evilplot': 'research/evilplot',
 
          'git@gh-rauko:rauko1753/stones': 'go/src/github.com/rauko1753/stones',
          'git@gh-rauko:rauko1753/stones.wiki': 'hobby/stones.wiki',
+         'git@gh-rauko:rauko1753/goomba': 'go/src/github.com/rauko1753/goomba',
 
          'git@github.com:jlund3/goplay': 'tools/goplay',
          'git@github.com:jlund3/git-horror': 'tools/git-horror',
          'git@github.com:byu-aml-lab/window': 'tools/window'}
 
-LINKS = {'go/src/github.com/rauko1753/stones': 'hobby/stones'}
+LINKS = {'go/src/github.com/rauko1753/stones': 'hobby/stones',
+         'go/src/github.com/rauko1753/goomba': 'hobby/goomba'}
 
 
 def main():
