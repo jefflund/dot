@@ -224,6 +224,9 @@ function! WinDo(cmd)
 endfunction
 com! -nargs=+ -complete=command Windo call WinDo(<q-args>)
 
+" Other helpful commands
+com TODO Ack TODO\|FIXME\|XXX
+
 " Other shortcuts for fn keys
 nnoremap <silent> <F1> :YcmRestartServer<cr>
 nnoremap <silent> <F2> :set invspell<cr>
