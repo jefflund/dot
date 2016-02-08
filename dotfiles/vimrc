@@ -71,7 +71,7 @@ set statusline+=%m
 set statusline+=%{fugitive#statusline()}
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=\ %{&spell?\"SPELL\ \":\"\"}
-set statusline+=%{&paste?\"PASTE\":\"\"}
+set statusline+=%{&paste?\"PASTE\ \":\"\"}
 set statusline+=%{&scrollbind?\"SCROLLBIND\":\"\"}
 set statusline+=%=
 set statusline+=%-14.(%l,%v%)
