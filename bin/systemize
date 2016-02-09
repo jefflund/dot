@@ -8,7 +8,7 @@ import glob
 from os import path
 import argparse
 
-ROOT_SCRIPT_DIRS = ['install']
+SUDO_SCRIPT_DIRS = ['install']
 USER_SCRIPT_DIRS = ['homedir', 'vim', 'hook']
 SLOW_SCRIPTS = ['install', 'vim/50-ycm.sh']
 
@@ -33,8 +33,6 @@ def get_args():
     """Gets the command line arguments for systemize"""
     parser = argparse.ArgumentParser()
     parser.description = 'Run each setup scripts in order'
-    parser.add_argument('hostname', default=None, type=str, nargs='?',
-                        help='Update the machine hostname')
     parser.add_argument('--list', '-l',
                         action='store_true', default=False,
                         help='List the setup scripts rather than run')
@@ -47,51 +45,25 @@ def get_args():
     return parser.parse_args()
 
 
-def list_scripts(root_scripts, user_scripts):
-    """Prints a list of the given scripts"""
-    login = os.getlogin()
-    pad = max(4, len(login)) + 2
-    for script in root_scripts:
-        print('<root>'.ljust(pad), script)
-    for script in user_scripts:
-        print('<{}>'.format(login).ljust(pad), script)
-
-
 def systemize(args):
     """Runs the systemize process"""
-    pwd_entry = pwd.getpwnam(os.getlogin())
-    uid = pwd_entry[2]
-    gid = pwd_entry[3]
-
-    if args.user_only:
-        root_script_dirs = []
-    elif args.tex:
-        root_script_dirs.append('tex')
-
     blacklist = SLOW_SCRIPTS if args.fast_only else None
-    root_scripts = get_scripts(ROOT_SCRIPT_DIRS, blacklist)
+    if args.user_only:
+        root_script_dirs = None
+    else:
+        root_scripts = get_scripts(SUDO_SCRIPT_DIRS, blacklist)
     user_scripts = get_scripts(USER_SCRIPT_DIRS, blacklist)
 
     if args.list:
-        list_scripts(root_scripts, user_scripts)
+        if root_scripts:
+            for script in root_scripts:
+                print('<root>'.ljust(pad), script)
+        for script in user_scripts:
+            print('<user>', script)
     else:
         if root_scripts:
-            assert os.getuid() == 0 and os.getgid() == 0, 'Must use root'
-
-            # run root scripts
             for script in root_scripts:
                 os.system(script)
-
-            # try update hostname
-            if args.hostname:
-                os.system('hostnamectl set-hostname {}'.format(args.hostname))
-
-            # switch to user
-            os.setgid(gid)
-            os.setuid(uid)
-            os.putenv('HOME', pwd_entry[5])
-
-        # run user scripts
         for script in user_scripts:
             os.system(script)
 
