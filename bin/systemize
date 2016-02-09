@@ -3,7 +3,6 @@
 """Runs the entire configuration"""
 
 import os
-import pwd
 import glob
 from os import path
 import argparse
