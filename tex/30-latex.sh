@@ -1,1 +1,0 @@
-../install/20-dnf-packages.sh

@@ -8,7 +8,7 @@ import glob
 from os import path
 import argparse
 
-ROOT_SCRIPT_DIRS = ['install', 'unserver']
+ROOT_SCRIPT_DIRS = ['install']
 USER_SCRIPT_DIRS = ['homedir', 'vim', 'hook']
 SLOW_SCRIPTS = ['install', 'vim/50-ycm.sh']
 
@@ -38,9 +38,6 @@ def get_args():
     parser.add_argument('--list', '-l',
                         action='store_true', default=False,
                         help='List the setup scripts rather than run')
-    parser.add_argument('--tex', '-t',
-                        action='store_true', default=False,
-                        help='Install texlive packages (very slow)')
     parser.add_argument('--user-only', '-u',
                         action='store_true', default=False,
                         help='Only run user-level scripts')
@@ -79,7 +76,7 @@ def systemize(args):
         list_scripts(root_scripts, user_scripts)
     else:
         if root_scripts:
-            assert os.getuid() == 0 and os.getgid() == 0, 'Must use sudo'
+            assert os.getuid() == 0 and os.getgid() == 0, 'Must use root'
 
             # run root scripts
             for script in root_scripts:

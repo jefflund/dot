@@ -7,20 +7,22 @@ import os
 
 REPOS = {'git@github.com:jlund3/evilplot': 'research/evilplot',
          'git@github.com:jlund3/ankura': 'research/ankura',
-
          'git@bitbucket.org:jlund3/research': 'research/writing',
          'git@github.com:ezubaric/pinafore-papers': 'research/pinafore',
 
          'git@gh-rauko:rauko1753/stones': 'go/src/github.com/rauko1753/stones',
          'git@gh-rauko:rauko1753/stones.wiki': 'hobby/stones.wiki',
          'git@gh-rauko:rauko1753/goomba': 'go/src/github.com/rauko1753/goomba',
+	 'git@gh-rauko:rauko1753/sandbox': 'go/src/github.com/rauko1753/sandbox',
+	 'git@gh-rauko:rauko1753/foobot': 'hobby/foobot',
 
          'git@github.com:jlund3/goplay': 'tools/goplay',
          'git@github.com:jlund3/git-horror': 'tools/git-horror',
          'git@github.com:byu-aml-lab/window': 'tools/window'}
 
 LINKS = {'go/src/github.com/rauko1753/stones': 'hobby/stones',
-         'go/src/github.com/rauko1753/goomba': 'hobby/goomba'}
+         'go/src/github.com/rauko1753/goomba': 'hobby/goomba',
+         'go/src/github.com/rauko1753/sandbox': 'hobby/sandbox'}
 
 
 def main():
