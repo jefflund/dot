@@ -14,11 +14,7 @@ export GOBIN=$HOME/go/bin
 
 # If not running interactively, don't do anything else
 [ -z "$PS1" ] && return
-if [ -n "$TMUX" ] && [ "$(tmux display-message -p '#S')" = "foobar" ]; then
-    PS1="rauko@smilodon:\W$ "
-else
-    PS1="\u@\h:\W$ "
-fi
+PS1="\u@\h:\W$ "
 
 # don't put duplicate lines or lines starting with space in the history.
 HISTCONTROL=ignoreboth
