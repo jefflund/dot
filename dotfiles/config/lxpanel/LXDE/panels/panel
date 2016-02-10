@@ -60,7 +60,7 @@ Plugin {
     type = space
     expand=1
     Config {
-        Size=4
+        Size=2
     }
 }
 
@@ -86,6 +86,10 @@ Plugin {
 
 Plugin {
     type = tray
+}
+
+Plugin {
+    type = netstat
 }
 
 Plugin {
