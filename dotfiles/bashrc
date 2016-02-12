@@ -78,12 +78,6 @@ function clear()
     ls
 }
 
-# Manaully adjust netbook backlight
-function brightness()
-{
-    sudo bash -c "echo $1 > /sys/class/backlight/acpi_video0/brightness"
-}
-
 # I can never remember these flags...
 alias untar='tar -xf'
 
