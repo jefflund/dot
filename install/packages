@@ -1,6 +1,8 @@
 lxde
 
+ack-grep
 git
+profanity
 tmux
 vim
 
@@ -9,12 +11,13 @@ build-essential
 cmake
 
 golang
+golang-go.tools
 
 texlive-full
 
-python-dev
-python3-sleekxmpp
-python3-flask
 ipython3
+python-dev
+python3-flask
+python3-sleekxmpp
 
 xbacklight
