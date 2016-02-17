@@ -35,7 +35,6 @@ filetype plugin on
 let g:tex_flavor="latex"
 
 " Turn on a few more options
-set title
 set backspace=2
 set scrolloff=2
 set showcmd
