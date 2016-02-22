@@ -11,7 +11,8 @@ REPOS = {'git@github.com:jlund3/evilplot': 'research/evilplot',
          'git@github.com:ezubaric/pinafore-papers': 'research/pinafore',
 
          'git@gh-rauko:rauko1753/stones': 'go/src/github.com/rauko1753/stones',
-         'git@gh-rauko:rauko1753/stones.wiki': 'hobby/stones.wiki',
+         'git@gh-rauko:rauko1753/stones.wiki': 'hobby/wiki',
+         'git@gh-rauko:rauko1753/rauko1753.github.io': 'hobby/blog',
          'git@gh-rauko:rauko1753/goomba': 'go/src/github.com/rauko1753/goomba',
          'git@gh-rauko:rauko1753/foobot': 'hobby/foobot',
 
