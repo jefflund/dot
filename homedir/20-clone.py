@@ -21,8 +21,7 @@ REPOS = {'git@github.com:jlund3/evilplot': 'research/evilplot',
          'git@github.com:byu-aml-lab/window': 'tools/window'}
 
 LINKS = {'go/src/github.com/rauko1753/stones': 'hobby/stones',
-         'go/src/github.com/rauko1753/goomba': 'hobby/goomba',
-         'go/src/github.com/rauko1753/sandbox': 'hobby/sandbox'}
+         'go/src/github.com/rauko1753/goomba': 'hobby/goomba'}
 
 
 def main():

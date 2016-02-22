@@ -22,3 +22,5 @@ ipython3
 python-dev
 python3-flask
 python3-sleekxmpp
+
+ffmpeg
