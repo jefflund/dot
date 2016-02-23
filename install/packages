@@ -20,6 +20,7 @@ texlive-full
 
 ipython3
 python-dev
+python-scipy
 python3-flask
 python3-sleekxmpp
 
