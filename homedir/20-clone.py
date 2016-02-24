@@ -5,8 +5,7 @@
 import imp
 import os
 
-REPOS = {'git@github.com:jlund3/evilplot': 'research/evilplot',
-         'git@github.com:jlund3/ankura': 'research/ankura',
+REPOS = {'git@github.com:jlund3/ankura': 'research/ankura',
          'git@bitbucket.org:jlund3/research': 'research/writing',
          'git@github.com:ezubaric/pinafore-papers': 'research/pinafore',
 
