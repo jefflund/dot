@@ -1,0 +1,12 @@
+session_name: foobar
+environment:
+  FOOBAR: rauko
+windows:
+  - window_name: config
+    start_directory: '~/config'
+    panes:
+      - clear
+  - window_name: stones
+    start_directory: '~/hobby/stones'
+    panes:
+      - clear
