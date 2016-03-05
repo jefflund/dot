@@ -1,5 +1,4 @@
 setlocal noexpandtab softtabstop=0
-setlocal textwidth=99
 setlocal formatoptions-=t
 
 nnoremap <buffer> <localleader>r :GoRun<cr>
