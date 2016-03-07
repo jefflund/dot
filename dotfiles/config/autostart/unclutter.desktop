@@ -1,4 +1,4 @@
 [Desktop Entry]
 Name=Unclutter
 Comment=Makes the mouse disappear after a second of idleness
-Exec=unclutter -display :0 -idle 1 -root -grab -noevents
+Exec=unclutter -display :0 -idle 5 -root -grab -noevents
