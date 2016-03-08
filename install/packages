@@ -20,8 +20,11 @@ texlive-full
 
 ipython3
 python-dev
+python-pip
 python-scipy
 python3-flask
+python3-pip
+python3-scipy
 python3-sleekxmpp
 
 ffmpeg
