@@ -6,7 +6,16 @@ windows:
     start_directory: '~/config'
     panes:
       - clear
+  - window_name: gorl
+    start_directory: '~/hobby/gorl'
+    panes:
+      - clear
   - window_name: stones
     start_directory: '~/hobby/stones'
     panes:
+      - clear
+  - window_name: chat
+    start_directory: '~/hobby/foobot'
+    panes:
+      - profanity
       - clear
