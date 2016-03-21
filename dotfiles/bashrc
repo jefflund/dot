@@ -19,7 +19,6 @@ if [ -z "$FOOBAR" ]; then
 else
     PS1="$FOOBAR@\h:\W$ \[\e]2;$FOOBAR@\H \w\a\]"
 fi
-alias foobar='tmuxp load foobar.yaml'
 
 # don't put duplicate lines or lines starting with space in the history.
 HISTCONTROL=ignoreboth
@@ -82,6 +81,10 @@ function clear()
     /usr/bin/env clear
     ls
 }
+
+# More alias goodness
+alias foobar='tmuxp load foobar.yaml'
+alias todo='ack "TODO|FIXME|XXX"'
 
 # I can never remember these flags...
 alias untar='tar -xf'
