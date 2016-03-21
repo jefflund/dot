@@ -123,6 +123,7 @@ let NERDTreeIgnore+=['\.pyc$', '__pycache__']
 let NERDTreeIgnore+=['\.o$', '\.d$']
 let NERDTreeIgnore+=['\.aux$', '\.log$']
 let NERDTreeIgnore+=['\.class$']
+let NERDTreeIgnore+=['\.make$', '\.blg$', '\.bbl$', '\.fls$', '\.cookie$']
 let NERDTreeQuitOnOpen=1
 let NERDTreeChDirMode=2
 
