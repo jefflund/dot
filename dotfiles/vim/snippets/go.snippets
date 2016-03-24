@@ -104,9 +104,14 @@ snippet sw
 	switch ${1:value} {
 	${0}
 	}
-snippet ty
+snippet tyt
 	switch ${1:t} := ${2:v}.(type) {
 	case ${3:type}:
+		${0}
+	}
+snippet ty
+	switch ${1:v}.(type) {
+	case ${2:type}:
 		${0}
 	}
 snippet ma
