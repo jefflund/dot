@@ -9,8 +9,8 @@ REPOS = {'git@github.com:jlund3/ankura': 'research/ankura',
          'git@bitbucket.org:jlund3/research': 'research/writing',
          'git@github.com:ezubaric/pinafore-papers': 'research/pinafore',
 
+         'git@gh-rauko:rauko1753/gorl': 'go/src/github.com/rauko1753/gorl',
          'git@gh-rauko:rauko1753/stones': 'go/src/github.com/rauko1753/stones',
-         'git@gh-rauko:rauko1753/stones.wiki': 'hobby/wiki',
          'git@gh-rauko:rauko1753/rauko1753.github.io': 'hobby/blog',
          'git@gh-rauko:rauko1753/goomba': 'go/src/github.com/rauko1753/goomba',
          'git@gh-rauko:rauko1753/foobot': 'hobby/foobot',
@@ -19,7 +19,8 @@ REPOS = {'git@github.com:jlund3/ankura': 'research/ankura',
          'git@github.com:jlund3/git-horror': 'tools/git-horror',
          'git@github.com:byu-aml-lab/window': 'tools/window'}
 
-LINKS = {'go/src/github.com/rauko1753/stones': 'hobby/stones',
+LINKS = {'go/src/github.com/rauko1753/gorl': 'hobby/gorl',
+         'go/src/github.com/rauko1753/stones': 'hobby/stones',
          'go/src/github.com/rauko1753/goomba': 'hobby/goomba'}
 
 
