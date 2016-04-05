@@ -14,8 +14,3 @@ windows:
     start_directory: '~/hobby/stones'
     panes:
       - clear
-  - window_name: chat
-    start_directory: '~/hobby/foobot'
-    panes:
-      - profanity
-      - clear
