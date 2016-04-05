@@ -12,10 +12,10 @@ Host github.com
     IdentityFile ~/.ssh/id_rsa
     ForwardX11 no
 
-Host gh-rauko
+Host gitlab.com
     User git
-    HostName github.com
-    IdentityFile ~/.ssh/id_rsa_rauko
+    HostName gitlab.com
+    IdentityFile ~/.ssh/id_rsa
     ForwardX11 no
 
 Host *potato
