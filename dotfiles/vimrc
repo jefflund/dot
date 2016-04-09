@@ -156,6 +156,7 @@ let g:syntastic_python_pylint_exe = 'python3 -m pylint'
 let g:ack_autoclose=1
 nnoremap <leader>a :Ack <c-r><c-w><cr>
 nnoremap <silent> <leader>d :Ack "TODO\|FIXME\|XXX"<cr>
+com TODO Ack TODO\|FIXME\|XXX
 
 " Setup vim-tmux-navigator
 let g:tmux_navigator_no_mappings=1
@@ -224,9 +225,6 @@ function! WinDo(cmd)
     execute currwin . 'wincmd w'
 endfunction
 com! -nargs=+ -complete=command Windo call WinDo(<q-args>)
-
-" Other helpful commands
-com TODO Ack TODO\|FIXME\|XXX
 
 " Other shortcuts for fn keys
 nnoremap <silent> <F1> :YcmRestartServer<cr>
