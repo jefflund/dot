@@ -11,7 +11,7 @@ REPOS = {'git@github.com:jlund3/ankura': 'research/ankura',
 
          'git@gitlab.com:rauko1753/gorl': 'go/src/gitlab.com/rauko1753/gorl',
          'git@gitlab.com:rauko1753/stones': 'go/src/gitlab.com/rauko1753/stones',
-         'git@gitlab.com:rauko1753/rauko1753.github.io': 'hobby/blog',
+         'git@gitlab.com:rauko1753/rauko1753.gitlab.io': 'hobby/blog',
          'git@gitlab.com:rauko1753/goomba': 'go/src/gitlab.com/rauko1753/goomba',
          'git@gitlab.com:rauko1753/foobot': 'hobby/foobot',
 
@@ -32,8 +32,8 @@ def main():
     lib_path = os.path.join(home, 'config', 'bin', 'common.py')
     lib = imp.load_source('lib', lib_path)
 
-    # for repo, path in REPOS.items():
-        # lib.clone(repo, path)
+    for repo, path in REPOS.items():
+        lib.clone(repo, path)
     for src, dst in LINKS.items():
         lib.ensure_link(os.path.join(home, src), os.path.join(home, dst))
 
