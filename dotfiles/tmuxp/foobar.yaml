@@ -5,7 +5,7 @@ windows:
   - window_name: config
     start_directory: '~/config'
     panes:
-      - clear
+      - git pull
   - window_name: gorl
     start_directory: '~/hobby/gorl'
     panes:
