@@ -56,7 +56,7 @@ def systemize(args):
     if args.list:
         if root_scripts:
             for script in root_scripts:
-                print('<root>'.ljust(pad), script)
+                print('<root>', script)
         for script in user_scripts:
             print('<user>', script)
     else:
