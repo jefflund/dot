@@ -20,6 +20,8 @@ libsdl2-dev
 libsdl2-image-dev
 libsdl2-mixer-dev
 libsdl-ttf2.0-dev
+libncurses5-dev
+libncursesw5-dev
 
 golang
 golang-go.tools
@@ -31,6 +33,7 @@ python-dev
 python-pip
 python-scipy
 python3-flask
+python3-matplotlib
 python3-pip
 python3-scipy
 python3-sleekxmpp
