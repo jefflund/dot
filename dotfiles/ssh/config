@@ -2,6 +2,10 @@ Host aml
     User jlund3
     HostName aml.cs.byu.edu
 
+Host wizard
+    User jlund3
+    ProxyCommand ssh aml nc wizard 22
+
 Host fsl
     User jlund3
     HostName ssh.fsl.byu.edu
