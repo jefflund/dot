@@ -82,6 +82,12 @@ function clear()
     ls
 }
 
+# Tmux version of nohup
+function multiplex() {
+    tmux new-session -d "$@"
+    tmux set -g status off
+}
+
 # More alias goodness
 alias foobar='tmuxp load foobar.yaml'
 alias todo='ack "TODO|FIXME|XXX"'
