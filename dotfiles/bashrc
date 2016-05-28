@@ -86,6 +86,7 @@ function clear()
 alias foobar='tmuxp load foobar.yaml'
 alias todo='ack "TODO|FIXME|XXX"'
 alias playall='mplayer -shuffle -loop 0 *'
+alias lc='wc -l'
 
 # I can never remember these flags...
 alias untar='tar -xf'
