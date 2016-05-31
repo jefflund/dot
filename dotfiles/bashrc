@@ -12,6 +12,11 @@ fi
 export GOPATH=$HOME/go
 export GOBIN=$HOME/go/bin
 
+if [[ ! "$PYTHONPATH" =~ (^|:)"$HOME/research/ankura"(:$) ]]
+then
+    export PYTHONPATH="$PYTHONPATH":$HOME/research/ankura
+fi
+
 # If not running interactively, don't do anything else
 [ -z "$PS1" ] && return
 if [ -z "$FOOBAR" ]; then

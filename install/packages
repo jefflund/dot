@@ -4,6 +4,7 @@ lxsession-logout
 ack-grep
 exuberant-ctags
 git
+gitg
 mercurial
 profanity
 tmux
