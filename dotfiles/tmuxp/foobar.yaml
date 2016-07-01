@@ -6,11 +6,7 @@ windows:
     start_directory: '~/config'
     panes:
       - git pull
-  - window_name: gorl
+  - window_name: stones
     start_directory: '~/hobby/gorl'
     panes:
-      - clear
-  - window_name: stones
-    start_directory: '~/hobby/stones'
-    panes:
-      - clear
+      - vim
