@@ -94,7 +94,7 @@ function multiplex() {
 }
 
 # More alias goodness
-alias foobar='tmuxp load foobar.yaml'
+alias foobar='tmuxp load foobar'
 alias todo='ack "TODO|FIXME|XXX"'
 alias playall='mplayer -shuffle -loop 0 *'
 alias lc='wc -l'
