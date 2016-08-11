@@ -9,4 +9,4 @@ nnoremap <buffer> <localleader>T :GoTest ./...<cr>
 nnoremap <buffer> <localleader>b :GoBuild<cr>
 nnoremap <buffer> <localleader>v :GoVet<cr>
 nnoremap <buffer> <localleader>l :GoLint<cr>
-nnoremap <buffer> <localleader>d :GoDoc<cr>
+nnoremap <buffer> <localleader>d :GoDef<cr>
