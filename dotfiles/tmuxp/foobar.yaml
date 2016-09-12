@@ -1,12 +1,18 @@
 session_name: foobar
-environment:
-  FOOBAR: rauko
 windows:
   - window_name: config
     start_directory: '~/config'
     panes:
       - git pull
-  - window_name: stones
+  - window_name: lctv
+    start_directory: '~'
+    panes:
+      - profanity
+  - window_name: gorl
     start_directory: '~/hobby/gorl'
     panes:
-      - vim
+      - clear
+  - window_name: stones
+    start_directory: '~/hobby/stones'
+    panes:
+      - clear
