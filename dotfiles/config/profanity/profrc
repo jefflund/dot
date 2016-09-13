@@ -3,7 +3,7 @@ time=%H:%M:%S
 time.statusbar=
 
 theme=original
-beep=false
+beep=true
 flash=false
 splash=true
 wrap=true

@@ -1,4 +1,4 @@
 #!/bin/bash
 
 sudo pip install tmuxp
-sudo pip install scdl
+sudo pip3 install scdl
