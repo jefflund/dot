@@ -6,44 +6,30 @@ windows:
     panes:
       - git pull
 
-  - window_name: lctv
-    layout: main-horizontal
+  - window_name: music
+    start_directory: '~/documents/music'
     options:
-      main-pane-height: 40
       monitor-activity: off
-    start_directory: '~'
     panes:
-      - shell_command:
-        - profanity
-        # ugly hack since we cant join until connected
-        - /lctv
-        - /lctv
-        - /lctv
-        - /lctv
-        - /lctv
-        - /lctv
-        - /lctv
-        - /lctv
-        - /lctv
-        - /lctv
-        - /lctv
-        - /lctv
-        - /lctv
-        suppress_history: false
-        focus: true
-      - shell_command:
-        - cd ~/hobby/foobot
-        - ./run_foobot
-      - shell_command:
-        - cd ~/documents/music
-        - playall
+      - playall
 
   - window_name: gorl
     start_directory: '~/hobby/gorl'
     panes:
-      - vim +NERDTreeToggle
+      - shell_command:
+        - git pull
+        - vim +NERDTreeToggle
 
   - window_name: stones
     start_directory: '~/hobby/stones'
     panes:
-      - vim +NERDTreeToggle
+      - shell_command:
+        - git pull
+        - vim +NERDTreeToggle
+
+  - window_name: blog
+    start_directory: '~/hobby/blog'
+    panes:
+      - shell_command:
+        - git pull
+        - vim +NERDTreeToggle
