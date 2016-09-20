@@ -1,0 +1,28 @@
+session_name: foobar
+windows:
+  - window_name: config
+    focus: true
+    start_directory: '~/config'
+    panes:
+      - git pull
+
+  - window_name: blog
+    start_directory: '~/hobby/blog'
+    panes:
+      - shell_command:
+        - git pull
+        - vim +NERDTreeToggle
+
+  - window_name: gorl
+    start_directory: '~/hobby/gorl'
+    panes:
+      - shell_command:
+        - git pull
+        - vim +NERDTreeToggle
+
+  - window_name: stones
+    start_directory: '~/hobby/stones'
+    panes:
+      - shell_command:
+        - git pull
+        - vim +NERDTreeToggle

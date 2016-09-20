@@ -1,4 +1,4 @@
-session_name: foobar
+session_name: lab
 windows:
   - window_name: config
     focus: true
@@ -18,3 +18,8 @@ windows:
     panes:
       - shell_command:
         - vim +NERDTreeToggle
+
+  - window_name: writing
+    start_directory: '~/research/writing'
+    panes:
+      - git pull
