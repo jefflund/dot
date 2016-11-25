@@ -10,7 +10,7 @@ REPOS = {'git@github.com:jlund3/ankura': 'research/ankura',
          'git@github.com:ezubaric/pinafore-papers': 'research/pinafore',
 
          'git@gitlab.com:rauko1753/gorl': 'go/src/gitlab.com/rauko1753/gorl',
-         'git@gitlab.com:rauko1753/stones': 'go/src/gitlab.com/rauko1753/stones',
+         'git@gitlab.com:rauko1753/stonesrl': 'go/src/gitlab.com/rauko1753/stones',
          'git@gitlab.com:rauko1753/rauko1753.gitlab.io': 'hobby/blog',
          'git@gitlab.com:rauko1753/goomba': 'go/src/gitlab.com/rauko1753/goomba',
          'git@gitlab.com:rauko1753/foobot': 'hobby/foobot',
