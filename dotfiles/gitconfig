@@ -12,8 +12,9 @@
     l = log --oneline --decorate --name-status
     lg = log --oneline --decorate --name-status --graph
     lo = log --oneline
-    jeff = !git config user.name \"Jeffrey Lund\" && git config user.email jefflund@gmail.com
-    rauko = !git config user.name Rauko && git config user.email rauko1753@gmail.com
     lastweek = log --oneline --since=\"1 week ago\"
 [push]
     default = current
+[user]
+    name = Jeffrey Lund
+    email = jefflund@gmail.com

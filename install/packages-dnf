@@ -7,7 +7,6 @@ exuberant-ctags
 git
 gitg
 mercurial
-profanity
 tmux
 vim
 vim-nox
@@ -44,3 +43,5 @@ ffmpeg
 mplayer
 
 r-base-core
+
+openvpn

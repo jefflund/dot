@@ -1,3 +1,3 @@
-#!/usr/bin/bash
+#!/bin/bash
 
-sudo Rscript $HOME/config/install/rpacks.r
+sudo Rscript $HOME/config/install/packages-r

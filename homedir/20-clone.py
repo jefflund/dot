@@ -5,25 +5,24 @@
 import imp
 import os
 
-REPOS = {'git@github.com:jlund3/ankura': 'research/ankura',
-         'git@bitbucket.org:jlund3/research': 'research/writing',
-         'git@github.com:ezubaric/pinafore-papers': 'research/pinafore',
+REPOS = {
+    'git@github.com:jlund3/ankura': 'research/ankura',
+    'git@bitbucket.org:jlund3/research': 'research/writing',
+    'git@github.com:ezubaric/pinafore-papers': 'research/pinafore',
 
-         'git@gitlab.com:rauko1753/gorl': 'go/src/gitlab.com/rauko1753/gorl',
-         'git@gitlab.com:rauko1753/stonesrl': 'go/src/gitlab.com/rauko1753/stones',
-         'git@gitlab.com:rauko1753/rauko1753.gitlab.io': 'hobby/blog',
-         'git@gitlab.com:rauko1753/goomba': 'go/src/gitlab.com/rauko1753/goomba',
-         'git@gitlab.com:rauko1753/foobot': 'hobby/foobot',
+    'git@github.com:jlund3/gorl': 'go/src/github.com/jlund3/gorl',
+    'git@github.com:jlund3/stones': 'go/src/github.com/jlund3/stones',
+    'git@github.com:jlund3/jlund3.github.io': 'hobby/blog',
 
-         'git@github.com:jlund3/goplay': 'tools/goplay',
-         'git@github.com:jlund3/git-horror': 'tools/git-horror',
-         'git@github.com:byu-aml-lab/window': 'tools/window'}
+    'git@github.com:jlund3/goplay': 'tools/goplay',
+    'git@github.com:jlund3/git-horror': 'tools/git-horror',
+    'git@github.com:byu-aml-lab/window': 'tools/window',
+}
 
-LINKS = {'go/src/gitlab.com/rauko1753/gorl': 'hobby/gorl',
-         'go/src/gitlab.com/rauko1753/stones': 'hobby/stones',
-         'go/src/gitlab.com/rauko1753/goomba': 'hobby/goomba'}
-
-# TODO Add git rauko command for hobby projects
+LINKS = {
+    'go/src/github.com/jlund3/gorl': 'hobby/gorl',
+    'go/src/github.com/jlund3/stones': 'hobby/stones',
+}
 
 
 def main():
