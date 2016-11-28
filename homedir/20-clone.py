@@ -12,7 +12,6 @@ REPOS = {
 
     'git@github.com:jlund3/gorl': 'go/src/github.com/jlund3/gorl',
     'git@github.com:jlund3/stones': 'go/src/github.com/jlund3/stones',
-    'git@github.com:jlund3/jlund3.github.io': 'hobby/blog',
 
     'git@github.com:jlund3/goplay': 'tools/goplay',
     'git@github.com:jlund3/git-horror': 'tools/git-horror',
