@@ -8,9 +8,10 @@ git
 gitg
 mercurial
 tmux
+unclutter
 vim
 vim-nox
-unclutter
+zsh
 
 automake
 build-essential

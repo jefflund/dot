@@ -1,0 +1,13 @@
+# set up paths
+. ~/.shenv
+
+# if not running interactively, don't do anything else
+[ -z "$PS1" ] && return
+
+# run default shell config
+. ~/.shrc
+
+# run zsh specific stuff
+
+# setup prompt
+PS1=$'%n@%m:%1~$ \e]2;%n@%M %~\a'
