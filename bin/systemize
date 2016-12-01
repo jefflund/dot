@@ -7,7 +7,7 @@ import glob
 from os import path
 import argparse
 
-SUDO_SCRIPT_DIRS = ['install']
+SUDO_SCRIPT_DIRS = ['install', 'system']
 USER_SCRIPT_DIRS = ['homedir', 'vim', 'hook']
 SLOW_SCRIPTS = ['install', 'vim/50-ycm.sh']
 
