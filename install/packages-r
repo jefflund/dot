@@ -1,5 +1,0 @@
-install.packages('ggplot2', repos='http://cloud.r-project.org')
-install.packages('reshape', repos='http://cloud.r-project.org')
-install.packages('gridExtra', repos='http://cloud.r-project.org')
-install.packages('xtable', repos='http://cloud.r-project.org')
-install.packages('Rmisc', repos='http://cloud.r-project.org')

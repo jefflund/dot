@@ -1,0 +1,15 @@
+1. Create the file to be used for swap
+
+sudo fallocate -l 1G /mnt/1GB.swap
+
+2. Format the file for swap
+
+sudo mkswap /mnt/1GB.swap
+
+3. Add the file to system as swap file
+
+sudo swapon /mnt/1GB.swap
+
+4. Check that the sap file was created
+
+sudo swapon -s
