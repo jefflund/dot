@@ -15,3 +15,9 @@ Host github.com
 
 Host *potato
     ForwardX11 no
+
+Host devbox
+    User jlund3
+    Hostname ec2-35-162-88-219.us-west-2.compute.amazonaws.com
+    IdentityFile ~/.ssh/devbox.pem
+    ForwardX11 no
