@@ -12,7 +12,6 @@ REPOS = {
     'git@github.com:jlund3/git-horror': 'tools/git-horror',
 }
 
-
 def main():
     """Runs the cloning"""
     home = os.environ['HOME']
