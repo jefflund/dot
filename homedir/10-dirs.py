@@ -18,7 +18,6 @@ MK_DIRS = ['desktop',
            'documents',
            'go',
            'research',
-           'hobby',
            'tools']
 
 def main():
