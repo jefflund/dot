@@ -3,7 +3,6 @@ exuberant-ctags
 git
 tmux
 vim-nox
-zsh
 
 automake
 build-essential
