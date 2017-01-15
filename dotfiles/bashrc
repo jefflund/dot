@@ -109,3 +109,7 @@ shopt -s globstar
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
+
+if [[ -z "$TMUX" ]]; then
+    exec tmux attach -d -t foobar || tmux new -s foobar
+fi
