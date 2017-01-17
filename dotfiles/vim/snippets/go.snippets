@@ -198,3 +198,7 @@ snippet cases
 	for _, c := range cases {
 		${0}
 	}
+snippet testm
+	func TestMain(m *testing.M) {
+		${0:os.Exit(m.Run())}
+	}
