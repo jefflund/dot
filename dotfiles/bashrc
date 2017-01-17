@@ -110,6 +110,7 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
+# logging into devbox, I always want to be inside tmux
 if [ -z "$TMUX" ]; then
     exec tmux attach -d -t foobar || tmux new -s foobar
 fi
