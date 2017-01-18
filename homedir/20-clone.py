@@ -7,7 +7,7 @@ import os
 
 REPOS = {
     'git@github.com:jlund3/ankura': 'research/ankura',
-    'git@bitbucket.org:jlund3/research': 'research/writing',
+    'git@github.com:jlund3/writing': 'research/writing',
     'git@github.com:Pinafore/pinafore-papers': 'research/pinafore',
 
     'git@github.com:jlund3/gorl': 'go/src/github.com/jlund3/gorl',
