@@ -112,5 +112,5 @@ fi
 
 # logging into devbox, I always want to be inside tmux
 if [ -z "$TMUX" ]; then
-    exec tmux attach -d -t foobar || tmux new -s foobar
+    exec tmux new-session -AD -s foobar
 fi
