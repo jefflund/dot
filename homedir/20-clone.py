@@ -6,10 +6,11 @@ import imp
 import os
 
 REPOS = {
-    'git@github.com:jlund3/gorl': 'go/src/github.com/jlund3/gorl',
-    'git@github.com:jlund3/stones': 'go/src/github.com/jlund3/stones',
+    'git@github.com:tophathaxor/gorl': 'go/src/github.com/tophathaxor/gorl',
+    'git@github.com:tophathaxor/stones': 'go/src/github.com/tophathaxor/stones',
+
+    'git@github.com:tophathaxor/git-horror': 'tools/git-horror',
     'git@github.com:jlund3/goplay': 'tools/goplay',
-    'git@github.com:jlund3/git-horror': 'tools/git-horror',
 }
 
 def main():
