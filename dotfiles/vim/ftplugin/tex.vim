@@ -6,6 +6,8 @@ nnoremap <buffer> <localleader>dp :!make -f ~/config/docs/latex-makefile documen
 nnoremap <buffer> <localleader>pd :!make -f ~/config/docs/latex-makefile document<cr>
 nnoremap <buffer> <localleader>pp :!make -f ~/config/docs/latex-makefile present<cr>
 
+nnoremap <buffer> <localleader>C :!make -f ~/config/docs/latex-makefile clean<cr>
+
 nnoremap <buffer> <localleader>ce :!evince %:r.pdf &<cr><cr>
 nnoremap <buffer> <localleader>ec :!evince %:r.pdf &<cr><cr>
 nnoremap <buffer> <localleader>de :!evince document.pdf &<cr><cr>
