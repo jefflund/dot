@@ -23,6 +23,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
 Plugin 'tomtom/tlib_vim'
 Plugin 'tophathaxor/colorschemer'
+Plugin 'tophathaxor/eoleof'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-repeat'
 call vundle#end()
@@ -70,6 +71,7 @@ set statusline+=\ %([%Y%R%H%W]%)
 set statusline+=%m
 set statusline+=%{fugitive#statusline()}
 set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%{EOLEOFStatusline()}
 set statusline+=\ %{&spell?\"SPELL\ \":\"\"}
 set statusline+=%{&paste?\"PASTE\ \":\"\"}
 set statusline+=%{&scrollbind?\"SCROLLBIND\":\"\"}
