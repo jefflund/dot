@@ -92,7 +92,7 @@ let mapleader=" "
 let maplocalleader="-"
 
 " Better whitespace
-set list listchars=tab:»\ ,trail:·,nbsp:·
+set list listchars=tab:»\ ,trail:•,nbsp:•
 set expandtab
 set textwidth=79
 set tabstop=4
