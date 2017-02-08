@@ -102,10 +102,9 @@ set autoindent
 
 " Handle trailing whitespace
 function! StripTrailingWhitespace()
-    let l=line(".")
-    let c=col(".")
+    let l:win = winsaveview()
     execute '%s/\(\s\|\)\+$//e'
-    call cursor(l, c)
+    call winrestview(l:win)
 endfunction
 nnoremap <silent> <leader><space> :call StripTrailingWhitespace()<cr>
 
