@@ -31,11 +31,11 @@ alias egrep='egrep --color=auto'
 alias rgrep='rgrep --color=auto'
 
 # some ls aliases
-alias ls='ls --color=auto'
-alias lal='ls -al'
-alias lla='ls -la'
-alias ll='ls -l'
-alias la='ls -a'
+alias ls='ls --color=auto -h'
+alias lal='ls -alh'
+alias lla='ls -lah'
+alias ll='ls -lh'
+alias la='ls -ah'
 alias l='ls'
 
 # I always want color
