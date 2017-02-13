@@ -90,8 +90,12 @@ snippet elif
 		${0}
 	}
 snippet ife
-	if err := ${1:call()}; err != nil {
-		${0:return err}
+	if err != nil {
+		return ${1:err}
+	}
+snippet ifae
+	if ${1:err} := ${2:value}; err != nil {
+		${0}
 	}
 # switches
 snippet sw
