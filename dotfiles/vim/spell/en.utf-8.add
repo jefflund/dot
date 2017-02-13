@@ -142,3 +142,5 @@ statusline
 h4x0r
 dotfiles
 NOOPs
+tmux
+fnmatch
