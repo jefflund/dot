@@ -8,9 +8,7 @@ import os
 REPOS = {
     'git@github.com:tophathaxor/gorl': 'go/src/github.com/tophathaxor/gorl',
     'git@github.com:tophathaxor/stones': 'go/src/github.com/tophathaxor/stones',
-
-    'git@github.com:tophathaxor/git-horror': 'tools/git-horror',
-    'git@github.com:jlund3/goplay': 'tools/goplay',
+    'git@github.com:tophathaxor/tophathaxor': 'docs/tophat',
 }
 
 def main():

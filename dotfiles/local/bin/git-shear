@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# Removes a branch both locally and remotely. This is likely a bad idea, as you
+# will eventually delete code you didn't mean to. It is here because I never
+# remember how to delete branches once I'm done with them, and I'm too lazy to
+# look it up everytime.
+
+git branch -D "$1"
+git push origin --delete "$1"

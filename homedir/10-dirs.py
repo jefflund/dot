@@ -7,7 +7,7 @@ import imp
 
 MK_DIRS = [
     'go',
-    'tools',
+    'docs',
 ]
 
 def main():
