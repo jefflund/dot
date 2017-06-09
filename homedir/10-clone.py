@@ -7,8 +7,8 @@ import os
 
 REPOS = {
     'git@github.com:jefflund/gorl': 'go/src/github.com/jefflund/gorl',
-    'git@github.com:jefflund/shelf': 'docs/shelf',
-    'git@github.com:jefflund/resume': 'docs/resume',
+    'git@github.com:jefflund/shelf': 'documents/shelf',
+    'git@github.com:jefflund/resume': 'documents/resume',
     'git@github.com:jefflund/ankura': 'research/ankura',
     'git@github.com:jefflund/writing': 'research/writing',
 }
