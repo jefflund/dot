@@ -21,3 +21,9 @@ Host devbox
     Hostname ec2-35-162-88-219.us-west-2.compute.amazonaws.com
     IdentityFile ~/.ssh/devbox.pem
     ForwardX11 no
+
+Host devbox2
+    User jefflund
+    Hostname 104.196.252.164
+    IdentityFile ~/.ssh/devbox
+    ForwardX11 no
