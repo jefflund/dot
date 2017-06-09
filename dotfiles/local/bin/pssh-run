@@ -18,7 +18,7 @@ def main():
                         help='command to run')
     args = parser.parse_args()
 
-    basedir = os.path.join(os.getenv('HOME'), 'scratch', args.name)
+    basedir = os.path.join(os.getenv('HOME'), 'documents', 'scratch', args.name)
     outdir = os.path.join(basedir, 'stdout')
     errdir = os.path.join(basedir, 'stderr')
 
