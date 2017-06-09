@@ -22,13 +22,5 @@ def link_dotfiles():
 
     os.chmod(os.path.join(dotfiles, 'ssh/config'), 0O644)
 
-    tools = ['tools/goplay',
-             'tools/git-horror']
-    for tool in tools:
-        for src in glob.glob(os.path.join(home, tool, '*')):
-            dst = os.path.join(home, '.local', 'bin', os.path.basename(src))
-            if os.access(src, os.X_OK):
-                lib.ensure_link(src, dst)
-
 if __name__ == '__main__':
     link_dotfiles()

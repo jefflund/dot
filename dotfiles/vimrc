@@ -125,6 +125,7 @@ let NERDTreeIgnore+=['\.o$', '\.d$']
 let NERDTreeIgnore+=['\.aux$', '\.log$']
 let NERDTreeIgnore+=['\.class$']
 let NERDTreeIgnore+=['\.make$', '\.blg$', '\.bbl$', '\.fls$', '\.cookie$']
+let NERDTreeIgnore+=['\.temp$']
 let NERDTreeQuitOnOpen=1
 let NERDTreeChDirMode=2
 
@@ -147,7 +148,7 @@ let g:ycm_key_list_select_completion=[]
 let g:ycm_key_list_previous_completion=[]
 let g:ycm_server_log_level='error'
 let g:ycm_key_detailed_diagnostics=''
-let g:ycm_path_to_python_interpreter = '/usr/bin/python'
+let g:ycm_server_python_interpreter='/usr/bin/python3'
 
 " Setup Syntastic
 let g:syntastic_check_on_open = 1

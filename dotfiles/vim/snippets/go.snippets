@@ -17,10 +17,10 @@ snippet im
 		"${0:fmt}"
 	)
 snippet gh
-	"github.com/jlund3/${0:pkg}"
+	"github.com/jefflund/${0:pkg}"
 snippet imgh
 	import (
-		"github.com/jlund3/${0:pkg}"
+		"github.com/jefflund/${0:pkg}"
 	)
 snippet consts
 	const (
@@ -173,6 +173,8 @@ snippet st
 # data structures
 snippet set
 	map[${0:Key}]struct{}
+snippet map
+	map[${1:Key}]${0:Value}
 snippet ap
 	${1:slice} = append($1, ${2:val})
 # testing

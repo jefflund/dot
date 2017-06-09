@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# Forcibly resets *everything*. If you use this, sooner or later you'll lose
+# work you didn't mean to. Seriously, I've lost a lot of working code this
+# way...
+
+git clean -df
+git reset --hard
