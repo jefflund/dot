@@ -81,7 +81,7 @@ source ~/.crosscompile.bash
 # run bash specific stuff
 
 # setup prompt
-PS1="\u@devbox:\W$ \[\e]2;\u@devbox \w\a\]"
+PS1="\u@\h:\W$ \[\e]2;\u@\H \w\a\]"
 
 # don't put duplicate lines or lines starting with space in the history.
 HISTCONTROL=ignoreboth
@@ -111,6 +111,6 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
 fi
 
 # logging into devbox, I always want to be inside tmux
-if [ -z "$TMUX" ]; then
+if [ $HOSTNAME = "devbox" ] && [ -z "$TMUX" ]; then
     exec tmux new-session -AD -s foobar
 fi
