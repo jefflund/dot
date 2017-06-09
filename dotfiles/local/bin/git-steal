@@ -1,0 +1,21 @@
+#!/bin/bash
+
+# Rewrites every commit to have the given name and email for both author and
+# committer. Rewritting history is almost always a bad idea. You will likely
+# need a force push to make this go through, and that is almost always a bad
+# idea. Make sure the repo has not been cloned elsewhere or *very* messy things
+# will happen.
+
+if [ "$#" -ne 2 ]; then
+    echo 'git steal <name> <email>'
+    exit
+fi
+
+email_re="^[a-z0-9!#\$%&'*+/=?^_\`{|}~-]+(\.[a-z0-9!#$%&'*+/=?^_\`{|}~-]+)*@([a-z0-9]([a-z0-9-]*[a-z0-9])?\.)+[a-z0-9]([a-z0-9-]*[a-z0-9])?\$"
+if [[ ! $2 =~ $email_re ]]; then
+    echo 'invalid email'
+    echo 'git steal <name> <email>'
+    exit
+fi
+
+git filter-branch -f --env-filter "GIT_AUTHOR_NAME='$1' GIT_AUTHOR_EMAIL='$2' GIT_COMMITTER_NAME='$1' GIT_COMMITTER_EMAIL='$2'" HEAD
