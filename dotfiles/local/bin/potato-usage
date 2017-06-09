@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+pssh -h /config/potatoes/all -i "ps -g aml,guest -o ruser,fname | grep -v RUSER | grep -v -E 'systemd|sd-pam|grep|ps|bash|ssh|sort|uniq' | sort | uniq -c"

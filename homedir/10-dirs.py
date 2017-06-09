@@ -8,6 +8,7 @@ import imp
 MK_DIRS = [
     'go',
     'docs',
+    'research',
 ]
 
 def main():
