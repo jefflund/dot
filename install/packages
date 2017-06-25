@@ -2,7 +2,7 @@ ack-grep
 exuberant-ctags
 git
 tmux
-vim-nox
+vim
 
 automake
 build-essential
@@ -21,3 +21,5 @@ python3-pytest-cov
 
 texlive-latex-base
 texlive-latex-recommended
+
+hugo
