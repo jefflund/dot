@@ -67,6 +67,7 @@ alias todo='ack "TODO|FIXME|XXX"'
 alias playall='mplayer -shuffle -loop 0 *'
 alias lc='wc -l'
 alias foobar='tmux attach -d -t foobar || tmux new -s foobar'
+alias angband='angband -mgcu'
 
 # I can never remember these flags...
 alias untar='tar -xf'
@@ -101,6 +102,12 @@ shopt -s checkwinsize
 
 # the pattern "**" used in pathnames will match all files in subdirectories
 shopt -s globstar
+
+# allow cd to work with enviromental variables, and setup a few shortcuts
+shopt -s cdable_vars
+export gh=$HOME/go/src/github.com/jefflund
+export ghg=$HOME/go/src/github.com/jefflund/gorl
+export ghs=$HOME/go/src/github.com/jefflund/stones
 
 # make less more friendly for non-text input files
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
