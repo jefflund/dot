@@ -21,6 +21,9 @@ fi
 # if not running interactively, don't do anything else
 [ -z "$PS1" ] && return
 
+# Add to CDPATH for easier movement around home directory
+export CDPATH=:.:$HOME:$GOPATH/src/github.com/jefflund
+
 # remove terminal scroll locking
 stty -ixon
 
@@ -101,12 +104,6 @@ shopt -s checkwinsize
 
 # the pattern "**" used in pathnames will match all files in subdirectories
 shopt -s globstar
-
-# allow cd to work with enviromental variables, and setup a few shortcuts
-shopt -s cdable_vars
-export gh=$HOME/go/src/github.com/jefflund
-export ghg=$HOME/go/src/github.com/jefflund/gorl
-export ghs=$HOME/go/src/github.com/jefflund/stones
 
 # make less more friendly for non-text input files
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
