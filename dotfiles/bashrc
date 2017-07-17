@@ -63,13 +63,12 @@ function multiplex() {
 }
 
 # More alias goodness
-alias todo='ack "TODO|FIXME|XXX"'
-alias playall='mplayer -shuffle -loop 0 *'
-alias lc='wc -l'
-alias foobar='tmux attach -d -t foobar || tmux new -s foobar'
 alias angband='angband -mgcu'
-
-# I can never remember these flags...
+alias df='df -h'
+alias du='du -h'
+alias lc='wc -l'
+alias playall='mplayer -shuffle -loop 0 *'
+alias todo='ack "TODO|FIXME|XXX"'
 alias untar='tar -xf'
 
 # Insecure ssh aliases
