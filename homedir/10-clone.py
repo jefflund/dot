@@ -9,9 +9,11 @@ REPOS = {
     'git@github.com:jefflund/gorl': 'go/src/github.com/jefflund/gorl',
     'git@github.com:jefflund/stones': 'go/src/github.com/jefflund/stones',
     'git@github.com:jefflund/shelf': 'documents/shelf',
+    'git@github.com:jefflund/website': 'documents/website',
     'git@github.com:jefflund/resume': 'documents/resume',
     'git@github.com:jefflund/ankura': 'research/ankura',
     'git@github.com:jefflund/writing': 'research/writing',
+    'git@github.com:jefflund/reading': 'research/reading',
 }
 
 def main():
