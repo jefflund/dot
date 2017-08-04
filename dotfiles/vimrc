@@ -23,6 +23,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
 Plugin 'tomtom/tlib_vim'
 Plugin 'jefflund/colorschemer'
+Plugin 'jefflund/eoleof'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-repeat'
 call vundle#end()
