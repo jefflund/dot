@@ -151,7 +151,7 @@ let g:ycm_server_python_interpreter='/usr/bin/python3'
 
 " Setup Syntastic
 let g:syntastic_check_on_open = 1
-let g:syntastic_python_pylint_exe = 'python3 -m pylint'
+let g:syntastic_python_checkers = ['pyflakes']
 
 " Setup ack.vim
 let g:ack_autoclose=1
