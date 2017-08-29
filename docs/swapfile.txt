@@ -10,6 +10,6 @@ sudo mkswap /mnt/1GB.swap
 
 sudo swapon /mnt/1GB.swap
 
-4. Check that the sap file was created
+4. Check that the swap file was created
 
 sudo swapon -s
