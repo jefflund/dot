@@ -4,7 +4,7 @@ if [[ ! "$PATH" =~ (^|:)"$HOME/.local/bin"(:|$) ]]; then
 fi
 
 # Add AML utils to PATH if I'm on AML
-if [ $(hostname -d) = "aml.cs.byu.edu" ]; then
+if [[ $(hostname -d) = "aml.cs.byu.edu" ]]; then
     export PATH="$PATH":"$HOME/aml/util/"
 fi
 
