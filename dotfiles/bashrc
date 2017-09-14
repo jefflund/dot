@@ -1,28 +1,27 @@
 # Add ~/.local/bin to PATH
-if [[ ! "$PATH" =~ (^|:)"$HOME/.local/bin"(:|$) ]]
-then
+if [[ ! "$PATH" =~ (^|:)"$HOME/.local/bin"(:|$) ]]; then
     export PATH="$PATH":"$HOME/.local/bin"
 fi
 
 # Set up GOPATH and GOBIN
-if [[ ! "$PATH" =~ (^|:)"$HOME/go/bin"(:|$) ]]
-then
+if [[ ! "$PATH" =~ (^|:)"$HOME/go/bin"(:|$) ]]; then
     export PATH="$PATH":"$HOME/go/bin"
 fi
 export GOPATH=$HOME/go
 export GOBIN=$HOME/go/bin
 
 # Add ankura to PYTHONPATH
-if [[ ! "$PYTHONPATH" =~ (^|:)"$HOME/research/ankura"(:$) ]]
-then
+if [[ ! "$PYTHONPATH" =~ (^|:)"$HOME/research/ankura"(:$) ]]; then
     export PYTHONPATH="$PYTHONPATH":$HOME/research/ankura
 fi
 
+# Exports for Tensorflow
 export CUDA_HOME=/usr/local/cuda
 export PATH=${CUDA_HOME}/bin:${PATH}
 export LD_LIBRARY_PATH=${CUDA_HOME}/lib64:$LD_LIBRARY_PATH
+export TF_CPP_MIN_LOG_LEVEL=2
 
-# if not running interactively, don't do anything else
+# If not running interactively, don't do anything else
 [ -z "$PS1" ] && return
 
 # Add to CDPATH for easier movement around home directory
@@ -52,13 +51,11 @@ alias l='ls'
 export EDITOR="vim"
 alias vi=vim
 
-# I always seem to ls right after things like cd and clear...
-function cd()
-{
+# I always seem to ls right after things like cd and clear
+function cd() {
     builtin cd "$@" && ls
 }
-function clear()
-{
+function clear() {
     /usr/bin/env clear
     ls
 }
@@ -70,7 +67,6 @@ function multiplex() {
 }
 
 # More alias goodness
-alias angband='angband -mgcu'
 alias df='df -h'
 alias du='du -h'
 alias lc='wc -l'
@@ -81,39 +77,37 @@ alias untar='tar -xf'
 # Golang Crosscompile
 source ~/.crosscompile.bash
 
-# run bash specific stuff
-
-# setup prompt
+# Setup prompt
 PS1="\u@\h:\W$ \[\e]2;\u@\H \w\a\]"
 
-# don't put duplicate lines or lines starting with space in the history.
+# Don't put duplicate lines or lines starting with space in the history.
 HISTCONTROL=ignoreboth
 
-# append to the history file, don't overwrite it
+# Append to the history file, don't overwrite it
 shopt -s histappend
 
-# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
+# For setting history length see HISTSIZE and HISTFILESIZE in bash(1)
 HISTSIZE=10000
 HISTFILESIZE=100000
 
-# make bash history ignore common commands I ever won't search for
+# Make bash history ignore common commands I ever won't search for
 export HISTIGNORE="&:ls:ll:la:cd:cd ..:clear:vim:git st:git wipe"
 
-# check the window size after each command and update values LINES and COLUMNS
+# Check the window size after each command and update values LINES and COLUMNS
 shopt -s checkwinsize
 
-# the pattern "**" used in pathnames will match all files in subdirectories
+# The pattern "**" used in pathnames will match all files in subdirectories
 shopt -s globstar
 
-# make less more friendly for non-text input files
+# Make less more friendly for non-text input files
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
-# enable programmable completion features
+# Enable programmable completion features
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
-# logging into devbox, I always want to be inside tmux
+# Logging into devbox, I always want to be inside tmux
 if [ $HOSTNAME = "devbox" ] && [ -z "$TMUX" ]; then
     exec tmux new-session -AD -s foobar
 fi
