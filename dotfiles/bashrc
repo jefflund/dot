@@ -3,6 +3,11 @@ if [[ ! "$PATH" =~ (^|:)"$HOME/.local/bin"(:|$) ]]; then
     export PATH="$PATH":"$HOME/.local/bin"
 fi
 
+# Add AML utils to PATH if I'm on AML
+if [ $(hostname -d) = "aml.cs.byu.edu" ]; then
+    export PATH="$PATH":"$HOME/aml/util/"
+fi
+
 # Set up GOPATH and GOBIN
 if [[ ! "$PATH" =~ (^|:)"$HOME/go/bin"(:|$) ]]; then
     export PATH="$PATH":"$HOME/go/bin"
