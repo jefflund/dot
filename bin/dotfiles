@@ -4,7 +4,6 @@
 
 import os
 import imp
-import glob
 
 def link_dotfiles():
     """Creates a symlink for every dotfile in the home directory"""
