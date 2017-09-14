@@ -8,9 +8,9 @@ nnoremap <buffer> <localleader>pp :!make -f ~/config/docs/latex-makefile present
 
 nnoremap <buffer> <localleader>C :!make -f ~/config/docs/latex-makefile clean<cr>
 
-nnoremap <buffer> <localleader>ce :!evince %:r.pdf &<cr><cr>
-nnoremap <buffer> <localleader>ec :!evince %:r.pdf &<cr><cr>
-nnoremap <buffer> <localleader>de :!evince document.pdf &<cr><cr>
-nnoremap <buffer> <localleader>ed :!evince document.pdf &<cr><cr>
-nnoremap <buffer> <localleader>pe :!evince present.pdf &<cr><cr>
-nnoremap <buffer> <localleader>ep :!evince present.pdf &<cr><cr>
+nnoremap <buffer> <localleader>ce :!okular %:r.pdf &<cr><cr>
+nnoremap <buffer> <localleader>ec :!okular %:r.pdf &<cr><cr>
+nnoremap <buffer> <localleader>de :!okular document.pdf &<cr><cr>
+nnoremap <buffer> <localleader>ed :!okular document.pdf &<cr><cr>
+nnoremap <buffer> <localleader>pe :!okular present.pdf &<cr><cr>
+nnoremap <buffer> <localleader>ep :!okular present.pdf &<cr><cr>
