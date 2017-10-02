@@ -1,8 +1,8 @@
 Host aml
     HostName aml.cs.byu.edu
 
-Host wizard
-    ProxyCommand ssh aml nc wizard 22
+Host perplexity
+    ProxyCommand ssh schizo.cs.byu.edu nc perplexity.aml.cs.byu.edu 22
 
 Host fsl
     HostName ssh.fsl.byu.edu
