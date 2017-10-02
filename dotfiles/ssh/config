@@ -16,6 +16,9 @@ Host github.com
 Host *potato
     ForwardX11 no
 
+Host *yam
+    ForwardX11 no
+
 Host devbox
     User jefflund
     Hostname 104.196.252.164
