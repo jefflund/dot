@@ -24,7 +24,6 @@ Global {
   iconsize=24
   loglevel=2
   align=center
-  monitor=1
 }
 Plugin {
   type=menu
