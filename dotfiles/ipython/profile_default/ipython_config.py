@@ -24,8 +24,10 @@ c = get_config()
 # c.InteractiveShellApp.code_to_run = ''
 
 # lines of code to run at IPython startup.
-c.InteractiveShellApp.exec_lines = ['import os, sys, math, random',
-                                    'import numpy, scipy, scipy.sparse',
+c.InteractiveShellApp.exec_lines = ['import os, sys, math, random, time',
+                                    'import collections',
+                                    'import numpy as np',
+                                    'import tensorflow as tf',
                                     '%autoreload 2']
 
 # Enable GUI event loop integration ('qt', 'wx', 'gtk', 'glut', 'pyglet',
