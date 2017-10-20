@@ -25,7 +25,8 @@ c = get_config()
 
 # lines of code to run at IPython startup.
 c.InteractiveShellApp.exec_lines = ['import os, sys, math, random, time',
-                                    'import collections',
+                                    'import collections, pickle',
+                                    'from glob import glob',
                                     'import numpy as np',
                                     'import tensorflow as tf',
                                     '%autoreload 2']
