@@ -111,8 +111,3 @@ shopt -s globstar
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
-
-# Logging into devbox, I always want to be inside tmux
-if [ $HOSTNAME = "devbox" ] && [ -z "$TMUX" ]; then
-    exec tmux new-session -AD -s foobar
-fi
