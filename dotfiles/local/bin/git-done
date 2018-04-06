@@ -1,8 +1,0 @@
-#!/bin/bash
-
-# Commits and pushes every change (staged or not) with the given commit
-# message. This is a horrible thing to do, because you will eventually commit
-# and push something you didn't mean to, but I'm lazy.
-
-git commit -a -m "$1"
-git push

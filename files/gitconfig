@@ -1,0 +1,23 @@
+[core]
+    editor = vim
+[color]
+    ui = true
+[alias]
+    st = status -sb
+    ci = commit
+    br = branch
+    co = checkout
+    df = diff
+    dfc = diff --cached
+    l = log --oneline --decorate --name-status
+    lg = log --oneline --decorate --name-status --graph
+    lo = log --oneline
+
+    wipe = "!git clean -df && git reset --hard"
+    done = "!f(){ git commit -a -m \"$1\" && git push; };f"
+    shear = "!f(){ git branch -D \"$1\" && git push origin --delete \"$1\"; };f"
+[push]
+    default = current
+[user]
+	name = Jeffrey Lund
+	email = jefflund@gmail.com

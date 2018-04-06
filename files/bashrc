@@ -1,0 +1,76 @@
+# Set up GOPATH and GOBIN
+export GOPATH=$HOME/go
+export GOBIN=$HOME/go/bin
+export PATH="$PATH":"$GOBIN"
+
+# If not running interactively, don't do anything else
+[ -z "$PS1" ] && return
+
+# Remove terminal scroll locking
+stty -ixon
+
+# Add color to a grep commands
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+alias rgrep='rgrep --color=auto'
+
+# Some ls aliases
+alias ls='ls --color=auto -h'
+alias lal='ls -alh'
+alias lla='ls -lah'
+alias ll='ls -lh'
+alias la='ls -ah'
+alias l='ls'
+
+# I always want color
+[ -z "$TMUX" ] && export TERM="xterm-256color"
+
+# Add to CDPATH for easier movement around home directory
+export CDPATH=:.:$HOME:$GOPATH/src/github.com/jefflund
+
+# All other cli editors suck
+export EDITOR="vim"
+alias vi=vim
+
+# I always seem to ls right after things like cd and clear
+function cd() {
+    builtin cd "$@" && ls
+}
+function clear() {
+    /usr/bin/env clear
+    ls
+}
+
+# Golang Crosscompile
+source ~/.crosscompile.bash
+
+# Setup prompt
+PS1="\u@\h:\W$ \[\e]2;\u@\H \w\a\]"
+
+# Don't put duplicate lines or lines starting with space in the history.
+HISTCONTROL=ignoreboth
+
+# Append to the history file, don't overwrite it
+shopt -s histappend
+
+# For setting history length see HISTSIZE and HISTFILESIZE in bash(1)
+HISTSIZE=10000
+HISTFILESIZE=100000
+
+# Make bash history ignore common commands I ever won't search for
+export HISTIGNORE="&:ls:ll:la:cd:cd ..:clear:vim"
+
+# Check the window size after each command and update values LINES and COLUMNS
+shopt -s checkwinsize
+
+# The pattern "**" used in pathnames will match all files in subdirectories
+shopt -s globstar
+
+# Make less more friendly for non-text input files
+[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
+
+# Enable programmable completion features
+if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
+    . /etc/bash_completion
+fi

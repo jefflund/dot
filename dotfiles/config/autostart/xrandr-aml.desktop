@@ -1,4 +1,0 @@
-[Desktop Entry]
-Name=Fix AML Monitors
-Comment=Runs xrandr setup for AML monitors on login
-Exec=xrandr-aml

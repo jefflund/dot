@@ -1,3 +1,0 @@
-package @PACKNAME@
-
-@CURSOR@

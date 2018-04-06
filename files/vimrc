@@ -1,0 +1,201 @@
+" First, be iMproved
+set nocompatible
+
+" Plugins load faster with this off
+filetype off
+
+" Load plugins via Vundle
+call plug#begin()
+Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'Valloric/YouCompleteMe'
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'fatih/vim-go'
+Plug 'garbas/vim-snipmate'
+Plug 'jefflund/termbase16-vim'
+Plug 'kien/ctrlp.vim'
+Plug 'majutsushi/tagbar'
+Plug 'mileszs/ack.vim'
+Plug 'scrooloose/nerdcommenter'
+Plug 'scrooloose/nerdtree'
+Plug 'tomtom/tlib_vim'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-repeat'
+call plug#end()
+
+" Turn on file type based options
+syntax on
+filetype on
+filetype indent on
+filetype plugin on
+let g:tex_flavor="latex"
+
+" Turn on a few more options
+set title
+set backspace=2
+set scrolloff=2
+set showcmd
+set showmode
+set guioptions=ace
+set colorcolumn=81
+set number
+set relativenumber
+set wrap
+set ttyfast
+
+" Even more options for vsplits
+set winwidth=84
+autocmd WinEnter * setlocal number relativenumber wrap
+autocmd WinLeave * setlocal nonumber norelativenumber nowrap
+
+" In memory buffers
+set nobackup
+set noswapfile
+set hidden
+
+" Switch up the colors
+set t_Co=256
+set t_ut=
+silent! colorscheme termbase16-classic-dark
+
+" Setup statusline
+set laststatus=2
+set statusline=%<
+set statusline+=%t
+set statusline+=\ %([%Y%R%H%W]%)
+set statusline+=%m
+set statusline+=%{fugitive#statusline()}
+set statusline+=\ %{&spell?\"SPELL\ \":\"\"}
+set statusline+=%{&paste?\"PASTE\ \":\"\"}
+set statusline+=%{&scrollbind?\"SCROLLBIND\":\"\"}
+set statusline+=%=
+set statusline+=%-14.(%l,%v%)
+set statusline+=\ %P
+
+" Setup cursorline
+autocmd WinEnter * setlocal cursorline
+autocmd BufEnter * setlocal cursorline
+autocmd WinLeave * setlocal nocursorline
+setlocal cursorline
+
+" More sane split openings
+set splitbelow
+set splitright
+
+" Set the leader keys
+let mapleader=" "
+let maplocalleader="-"
+
+" Better whitespace
+set list listchars=tab:»\ ,trail:•,nbsp:•
+set expandtab
+set textwidth=79
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set autoindent
+
+" Handle trailing whitespace
+function! StripTrailingWhitespace()
+    let l:win = winsaveview()
+    execute '%s/\(\s\|\)\+$//e'
+    call winrestview(l:win)
+endfunction
+nnoremap <silent> <leader><space> :call StripTrailingWhitespace()<cr>
+
+" Setup search
+set hlsearch
+set incsearch
+set ignorecase
+set smartcase
+nnoremap <silent> <leader>/ :nohlsearch<cr>
+
+" Setup NERDTree
+nnoremap <silent> <leader>n :NERDTreeToggle<cr>
+let NERDTreeIgnore=[]
+let NERDTreeIgnore+=['\.pyc$', '__pycache__']
+let NERDTreeIgnore+=['\.o$', '\.d$']
+let NERDTreeIgnore+=['\.aux$', '\.log$']
+let NERDTreeIgnore+=['\.class$']
+let NERDTreeIgnore+=['\.make$', '\.blg$', '\.bbl$', '\.fls$', '\.cookie$']
+let NERDTreeIgnore+=['\.temp$']
+let NERDTreeQuitOnOpen=1
+let NERDTreeChDirMode=2
+
+" Setup CtrlP
+let g:ctrlp_custom_ignore = {
+    \ 'dir':  '\v[\/]\.(git|hg|svn)$',
+    \ 'file': '\v\.(pyc|blg|bbl|fls|cookies|make|o|d|class|aux|log)$',
+    \ }
+let g:ctrlp_working_path_mode = 'a'
+
+" Setup vim-go
+let g:go_doc_keywordprg_enabled=0
+let g:go_def_mapping_enabled=0
+let g:go_textobj_enabled=0
+let g:go_test_timeout=0
+
+" Setup YouCompleteMe
+let g:ycm_autoclose_preview_window_after_insertion=1
+let g:ycm_key_list_select_completion=[]
+let g:ycm_key_list_previous_completion=[]
+
+" Setup Tagbar
+nnoremap <silent> <leader>t :TagbarToggle<cr>
+let g:tagbar_autoclose=1
+let g:tagbar_left=1
+let g:tagbar_sort=0
+
+" Setup ack.vim
+let g:ack_autoclose=1
+nnoremap <leader>a :Ack <c-r><c-w><cr>
+
+" Setup vim-tmux-navigator
+let g:tmux_navigator_no_mappings=1
+nnoremap <silent> <c-h> :TmuxNavigateLeft<cr>
+nnoremap <silent> <c-l> :TmuxNavigateRight<cr>
+nnoremap <silent> <c-j> :TmuxNavigateDown<cr>
+nnoremap <silent> <c-k> :TmuxNavigateUp<cr>
+
+" Navigation shortcuts
+nnoremap <s-j> <c-f>zz
+nnoremap <s-k> <c-u>zz
+vnoremap <s-j> <c-f>zz
+vnoremap <s-k> <c-u>zz
+nnoremap j gj
+nnoremap k gk
+
+" Easy quit and save
+nnoremap <silent> <leader>Q :qa<cr>
+nnoremap <silent> <leader>q :q<cr>
+nnoremap <silent> <leader>w :w<cr>
+nnoremap <silent> <leader>W :wa<cr>
+
+" Save some keystrokes
+vnoremap < <gv
+vnoremap > >gv
+nnoremap > >>
+nnoremap < <<
+nnoremap ; :
+vnoremap ; :
+nnoremap ! :!
+
+" Better windo (restores current window)
+function! WinDo(cmd)
+    let currwin=winnr()
+    execute 'windo ' . a:cmd
+    execute currwin . 'wincmd w'
+endfunction
+com! -nargs=+ -complete=command Windo call WinDo(<q-args>)
+
+" Other shortcuts for fn keys
+nnoremap <silent> <F1> :YcmRestartServer<cr>
+nnoremap <silent> <F2> :set invspell<cr>
+nnoremap <silent> <F3> :set invpaste<cr>
+nnoremap <silent> <F4> :Windo set scrollbind!<cr>
+nnoremap <silent> <F5> :redraw!<cr>
+
+" Disable Ex mode
+map Q <nop>
+
+" I don't anticpate ever using Modula-2, but I do use *.md for markdown
+autocmd BufNewFile,BufReadPost *.md set filetype=markdown

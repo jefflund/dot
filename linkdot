@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# create dot directories
+for dotdir in $(find $HOME/dot/files -type d -not -path '*/\.*'); do
+    mkdir -p ${dotdir/\/dot\/files\//\/.}
+done
+# symlink dot files
+for dotfile in $(find $HOME/dot/files -type f -not -path '*/\.*'); do
+    ln -sf $dotfile ${dotfile/\/dot\/files\//\/.}
+done
