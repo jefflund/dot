@@ -30,3 +30,8 @@ libncursesw5-dev
 curl
 wget
 w3m
+
+# tex
+texlive-latex-base
+texlive-latex-recommended
+texlive-latex-extra
