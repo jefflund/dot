@@ -149,6 +149,7 @@ let g:tagbar_sort=0
 " Setup ack.vim
 let g:ack_autoclose=1
 nnoremap <leader>a :Ack <c-r><c-w><cr>
+let g:ackprg = 'ag --vimgrep'
 
 " Setup vim-tmux-navigator
 let g:tmux_navigator_no_mappings=1
