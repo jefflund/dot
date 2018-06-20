@@ -7,10 +7,11 @@ filetype off
 " Load plugins via Vundle
 call plug#begin()
 Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'SirVer/ultisnips'
 Plug 'Valloric/YouCompleteMe'
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'ervandew/supertab'
 Plug 'fatih/vim-go'
-Plug 'garbas/vim-snipmate'
 Plug 'jefflund/eoleof'
 Plug 'jefflund/termbase16-vim'
 Plug 'kien/ctrlp.vim'
@@ -137,8 +138,14 @@ let g:go_test_timeout=0
 
 " Setup YouCompleteMe
 let g:ycm_autoclose_preview_window_after_insertion=1
-let g:ycm_key_list_select_completion=[]
-let g:ycm_key_list_previous_completion=[]
+let g:ycm_key_list_select_completion = ['<c-n>', '<down>']
+let g:ycm_key_list_previous_completion = ['<c-p', '<up>']
+
+" Setup UltiSnips
+let g:SuperTabDefaultCompletionType = '<c-n>'
+let g:UltiSnipsExpandTrigger = '<tab>'
+let g:UltiSnipsJumpForwardTrigger = '<tab>'
+let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
 
 " Setup Tagbar
 nnoremap <silent> <leader>t :TagbarToggle<cr>
