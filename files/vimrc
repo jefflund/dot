@@ -187,6 +187,7 @@ nnoremap < <<
 nnoremap ; :
 vnoremap ; :
 nnoremap ! :!
+inoremap jk <esc>
 
 " Better windo (restores current window)
 function! WinDo(cmd)
