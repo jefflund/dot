@@ -187,6 +187,7 @@ nnoremap < <<
 nnoremap ; :
 vnoremap ; :
 nnoremap ! :!
+vnoremap jk <esc>
 inoremap jk <esc>
 
 " Better windo (restores current window)
