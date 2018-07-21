@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# I use this on my free GCP instance (which only has 0.6 GB ram).
+
 # Create file to be used for swap
 sudo fallocate -l 1G /mnt/1GB.swap
 # Format the file for swap
@@ -8,4 +10,3 @@ sudo mkswap /mnt/1GB.swap
 sudo swapon /mnt/1GB.swap
 # Check that the swap file was created
 sudo swapon -s
-
