@@ -120,6 +120,7 @@ let NERDTreeIgnore+=['\.aux$', '\.log$']
 let NERDTreeIgnore+=['\.class$']
 let NERDTreeIgnore+=['\.make$', '\.blg$', '\.bbl$', '\.fls$', '\.cookie$']
 let NERDTreeIgnore+=['\.temp$']
+let NERDTreeIgnore+=['\.lof$', '\.lol$', '\.lot$', '\.out$', '\.toc$']
 let NERDTreeQuitOnOpen=1
 let NERDTreeChDirMode=2
 
