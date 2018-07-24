@@ -198,18 +198,6 @@
         <wrap>no</wrap>
       </action>
     </keybind>
-    <keybind key="C-A-Up">
-      <action name="GoToDesktop">
-        <to>up</to>
-        <wrap>no</wrap>
-      </action>
-    </keybind>
-    <keybind key="C-A-Down">
-      <action name="GoToDesktop">
-        <to>down</to>
-        <wrap>no</wrap>
-      </action>
-    </keybind>
     <keybind key="S-A-Left">
       <action name="SendToDesktop">
         <to>left</to>
@@ -222,42 +210,9 @@
         <wrap>no</wrap>
       </action>
     </keybind>
-    <keybind key="S-A-Up">
-      <action name="SendToDesktop">
-        <to>up</to>
-        <wrap>no</wrap>
-      </action>
-    </keybind>
-    <keybind key="S-A-Down">
-      <action name="SendToDesktop">
-        <to>down</to>
-        <wrap>no</wrap>
-      </action>
-    </keybind>
-    <keybind key="W-F1">
-      <action name="GoToDesktop">
-        <to>1</to>
-      </action>
-    </keybind>
-    <keybind key="W-F2">
-      <action name="GoToDesktop">
-        <to>2</to>
-      </action>
-    </keybind>
-    <keybind key="W-F3">
-      <action name="GoToDesktop">
-        <to>3</to>
-      </action>
-    </keybind>
-    <keybind key="W-F4">
-      <action name="GoToDesktop">
-        <to>4</to>
-      </action>
-    </keybind>
     <keybind key="W-d">
       <action name="ToggleShowDesktop"/>
     </keybind>
-    <!-- Keybindings for windows -->
     <!-- Keybindings for windows -->
     <keybind key="A-F4">
       <action name="Close"/>
@@ -291,45 +246,7 @@
         </finalactions>
       </action>
     </keybind>
-    <keybind key="C-A-Tab">
-      <action name="NextWindow">
-        <panels>yes</panels>
-        <desktop>yes</desktop>
-        <finalactions>
-          <action name="Focus"/>
-          <action name="Raise"/>
-          <action name="Unshade"/>
-        </finalactions>
-      </action>
-    </keybind>
-    <!-- Keybindings for window switching with the arrow keys -->
-    <keybind key="W-S-Right">
-      <action name="DirectionalCycleWindows">
-        <direction>right</direction>
-      </action>
-    </keybind>
-    <keybind key="W-S-Left">
-      <action name="DirectionalCycleWindows">
-        <direction>left</direction>
-      </action>
-    </keybind>
-    <keybind key="W-S-Up">
-      <action name="DirectionalCycleWindows">
-        <direction>up</direction>
-      </action>
-    </keybind>
-    <keybind key="W-S-Down">
-      <action name="DirectionalCycleWindows">
-        <direction>down</direction>
-      </action>
-    </keybind>
-    <!-- 
-        Lubuntu specific.
-        Keybindings for window tiling
-    -->
-    <!-- 
-        # HalfLeftScreen
-    -->
+    <!-- Keybindings for window tiling -->
     <keybind key="W-Left">
       <action name="UnmaximizeFull"/>
       <action name="MoveResizeTo">
@@ -339,9 +256,24 @@
         <width>50%</width>
       </action>
     </keybind>
-    <!-- 
-        # HalfRightScreen
-    -->
+    <keybind key="W-S-Left">
+      <action name="UnmaximizeFull"/>
+      <action name="MoveResizeTo">
+        <x>0</x>
+        <y>0</y>
+        <height>50%</height>
+        <width>50%</width>
+      </action>
+    </keybind>
+    <keybind key="W-C-Left">
+      <action name="UnmaximizeFull"/>
+      <action name="MoveResizeTo">
+        <x>0</x>
+        <y>-0</y>
+        <height>50%</height>
+        <width>50%</width>
+      </action>
+    </keybind>
     <keybind key="W-Right">
       <action name="UnmaximizeFull"/>
       <action name="MoveResizeTo">
@@ -351,9 +283,24 @@
         <width>50%</width>
       </action>
     </keybind>
-    <!-- 
-        # HalfUpperScreen
-    -->
+    <keybind key="W-S-Right">
+      <action name="UnmaximizeFull"/>
+      <action name="MoveResizeTo">
+        <x>-0</x>
+        <y>0</y>
+        <height>50%</height>
+        <width>50%</width>
+      </action>
+    </keybind>
+    <keybind key="W-C-Right">
+      <action name="UnmaximizeFull"/>
+      <action name="MoveResizeTo">
+        <x>-0</x>
+        <y>-0</y>
+        <height>50%</height>
+        <width>50%</width>
+      </action>
+    </keybind>
     <keybind key="W-Up">
       <action name="UnmaximizeFull"/>
       <action name="MoveResizeTo">
@@ -363,9 +310,16 @@
         <height>50%</height>
       </action>
     </keybind>
-    <!-- 
-        # HalfLowerScreen
-    -->
+    <keybind key="W-S-Up">
+      <action name="GrowToEdge">
+        <direction>north</direction>
+      </action>
+    </keybind>
+    <keybind key="W-C-Up">
+      <action name="MoveToEdge">
+        <direction>north</direction>
+      </action>
+    </keybind>
     <keybind key="W-Down">
       <action name="UnmaximizeFull"/>
       <action name="MoveResizeTo">
@@ -373,6 +327,16 @@
         <y>-0</y>
         <width>100%</width>
         <height>50%</height>
+      </action>
+    </keybind>
+    <keybind key="W-S-Down">
+      <action name="GrowToEdge">
+        <direction>south</direction>
+      </action>
+    </keybind>
+    <keybind key="W-C-Down">
+      <action name="MoveToEdge">
+        <direction>south</direction>
       </action>
     </keybind>
     <!--  Lubuntu specific : Keybindings -->
