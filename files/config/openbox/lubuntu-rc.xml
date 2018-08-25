@@ -339,6 +339,9 @@
         <direction>south</direction>
       </action>
     </keybind>
+    <keybind key="W-C-S-Up">
+      <action name="ToggleMaximize"/>
+    </keybind>
     <!--  Lubuntu specific : Keybindings -->
     <!-- Keybindings for running applications on Home + E -->
     <keybind key="W-e">
