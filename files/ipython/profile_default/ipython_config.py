@@ -43,6 +43,7 @@ c = get_config()
 c.InteractiveShellApp.exec_lines = [
     'autoreload 2',
     'import numpy as np',
+    'import sys, os',
 ]
 
 # Pre-load matplotlib and numpy for interactive use, selecting a particular
