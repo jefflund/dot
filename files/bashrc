@@ -3,6 +3,8 @@ export GOPATH=$HOME/go
 export GOBIN=$HOME/go/bin
 export PATH="$PATH":"$GOBIN"
 
+export PYTHONPATH="$PYTHONPATH":$HOME/dev/ankura
+
 # If not running interactively, don't do anything else
 [ -z "$PS1" ] && return
 
