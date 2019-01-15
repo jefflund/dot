@@ -3,8 +3,6 @@ export GOPATH=$HOME/go
 export GOBIN=$HOME/go/bin
 export PATH="$PATH":"$GOBIN"
 
-export PYTHONPATH="$PYTHONPATH":$HOME/dev/ankura
-
 # If not running interactively, don't do anything else
 [ -z "$PS1" ] && return
 
@@ -57,11 +55,11 @@ HISTCONTROL=ignoreboth
 shopt -s histappend
 
 # For setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=10000
-HISTFILESIZE=100000
+HISTSIZE=1000000
+HISTFILESIZE=1000000
 
 # Make bash history ignore common commands I ever won't search for
-export HISTIGNORE="&:ls:ll:la:cd:cd ..:clear:vim"
+export HISTIGNORE="&:ls:ll:la:lla:cd:cd ..:clear:vim"
 
 # Check the window size after each command and update values LINES and COLUMNS
 shopt -s checkwinsize
