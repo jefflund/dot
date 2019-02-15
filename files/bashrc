@@ -74,3 +74,8 @@ shopt -s globstar
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
+
+# I pretty much always do this
+function foobar() {
+    tmux attach -dt foobar || tmux new -s foobar
+}
