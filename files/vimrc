@@ -57,7 +57,7 @@ set hidden
 " Switch up the colors
 set t_Co=256
 set t_ut=
-silent! colorscheme termbase16-brewer
+silent! colorscheme lucid
 
 " Setup statusline
 set laststatus=2
