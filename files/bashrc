@@ -3,6 +3,10 @@ export GOPATH=$HOME/go
 export GOBIN=$HOME/go/bin
 export PATH="$PATH":"$GOBIN"
 
+# Set up Dart
+export PATH="$PATH":"/usr/lib/dart/bin"
+export PATH="$PATH":"$HOME/.pub-cache/bin"
+
 # If not running interactively, don't do anything else
 [ -z "$PS1" ] && return
 

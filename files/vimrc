@@ -22,6 +22,8 @@ Plug 'scrooloose/nerdtree'
 Plug 'tomtom/tlib_vim'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
+
+Plug 'dart-lang/dart-vim-plugin'
 call plug#end()
 
 " Turn on file type based options
