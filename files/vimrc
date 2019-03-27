@@ -6,11 +6,9 @@ filetype off
 
 " Load plugins via Vundle
 call plug#begin()
-Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'SirVer/ultisnips'
 Plug 'Valloric/YouCompleteMe'
 Plug 'christoomey/vim-tmux-navigator'
-Plug 'ervandew/supertab'
 Plug 'fatih/vim-go'
 Plug 'jefflund/eoleof'
 Plug 'jefflund/termbase16-vim'
@@ -19,11 +17,7 @@ Plug 'majutsushi/tagbar'
 Plug 'mileszs/ack.vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
-Plug 'tomtom/tlib_vim'
-Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
-
-Plug 'dart-lang/dart-vim-plugin'
 call plug#end()
 
 " Turn on file type based options
@@ -59,7 +53,7 @@ set hidden
 " Switch up the colors
 set t_Co=256
 set t_ut=
-silent! colorscheme lucid
+colorscheme lucid
 
 " Setup statusline
 set laststatus=2
@@ -67,7 +61,6 @@ set statusline=%<
 set statusline+=%t
 set statusline+=\ %([%Y%R%H%W]%)
 set statusline+=%m
-set statusline+=%{fugitive#statusline()}
 set statusline+=\ %{&spell?\"SPELL\ \":\"\"}
 set statusline+=%{&paste?\"PASTE\ \":\"\"}
 set statusline+=%{&scrollbind?\"SCROLLBIND\":\"\"}
@@ -141,11 +134,10 @@ let g:go_test_timeout=0
 
 " Setup YouCompleteMe
 let g:ycm_autoclose_preview_window_after_insertion=1
-let g:ycm_key_list_select_completion = ['<c-n>', '<down>']
-let g:ycm_key_list_previous_completion = ['<c-p', '<up>']
+let g:ycm_key_list_select_completion=[]
+let g:ycm_key_list_previous_completion=[]
 
 " Setup UltiSnips
-let g:SuperTabDefaultCompletionType = '<c-n>'
 let g:UltiSnipsExpandTrigger = '<tab>'
 let g:UltiSnipsJumpForwardTrigger = '<tab>'
 let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
