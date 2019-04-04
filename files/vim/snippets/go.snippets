@@ -154,9 +154,11 @@ snippet example
 		${0}
 		// Output:
 	}
-snippet benchmark
+snippet bench
 	func Benchmark${1:Name}(b *testing.B) {
-		${0}
+		for i := 0; i < b.N; i++ {
+			${0}
+		}
 	}
 snippet cases
 	cases := []struct{
