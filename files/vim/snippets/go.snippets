@@ -167,5 +167,7 @@ snippet cases
 		${2:cases}
 	}
 	for _, c := range cases {
-		${0}
+		t.Run(fmt.Sprintf(${3:""}), func(t *testing.T) {
+			${0}
+		})
 	}
