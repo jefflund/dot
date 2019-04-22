@@ -118,6 +118,8 @@ let NERDTreeIgnore+=['\.temp$']
 let NERDTreeIgnore+=['\.lof$', '\.lol$', '\.lot$', '\.out$', '\.toc$']
 let NERDTreeQuitOnOpen=1
 let NERDTreeChDirMode=2
+let NERDTreeDirArrowExpandable = '+'
+let NERDTreeDirArrowCollapsible = '~'
 
 " Setup CtrlP
 let g:ctrlp_custom_ignore = {
@@ -191,12 +193,12 @@ function! WinDo(cmd)
 endfunction
 com! -nargs=+ -complete=command Windo call WinDo(<q-args>)
 
-" Other shortcuts for fn keys
-nnoremap <silent> <F1> :YcmRestartServer<cr>
-nnoremap <silent> <F2> :set invspell<cr>
-nnoremap <silent> <F3> :set invpaste<cr>
-nnoremap <silent> <F4> :Windo set scrollbind!<cr>
-nnoremap <silent> <F5> :redraw!<cr>
+" Other handy shortcuts
+nnoremap <silent> <leader>1 :YcmRestartServer<cr>
+nnoremap <silent> <leader>2 :set invspell<cr>
+nnoremap <silent> <leader>3 :set invpaste<cr>
+nnoremap <silent> <leader>4 :Windo set scrollbind!<cr>
+nnoremap <silent> <leader>5 :redraw!<cr>
 
 " Disable Ex mode
 map Q <nop>
