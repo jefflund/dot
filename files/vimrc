@@ -9,7 +9,6 @@ call plug#begin()
 Plug 'SirVer/ultisnips'
 Plug 'Valloric/YouCompleteMe'
 Plug 'christoomey/vim-tmux-navigator'
-Plug 'fatih/vim-go'
 Plug 'jefflund/eoleof'
 Plug 'jefflund/termbase16-vim'
 Plug 'kien/ctrlp.vim'
@@ -18,6 +17,8 @@ Plug 'mileszs/ack.vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-repeat'
+
+Plug 'qualiabyte/vim-colorstepper'
 call plug#end()
 
 " Turn on file type based options
@@ -127,12 +128,6 @@ let g:ctrlp_custom_ignore = {
     \ 'file': '\v\.(pyc|blg|bbl|fls|cookies|make|o|d|class|aux|log)$',
     \ }
 let g:ctrlp_working_path_mode = 'a'
-
-" Setup vim-go
-let g:go_doc_keywordprg_enabled=0
-let g:go_def_mapping_enabled=0
-let g:go_textobj_enabled=0
-let g:go_test_timeout=0
 
 " Setup YouCompleteMe
 let g:ycm_autoclose_preview_window_after_insertion=1
