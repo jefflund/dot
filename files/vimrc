@@ -17,8 +17,6 @@ Plug 'mileszs/ack.vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-repeat'
-
-Plug 'qualiabyte/vim-colorstepper'
 call plug#end()
 
 " Turn on file type based options
