@@ -7,9 +7,10 @@ filetype off
 " Load plugins via Vundle
 call plug#begin()
 Plug 'SirVer/ultisnips'
-Plug 'Valloric/YouCompleteMe'
+" Plug 'ycm-core/YouCompleteMe', { 'commit':'d98f896' }
+Plug 'Yggdroot/indentLine'
 Plug 'christoomey/vim-tmux-navigator'
-Plug 'jefflund/eoleof'
+Plug 'fatih/vim-go'
 Plug 'jefflund/termbase16-vim'
 Plug 'kien/ctrlp.vim'
 Plug 'majutsushi/tagbar'
@@ -27,17 +28,18 @@ filetype plugin on
 let g:tex_flavor="latex"
 
 " Turn on a few more options
-set title
 set backspace=2
+set colorcolumn=81
+set guioptions=ace
+set number
+set relativenumber
 set scrolloff=2
 set showcmd
 set showmode
-set guioptions=ace
-set colorcolumn=81
-set number
-set relativenumber
-set wrap
+set title
 set ttyfast
+set visualbell
+set wrap
 
 " Even more options for vsplits
 set winwidth=84
@@ -129,10 +131,12 @@ let g:ctrlp_working_path_mode = 'a'
 
 " Setup YouCompleteMe
 let g:ycm_autoclose_preview_window_after_insertion=1
-let g:ycm_key_list_select_completion=[]
-let g:ycm_key_list_previous_completion=[]
+let g:ycm_key_list_select_completion=['<c-n>', '<down>']
+let g:ycm_key_list_previous_completion=['<c-p>', '<up>']
 
 " Setup UltiSnips
+let g:UltiSnipsSnippetsDir="~/.vim/ultisnips"
+let g:UltiSnipsSnippetDirectories = ['ultisnips']
 let g:UltiSnipsExpandTrigger = '<tab>'
 let g:UltiSnipsJumpForwardTrigger = '<tab>'
 let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
@@ -156,6 +160,11 @@ nnoremap <silent> <c-l> :TmuxNavigateRight<cr>
 nnoremap <silent> <c-j> :TmuxNavigateDown<cr>
 nnoremap <silent> <c-k> :TmuxNavigateUp<cr>
 
+" Setup vim-go
+let g:go_template_autocreate=0
+let g:go_snippet_engine=""
+let g:go_doc_keywordprg_enabled=0
+
 " Navigation shortcuts
 nnoremap <s-j> <c-f>zz
 nnoremap <s-k> <c-u>zz
@@ -163,6 +172,9 @@ vnoremap <s-j> <c-f>zz
 vnoremap <s-k> <c-u>zz
 nnoremap j gj
 nnoremap k gk
+
+" Setup indentLine
+let g:indentLine_char='┆'
 
 " Easy quit and save
 nnoremap <silent> <leader>Q :qa<cr>
@@ -179,19 +191,10 @@ nnoremap ; :
 vnoremap ; :
 nnoremap ! :!
 
-" Better windo (restores current window)
-function! WinDo(cmd)
-    let currwin=winnr()
-    execute 'windo ' . a:cmd
-    execute currwin . 'wincmd w'
-endfunction
-com! -nargs=+ -complete=command Windo call WinDo(<q-args>)
-
 " Other handy shortcuts
 nnoremap <silent> <leader>1 :YcmRestartServer<cr>
 nnoremap <silent> <leader>2 :set invspell<cr>
 nnoremap <silent> <leader>3 :set invpaste<cr>
-nnoremap <silent> <leader>4 :Windo set scrollbind!<cr>
 nnoremap <silent> <leader>5 :redraw!<cr>
 
 " Disable Ex mode

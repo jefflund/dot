@@ -68,3 +68,6 @@ fi
 function foobar() {
     tmux attach -dt foobar || tmux new -s foobar
 }
+
+# For tinkering with Go
+export GOPATH="$HOME/go"
