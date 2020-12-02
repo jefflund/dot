@@ -7,7 +7,7 @@ filetype off
 " Load plugins via Vundle
 call plug#begin()
 Plug 'SirVer/ultisnips'
-" Plug 'ycm-core/YouCompleteMe', { 'commit':'d98f896' }
+Plug 'ycm-core/YouCompleteMe'
 Plug 'Yggdroot/indentLine'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'fatih/vim-go'
