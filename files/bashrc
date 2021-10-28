@@ -47,6 +47,9 @@ shopt -s histappend
 HISTSIZE=1000000
 HISTFILESIZE=1000000
 
+# Write history immediately (useful with multiple tmux panes)
+export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
+
 # Make bash history ignore common commands I ever won't search for
 export HISTIGNORE="&:ls:ll:la:lla:cd:cd ..:clear:vim"
 
@@ -68,6 +71,3 @@ fi
 function foobar() {
     tmux attach -dt foobar || tmux new -s foobar
 }
-
-# For tinkering with Go
-export GOPATH="$HOME/go"

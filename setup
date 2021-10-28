@@ -1,9 +1,0 @@
-#!/bin/bash
-
-# setup go
-export GOPATH=$HOME/go
-go get github.com/nsf/termbox-go
-
-# setup vim
-vim +PlugInstall +qa
-vim +GoInstallBinaries +qa
