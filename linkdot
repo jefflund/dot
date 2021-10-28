@@ -6,7 +6,9 @@ done
 for dotfile in $(find $HOME/dot/files -type f -not -path '*/\.*'); do
   dest=${dotfile/\/dot\/files\//\/.}
   if [ ! -f "$dest" ]; then
-    echo "$dest"
-    ln -sf $dotfile ${dotfile/\/dot\/files\//\/.}
+    echo "linking $dotfile => $dest"
+    ln -sf $dotfile $dest
+  elif [ "$(readlink -- "$dest")" != "$dotfile" ]; then
+    echo "could not link $dotfile => $dest"
   fi
 done
