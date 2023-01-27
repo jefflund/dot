@@ -1,6 +1,10 @@
 # If not running interactively, don't do anything else
 [ -z "$PS1" ] && return
 
+# Add a few things to paths
+export PATH=~/.local/bin:$PATH
+export GOPATH="$HOME/go"
+
 # Remove terminal scroll locking
 stty -ixon
 
@@ -37,21 +41,14 @@ function clear() {
 # Setup prompt
 PS1="\u@\h:\W$ \[\e]2;\u@\H \w\a\]"
 
-# Don't put duplicate lines or lines starting with space in the history.
+# Make bash history a bit more useful
 HISTCONTROL=ignoreboth
-
-# Append to the history file, don't overwrite it
 shopt -s histappend
-
-# For setting history length see HISTSIZE and HISTFILESIZE in bash(1)
+shopt -s extglob
+PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
+HISTIGNORE="ls@( *|):ll@( *|):la@( *|):cd@( *|):clear:vim:git st"
 HISTSIZE=1000000
 HISTFILESIZE=1000000
-
-# Write history immediately (useful with multiple tmux panes)
-export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
-
-# Make bash history ignore common commands I ever won't search for
-export HISTIGNORE="&:ls:ll:la:lla:cd:cd ..:clear:vim"
 
 # Check the window size after each command and update values LINES and COLUMNS
 shopt -s checkwinsize
@@ -66,8 +63,3 @@ shopt -s globstar
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
-
-# I pretty much always do this
-function foobar() {
-    tmux attach -dt foobar || tmux new -s foobar
-}

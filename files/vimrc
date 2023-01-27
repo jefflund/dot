@@ -16,7 +16,7 @@ Plug 'majutsushi/tagbar'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-repeat'
-" Plug 'ycm-core/YouCompleteMe'
+Plug 'ycm-core/YouCompleteMe'
 call plug#end()
 
 " Turn on file type based options
@@ -129,9 +129,9 @@ let g:ctrlp_custom_ignore = {
 let g:ctrlp_working_path_mode = 'a'
 
 " Setup YouCompleteMe
-" let g:ycm_autoclose_preview_window_after_insertion=1
-" let g:ycm_key_list_select_completion=['<c-n>', '<down>']
-" let g:ycm_key_list_previous_completion=['<c-p>', '<up>']
+ let g:ycm_autoclose_preview_window_after_insertion=1
+ let g:ycm_key_list_select_completion=['<c-n>', '<down>']
+ let g:ycm_key_list_previous_completion=['<c-p>', '<up>']
 
 " Setup UltiSnips
 let g:UltiSnipsSnippetsDir="~/.vim/ultisnips"
@@ -142,6 +142,7 @@ let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
 
 " Setup Tagbar
 nnoremap <silent> <leader>t :TagbarToggle<cr>
+let g:tagbar_crags_bin='/usr/bin/ctags-universal'
 let g:tagbar_autoclose=1
 let g:tagbar_left=1
 let g:tagbar_sort=0
@@ -186,13 +187,10 @@ vnoremap ; :
 nnoremap ! :!
 
 " Other handy shortcuts
-" nnoremap <silent> <leader>1 :YcmRestartServer<cr>
+nnoremap <silent> <leader>1 :YcmRestartServer<cr>
 nnoremap <silent> <leader>2 :set invspell<cr>
 nnoremap <silent> <leader>3 :set invpaste<cr>
 nnoremap <silent> <leader>5 :redraw!<cr>
 
 " Disable Ex mode
 map Q <nop>
-
-" I don't anticpate ever using Modula-2, but I do use *.md for markdown
-autocmd BufNewFile,BufReadPost *.md set filetype=markdown

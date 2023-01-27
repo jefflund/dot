@@ -1,0 +1,15 @@
+#!/bin/bash
+packages="
+ack
+build-essential
+cmake
+git
+golang
+ipython3
+python3-dev
+universal-ctags
+vim-nox
+"
+sudo apt update
+sudo apt install -y $packages
+sudo apt autoremove -y
