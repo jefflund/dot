@@ -1,0 +1,22 @@
+# Stuff I use all the time.
+ack
+build-essential
+cmake
+git
+golang
+ipython3
+python3-dev
+universal-ctags
+vim-nox
+
+# A few extra deps for dev.
+libasound2-dev
+libc6-dev
+libgl1-mesa-dev
+libglu1-mesa-dev
+libxcursor-dev
+libxi-dev
+libxinerama-dev
+libxrandr-dev
+libxxf86vm-dev
+pkg-config
