@@ -4,20 +4,24 @@ set nocompatible
 " Plugins load faster with this off
 filetype off
 
-" Load plugins via Vundle
-call plug#begin()
-Plug 'SirVer/ultisnips'
-Plug 'Yggdroot/indentLine'
-Plug 'christoomey/vim-tmux-navigator'
-Plug 'fatih/vim-go'
-Plug 'jefflund/termbase16-vim'
-Plug 'kien/ctrlp.vim'
-Plug 'majutsushi/tagbar'
-Plug 'scrooloose/nerdcommenter'
-Plug 'scrooloose/nerdtree'
-Plug 'tpope/vim-repeat'
-Plug 'ycm-core/YouCompleteMe'
-call plug#end()
+" Load machine-specic plugins, or load defaults via Vundle
+if filereadable(expand('~/.vimrc_plug'))
+    source ~/.vimrc_plug
+else
+    call plug#begin()
+    Plug 'SirVer/ultisnips'
+    Plug 'Yggdroot/indentLine'
+    Plug 'christoomey/vim-tmux-navigator'
+    Plug 'fatih/vim-go'
+    Plug 'jefflund/termbase16-vim'
+    Plug 'kien/ctrlp.vim'
+    Plug 'majutsushi/tagbar'
+    Plug 'scrooloose/nerdcommenter'
+    Plug 'scrooloose/nerdtree'
+    Plug 'tpope/vim-repeat'
+    Plug 'ycm-core/YouCompleteMe'
+    call plug#end()
+endif
 
 " Turn on file type based options
 syntax on

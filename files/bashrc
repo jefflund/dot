@@ -64,4 +64,10 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
+# One last alias for my most commonly used tmux session
 alias foobar="tmux attach -dt foobar || tmux new -s foobar"
+
+# Make it easier to define machine-specific stuff for work
+if [ -f $HOME/.bashrc_extras ]; then
+    source $HOME/.bashrc_extras
+fi
