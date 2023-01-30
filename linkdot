@@ -1,10 +1,13 @@
+#!/bin/bash
+linkdot_path=$(realpath "$0")
+dotfile_root=$(dirname "$linkdot_path")/files
 # create dot directories
-for dotdir in $(find $HOME/dot/files -type d -not -path '*/\.*'); do
-  mkdir -p ${dotdir/\/dot\/files\//\/.}
+for dotdir in $(find $dotfile_root -mindepth 1 -type d); do
+    mkdir -p ${dotdir/$dotfile_root\//$HOME/.}
 done
 # symlink dot files
-for dotfile in $(find $HOME/dot/files -type f -not -path '*/\.*'); do
-  dest=${dotfile/\/dot\/files\//\/.}
+for dotfile in $(find $dotfile_root -mindepth 1 -type f); do
+  dest=${dotfile/$dotfile_root\//$HOME/.}
   if [ ! -f "$dest" ]; then
     echo "linking $dotfile => $dest"
     ln -sf $dotfile $dest
