@@ -14,4 +14,5 @@ pushing confidential information to github. The hooks work by checking if an
 optional file and sourcing that file if it exists. Those special files are:
 
 * $HOME/.bashrc_extras - extra file which gets sourced after $HOME/.bashrc runs
-* $HOME/.vimrc_plug - this will run instead of my usual vimrc plug commands
+* $HOME/.vimrc_extras - extra file which gets sourced after $HOME/.vimrc runs
+* $HOME/.vimrc_plug - if it exists, entirely replaces my default plug commands

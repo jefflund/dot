@@ -4,7 +4,7 @@ set nocompatible
 " Plugins load faster with this off
 filetype off
 
-" Load machine-specic plugins, or load defaults via Vundle
+" Load plugins, either using machine-specific vimrc_plug, or using my defaults
 if filereadable(expand('~/.vimrc_plug'))
     source ~/.vimrc_plug
 else
@@ -57,7 +57,7 @@ set hidden
 " Switch up the colors
 set t_Co=256
 set t_ut=
-colorscheme termbase16-atelier-savanna
+colorscheme lucid
 
 " Setup statusline
 set laststatus=2
@@ -198,3 +198,8 @@ nnoremap <silent> <leader>5 :redraw!<cr>
 
 " Disable Ex mode
 map Q <nop>
+
+" Make it easier to define machine-specific stuff for work
+if filereadable(expand('~/.vimrc_extras'))
+    source ~/.vimrc_extras
+endif
