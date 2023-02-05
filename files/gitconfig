@@ -23,3 +23,5 @@
 [user]
 	name = Jeffrey Lund
 	email = jefflund@gmail.com
+[init]
+	defaultBranch = main

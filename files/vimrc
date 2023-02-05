@@ -57,7 +57,7 @@ set hidden
 " Switch up the colors
 set t_Co=256
 set t_ut=
-colorscheme lucid
+colorscheme termbase16-ashes
 
 " Setup statusline
 set laststatus=2
