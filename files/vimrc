@@ -12,14 +12,15 @@ else
     Plug 'SirVer/ultisnips'
     Plug 'Yggdroot/indentLine'
     Plug 'christoomey/vim-tmux-navigator'
-    Plug 'fatih/vim-go'
+    Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
     Plug 'jefflund/termbase16-vim'
+    Plug 'kana/vim-arpeggio'
     Plug 'kien/ctrlp.vim'
     Plug 'majutsushi/tagbar'
-    Plug 'scrooloose/nerdcommenter'
-    Plug 'scrooloose/nerdtree'
+    Plug 'preservim/nerdcommenter'
+    Plug 'preservim/nerdtree'
     Plug 'tpope/vim-repeat'
-    Plug 'ycm-core/YouCompleteMe'
+    Plug 'ycm-core/YouCompleteMe', { 'do': 'python3 install.py --go-completer' }
     call plug#end()
 endif
 
@@ -163,6 +164,11 @@ nnoremap <silent> <c-k> :TmuxNavigateUp<cr>
 let g:go_template_autocreate=0
 let g:go_snippet_engine=""
 let g:go_doc_keywordprg_enabled=0
+
+" Setup vim-arpeggio
+call arpeggio#load()
+Arpeggio inoremap jk <esc>
+Arpeggio vnoremap jk <esc>
 
 " Navigation shortcuts
 nnoremap <s-j> <c-f>zz
