@@ -28,6 +28,7 @@ alias l='ls'
 # All other cli editors suck
 export EDITOR="vim"
 alias vi=vim
+alias vim="vim -O"
 
 # I always seem to ls right after things like cd and clear
 function cd() {
