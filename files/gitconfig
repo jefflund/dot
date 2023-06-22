@@ -16,12 +16,12 @@
     wipe = "!git clean -df && git reset --hard"
     done = "!f(){ git commit -a -m \"$1\" && git push; };f"
     shear = "!f(){ git branch -D \"$1\" && git push origin --delete \"$1\"; };f"
-
-    steal = "!f() { VAR1=$1; VAR='$'$1; OLD=$2; NEW=$3; echo \"Are you sure for replace $VAR $OLD => $NEW ?(Y/N)\";read OK;if [ \"$OK\" = 'Y' ] ; then shift 3; git filter-branch -f --env-filter \"if [ \\\"${VAR}\\\" = '$OLD' ]; then export $VAR1='$NEW';echo 'to $NEW'; fi\" $@; fi;}; f "
 [push]
     default = current
 [user]
-	name = Jeffrey Lund
-	email = jefflund@gmail.com
+    name = Jeffrey Lund
+    email = jefflund@gmail.com
 [init]
-	defaultBranch = main
+    defaultBranch = main
+[include]
+    path = ~/.gitconfig_extras
