@@ -6,6 +6,7 @@ git
 golang
 ipython3
 python3-dev
+tmux
 universal-ctags
 vim-nox
 
