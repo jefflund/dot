@@ -21,7 +21,7 @@ optional file and sourcing that file if it exists. Those special files are:
 
 Reminders on how to do a few things because I have a terrible memory.
 
-# Generate new ssh keys for Github
+# generate new ssh keys for github
 
 * ssh-keygen -t ed25519 -C "jefflund@gmail.com"
 * eval "$(ssh-agent -s)"
@@ -29,7 +29,7 @@ Reminders on how to do a few things because I have a terrible memory.
 * cat ~/.ssh/id_ed25519.pub
 * github.com/settings/keys
 
-# Bullseye -> Bookworm
+# bullseye -> bookworm
 
 * sudo apt update && sudo apt upgrade -y
 * sudo apt --purge autoremove
