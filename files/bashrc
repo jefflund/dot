@@ -2,8 +2,9 @@
 [ -z "$PS1" ] && return
 
 # Add a few things to paths
-export PATH=~/.local/bin:$PATH
 export GOPATH="$HOME/go"
+export PATH="$PATH:$HOME/.local/bin:$GOPATH/bin"
+export PATH=`echo $PATH | tr -s ":" "\n" | sort | uniq | paste -s -d ":"`
 
 # Remove terminal scroll locking
 stty -ixon
