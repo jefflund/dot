@@ -1,0 +1,19 @@
+# Tools
+ack-grep
+build-essential
+cmake
+ctags
+git
+man
+openssh
+tmux
+vim-python
+
+# Golang
+golang
+golang-doc
+
+# Python
+python
+python-numpy
+python-pip
