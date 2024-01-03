@@ -3,3 +3,5 @@ pkg update
 pkg upgrade
 sed 's:#.*$::g' $HOME/dot/termux-packages | xargs pkg install -y
 pkg autoclean -y
+
+sed 's:#.*$::g' $HOME/dot/termux-packages | xargs pip install
