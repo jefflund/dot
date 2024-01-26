@@ -81,7 +81,7 @@ endsnippet
 
 snippet sw
 switch ${1:exp} {
-	$0
+$0
 }
 endsnippet
 
@@ -127,6 +127,12 @@ snippet rfn
 func (${1:rcvr}) ${2:name}($3) $4{
 	$0
 }
+endsnippet
+
+snippet gofn
+go func() {
+	$0
+}()
 endsnippet
 
 snippet test
