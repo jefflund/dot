@@ -21,6 +21,8 @@ else
     Plug 'preservim/nerdtree'
     Plug 'tpope/vim-repeat'
     Plug 'ycm-core/YouCompleteMe', { 'do': 'python3 install.py --go-completer' }
+
+    Plug 'psf/black', { 'tag': '*.*.*' }
     call plug#end()
 endif
 
@@ -169,6 +171,13 @@ let g:go_doc_keywordprg_enabled=0
 call arpeggio#load()
 Arpeggio inoremap jk <esc>
 Arpeggio vnoremap jk <esc>
+
+" Setup Black
+let g:black_use_virtualenv = 0
+augroup black_on_save
+  autocmd!
+  autocmd BufWritePre *.py Black
+augroup end
 
 " Navigation shortcuts
 nnoremap <s-j> <c-f>zz
