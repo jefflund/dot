@@ -19,10 +19,9 @@ else
     Plug 'majutsushi/tagbar'
     Plug 'preservim/nerdcommenter'
     Plug 'preservim/nerdtree'
+    Plug 'psf/black', { 'tag': '*.*.*' }
     Plug 'tpope/vim-repeat'
     Plug 'ycm-core/YouCompleteMe', { 'do': 'python3 install.py --go-completer' }
-
-    Plug 'psf/black', { 'tag': '*.*.*' }
     call plug#end()
 endif
 
