@@ -5,4 +5,4 @@ pkg install x11-repo -y
 sed 's:#.*$::g' $HOME/dot/termux-packages | xargs pkg install -y
 pkg autoclean -y
 
-sed 's:#.*$::g' $HOME/dot/termux-packages | xargs pip install
+sed 's:#.*$::g' $HOME/dot/termux-packages | xargs pip3 install
