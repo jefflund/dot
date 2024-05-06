@@ -211,6 +211,7 @@ nnoremap <silent> <leader>1 :YcmRestartServer<cr>
 nnoremap <silent> <leader>2 :set invspell<cr>
 nnoremap <silent> <leader>3 :set invpaste<cr>
 nnoremap <silent> <leader>5 :redraw!<cr>
+vnoremap <leader>s :sort<cr>
 
 " Disable Ex mode
 map Q <nop>
