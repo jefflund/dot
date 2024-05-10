@@ -22,4 +22,5 @@ python-scipy
 
 # Lua
 love
-lua54
+luajit
+luarocks
