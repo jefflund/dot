@@ -25,6 +25,13 @@ python3-pip
 python3-scipy
 python3-sklearn
 
+# Lua
+love
+lua-bit32
+lua-check
+lua5.1
+luajit
+
 # Deps
 libasound2-dev
 libc6-dev
