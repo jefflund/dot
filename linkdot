@@ -9,9 +9,9 @@ done
 for dotfile in $(find $dotfile_root -mindepth 1 -type f); do
   dest=${dotfile/$dotfile_root\//$HOME/.}
   if [ ! -f "$dest" ]; then
-    echo "linking $dotfile => $dest"
+    echo "linking $dest"
     ln -sf $dotfile $dest
   elif [ "$(readlink -- "$dest")" != "$dotfile" ]; then
-    echo "could not link $dotfile => $dest"
+    echo "could not link $dest"
   fi
 done
