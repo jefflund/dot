@@ -8,6 +8,12 @@ function ${1:name}($2)
 end
 endsnippet
 
+snippet afn
+function($1)
+	$0
+end
+endsnippet
+
 snippet lfn
 local function ${1:name}($2)
 	$0
@@ -30,4 +36,32 @@ snippet forv
 for _, ${1:v} in ${2:i}pairs(${3:vals}) do
 	$0
 end
+endsnippet
+
+snippet if
+if ${1:cond} then
+	$0
+end
+endsnippet
+
+snippet req
+local ${1:name} = require("${0:module}")
+endsnippet
+
+snippet new
+function ${1:cls}:new($2)
+	$0
+end
+endsnippet
+
+snippet smt
+setmetatable($0
+endsnippet
+
+snippet +=
+${1:var} = $1 + ${0:1}
+endsnippet
+
+snippet -=
+${1:var} = $1 - ${0:1}
 endsnippet
