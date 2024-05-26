@@ -19,8 +19,3 @@ python
 python-numpy
 python-pip
 python-scipy
-
-# Lua
-love
-luajit
-luarocks
