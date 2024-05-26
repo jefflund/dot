@@ -2,3 +2,4 @@ black
 ipython
 mypy
 pylint
+pytest
