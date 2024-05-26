@@ -9,6 +9,7 @@ Reminders on how to do a few things because I have a terrible memory.
 * ssh-add ~/.ssh/id_ed25519
 * cat ~/.ssh/id_ed25519.pub
 * github.com/settings/keys
+* ssh git@github.com
 
 ## bullseye -> bookworm
 
@@ -19,3 +20,10 @@ Reminders on how to do a few things because I have a terrible memory.
 * sudo apt update && sudo apt upgrade --without-new-pkgs -y
 * sudo apt full-upgrade -y
 * sudo reboot
+
+# swapfile for low ram instance
+
+* sudo fallocate -l 1G /mnt/1GB.swap
+* sudo mkswap /mnt/1GB.swap
+* sudo swapon /mnt/1GB.swap
+* sudo swapon -s

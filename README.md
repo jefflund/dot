@@ -6,8 +6,7 @@ addition to the dotfiles, the repo has the following scripts for setup:
 * install - ensure I've got a few key packages, and that packages are updated
 * termux-install - alternative install script for termux environment
 * linkdot - symlinks all dotfiles to the dot repo so git pull updates the files
-* plugin - installs vim plugins and vim-go binaries (but doesn't install YCM)
-* swapfile - creates a 1GB swapfile for low RAM cloud instances
+* plugin - installs vim plugins, along with YCM and vim-go setup.
 
 In a few places my dotfiles have hooks for additional machine specific stuff.
 This is mainly so I can have work related config without risk of accidentally
