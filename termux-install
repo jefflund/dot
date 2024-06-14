@@ -3,6 +3,8 @@
 pkg update
 pkg upgrade
 
+pkg install x11-repo
+
 sed 's:#.*$::g' $HOME/dot/termux-packages | xargs pkg install -y
 pkg autoclean -y
 

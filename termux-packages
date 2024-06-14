@@ -6,6 +6,7 @@ ctags
 git
 man
 openssh
+pkg-config
 tmux
 vim-python
 zip
@@ -19,3 +20,12 @@ python
 python-numpy
 python-pip
 python-scipy
+
+# Deps
+mesa
+mesa-dev
+libxrandr
+libxcursor
+libxi
+libxinerama
+libxxf86vm
