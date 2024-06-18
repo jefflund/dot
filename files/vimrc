@@ -197,6 +197,11 @@ nnoremap <silent> <leader>q :q<cr>
 nnoremap <silent> <leader>w :w<cr>
 nnoremap <silent> <leader>W :wa<cr>
 
+" Some macro shortcuts
+nnoremap <silent> <leader>~ :set paste<cr>qa
+nnoremap <silent> <esc><esc> q
+nnoremap <silent> <leader>` @a
+
 " Save some keystrokes
 vnoremap < <gv
 vnoremap > >gv
