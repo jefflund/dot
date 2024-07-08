@@ -8,6 +8,7 @@ ipython3
 tmux
 universal-ctags
 vim-nox
+wget
 
 # Golang
 golang

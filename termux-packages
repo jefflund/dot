@@ -9,6 +9,7 @@ openssh
 pkg-config
 tmux
 vim-python
+wget
 zip
 
 # Golang
