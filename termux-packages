@@ -5,6 +5,7 @@ cmake
 ctags
 git
 man
+ncurses-utils
 openssh
 pkg-config
 tmux
