@@ -168,8 +168,8 @@ let g:go_doc_keywordprg_enabled=0
 
 " Setup vim-arpeggio
 call arpeggio#load()
-Arpeggio inoremap jk <esc>
-Arpeggio vnoremap jk <esc>
+Arpeggio noremap jk <esc>
+Arpeggio noremap! jk <esc>
 
 " Setup Black
 if exists("g:load_black")
