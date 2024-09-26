@@ -211,12 +211,15 @@ nnoremap ; :
 vnoremap ; :
 nnoremap ! :!
 
+" Make & highlight current word (like * or #, except cursor stays put)
+nnoremap <silent> & :let searchTerm = '\v<'.expand("<cword>").'>' <bar> let @/ = searchTerm <bar> echo '/'.@/ <bar> call histadd("search", searchTerm) <bar> set hls<cr>
+
 " Other handy shortcuts
 nnoremap <silent> <leader>1 :YcmRestartServer<cr>
 nnoremap <silent> <leader>2 :set invspell<cr>
 nnoremap <silent> <leader>3 :set invpaste<cr>
 nnoremap <silent> <leader>5 :redraw!<cr>
-vnoremap <leader>s :sort<cr>
+vnoremap <silent> <leader>s :sort<cr>
 
 " Disable Ex mode
 map Q <nop>
