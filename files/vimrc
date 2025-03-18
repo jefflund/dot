@@ -210,6 +210,8 @@ nnoremap < <<
 nnoremap ; :
 vnoremap ; :
 nnoremap ! :!
+nnoremap * g*
+nnoremap # g#
 
 " Make & highlight current word (like * or #, except cursor stays put)
 nnoremap <silent> & :let searchTerm = '\v<'.expand("<cword>").'>' <bar> let @/ = searchTerm <bar> echo '/'.@/ <bar> call histadd("search", searchTerm) <bar> set hls<cr>
