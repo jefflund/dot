@@ -42,7 +42,8 @@ c = get_config()
 # lines of code to run at IPython startup.
 c.InteractiveShellApp.exec_lines = [
     'autoreload 2',
-    'import sys, os',
+    'import sys, os, datetime',
+    'import numpy as np',
 ]
 
 # Pre-load matplotlib and numpy for interactive use, selecting a particular
