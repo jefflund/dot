@@ -23,10 +23,12 @@ python3-matplotlib
 python3-mypy
 python3-nltk
 python3-numpy
+python3-parameterized
 python3-pip
 python3-pytest
 python3-scipy
 python3-sklearn
+python3-textual
 
 # Deps
 libasound2-dev
