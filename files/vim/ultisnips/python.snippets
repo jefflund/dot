@@ -1,0 +1,34 @@
+snippet fn
+def ${1:name}($2) -> ${3:None}:
+	$0
+endsnippet
+
+snippet sfn
+def $(1:name)(self$2) -> ${3:None}:
+	$0
+endsnippet
+
+snippet cl
+class ${1:Name}:
+	$0
+endsnippet
+
+snippet if
+if ${1:cond}:
+	$0
+endsnippet
+
+snippet el
+else:
+	$0
+endsnippet
+
+snippet elif
+elif ${1:cond}:
+	$0
+endsnippet
+
+snippet main
+if __name__ == "__main__":
+	$0
+endsnippet
