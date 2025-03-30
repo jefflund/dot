@@ -172,13 +172,7 @@ Arpeggio noremap jk <esc>
 Arpeggio noremap! jk <esc>
 
 " Setup Black
-if exists("g:load_black")
-  let g:black_use_virtualenv = 0
-  augroup black_on_save
-    autocmd!
-    autocmd BufWritePre *.py Black
-  augroup end
-end
+autocmd BufWritePre *.py Black
 
 " Navigation shortcuts
 nnoremap <s-j> <c-f>zz
