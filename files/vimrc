@@ -172,7 +172,7 @@ Arpeggio noremap jk <esc>
 Arpeggio noremap! jk <esc>
 
 " Setup Black
-autocmd BufWritePre *.py Black
+autocmd BufWritePre *.py silent Black
 
 " Navigation shortcuts
 nnoremap <s-j> <c-f>zz
