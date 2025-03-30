@@ -3,3 +3,5 @@ ipython
 mypy
 pylint
 pytest
+textual
+textual-dev
