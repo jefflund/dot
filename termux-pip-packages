@@ -3,5 +3,6 @@ ipython
 mypy
 pylint
 pytest
+python-dotenv
 textual
 textual-dev
