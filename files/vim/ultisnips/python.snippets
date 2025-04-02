@@ -1,10 +1,26 @@
+snippet im
+import ${0:mod}
+endsnippet
+
+snippet ima
+import ${1:mod} as ${0:name}
+endsnippet
+
+snippet fim
+from ${1:pkg} import ${0:mod}
+endsnippet
+
+snippet fima
+from ${1:pkg} import ${2:mod} as ${0:name}
+endsnippet
+
 snippet fn
 def ${1:name}($2) -> ${3:None}:
 	$0
 endsnippet
 
 snippet sfn
-def $(1:name)(self$2) -> ${3:None}:
+def ${1:name}(self$2) -> ${3:None}:
 	$0
 endsnippet
 
