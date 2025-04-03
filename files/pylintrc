@@ -1,0 +1,2 @@
+[MASTER]
+no-docstring-rgx=^(_|test_)
