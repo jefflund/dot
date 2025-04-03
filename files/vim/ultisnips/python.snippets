@@ -24,8 +24,25 @@ def ${1:name}(self$2) -> ${3:None}:
 	$0
 endsnippet
 
+snippet cases
+@parameterized.expand(
+	[
+		${3:cases}
+	]
+)
+def test_${1:name}(self, ${2:args}):
+	$0
+endsnippet
+
 snippet cl
 class ${1:Name}:
+	$0
+endsnippet
+
+
+snippet dc
+@dataclass${1}:
+class ${2:Name}:
 	$0
 endsnippet
 
