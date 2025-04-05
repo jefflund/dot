@@ -22,6 +22,9 @@ else
     Plug 'psf/black', { 'tag': '*.*.*' }
     Plug 'tpope/vim-repeat'
     Plug 'ycm-core/YouCompleteMe', { 'do': 'python3 install.py --go-completer' }
+
+    Plug 'madox2/vim-ai'
+    Plug 'madox2/vim-ai-provider-google'
     call plug#end()
 endif
 
@@ -174,6 +177,13 @@ Arpeggio noremap! jk <esc>
 " Setup Black
 autocmd BufWritePre *.py silent Black
 
+
+" Setup indentLine
+let g:indentLine_char='┆'
+
+" Setup vim-ai
+let g:vim_ai_roles_config_file = '~/.config/vim-ai/roles.ini'
+
 " Navigation shortcuts
 nnoremap <s-j> <c-f>zz
 nnoremap <s-k> <c-u>zz
@@ -181,9 +191,6 @@ vnoremap <s-j> <c-f>zz
 vnoremap <s-k> <c-u>zz
 nnoremap j gj
 nnoremap k gk
-
-" Setup indentLine
-let g:indentLine_char='┆'
 
 " Easy quit and save
 nnoremap <silent> <leader>Q :qa<cr>
