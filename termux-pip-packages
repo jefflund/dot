@@ -1,7 +1,6 @@
 black
 ipython
 mypy
-parameterized
 pylint
 pytest
 python-dotenv

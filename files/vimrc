@@ -16,15 +16,14 @@ else
     Plug 'jefflund/termbase16-vim'
     Plug 'kana/vim-arpeggio'
     Plug 'kien/ctrlp.vim'
+    Plug 'madox2/vim-ai'
+    Plug 'madox2/vim-ai-provider-google'
     Plug 'majutsushi/tagbar'
     Plug 'preservim/nerdcommenter'
     Plug 'preservim/nerdtree'
     Plug 'psf/black', { 'tag': '*.*.*' }
     Plug 'tpope/vim-repeat'
     Plug 'ycm-core/YouCompleteMe', { 'do': 'python3 install.py --go-completer' }
-
-    Plug 'madox2/vim-ai'
-    Plug 'madox2/vim-ai-provider-google'
     call plug#end()
 endif
 

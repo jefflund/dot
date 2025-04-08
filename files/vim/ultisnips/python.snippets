@@ -25,13 +25,13 @@ def ${1:name}(self$2) -> ${3:None}:
 endsnippet
 
 snippet cases
-@parameterized.expand(
-	[
-		${3:cases}
+def test_${1:name}(self):
+	${2:cases} = [
+		$3
 	]
-)
-def test_${1:name}(self, ${2:args}):
-	$0
+	for $4 in $2:
+		with self.subTest($5):
+			$0
 endsnippet
 
 snippet cl
