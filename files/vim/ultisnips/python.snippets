@@ -65,6 +65,17 @@ elif ${1:cond}:
 	$0
 endsnippet
 
+snippet ma
+match ${1:x}:
+	case ${2:v}:
+		$0
+endsnippet
+
+snippet ca
+case ${1:v}:
+	$0
+endsnippet
+
 snippet for
 for ${1:x} in ${2:xs}:
 	$0
@@ -83,6 +94,19 @@ endsnippet
 snippet forz
 for ${1:x}, ${2:y} in zip(${3:xs}, ${4:ys}):
 	$0
+endsnippet
+
+snippet wh
+while ${1:cond}:
+	$0
+endsnippet
+
+snippet br
+break
+endsnippet
+
+snippet con
+continue
 endsnippet
 
 snippet main
