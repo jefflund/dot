@@ -14,6 +14,7 @@ else
     Plug 'christoomey/vim-tmux-navigator'
     Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
     Plug 'jefflund/termbase16-vim'
+    Plug 'jlund/vtzoom'
     Plug 'kana/vim-arpeggio'
     Plug 'kien/ctrlp.vim'
     Plug 'madox2/vim-ai'
