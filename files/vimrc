@@ -54,6 +54,10 @@ set winwidth=84
 autocmd WinEnter * setlocal number relativenumber wrap
 autocmd WinLeave * setlocal nonumber norelativenumber nowrap
 
+" Let zoom fullscreen
+set winminheight=0
+set winminwidth=0
+
 " In memory buffers
 set nobackup
 set noswapfile
