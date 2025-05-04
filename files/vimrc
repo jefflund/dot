@@ -230,8 +230,3 @@ vnoremap <silent> <leader>s :sort<cr>
 
 " Disable Ex mode
 map Q <nop>
-
-" Make it easier to define machine-specific stuff for work
-if filereadable(expand('~/.vimrc_extras'))
-    source ~/.vimrc_extras
-endif

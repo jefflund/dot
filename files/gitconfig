@@ -23,5 +23,3 @@
     email = jefflund@gmail.com
 [init]
     defaultBranch = main
-[include]
-    path = ~/.gitconfig_extras

@@ -70,8 +70,3 @@ fi
 alias foobar-attach="tmux attach -dt foobar"
 alias foobar-new="tmux new -s foobar \; rename-window dot \; send-keys cd Space dot C-m Space clear C-m"
 alias foobar="(foobar-attach || foobar-new) > /dev/null 2>&1"
-
-# Make it easier to define machine-specific stuff for work
-if [ -f $HOME/.bashrc_extras ]; then
-    source $HOME/.bashrc_extras
-fi
