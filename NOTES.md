@@ -11,17 +11,17 @@ Reminders on how to do a few things because I have a terrible memory.
 * github.com/settings/keys
 * ssh git@github.com
 
-## bullseye -> bookworm
+## bookworm -> testing
 
 * sudo apt update && sudo apt upgrade -y
 * sudo apt --purge autoremove
 * sudo -e /etc/apt/sources.list
-* %s/bullseye/bookworm/g
+* %s/bookworm/testing/g
 * sudo apt update && sudo apt upgrade --without-new-pkgs -y
 * sudo apt full-upgrade -y
 * sudo reboot
 
-# swapfile for low ram instance
+## swapfile for low ram instance
 
 * sudo fallocate -l 1G /mnt/1GB.swap
 * sudo mkswap /mnt/1GB.swap
