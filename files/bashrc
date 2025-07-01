@@ -70,3 +70,8 @@ fi
 alias foobar-attach="tmux attach -dt foobar"
 alias foobar-new="tmux new -s foobar \; rename-window dot \; send-keys cd Space dot C-m Space clear C-m"
 alias foobar="(foobar-attach || foobar-new) > /dev/null 2>&1"
+
+# Functions for a few dumb things I do frequently
+function altcaps() { echo $@ | sed 's/[a-z].\?/\u\0/g'; }
+function timestamp() { date -d @$1 +'%Y-%m-%d %H:%M:%S'; }
+function percent-change() { echo "($2 - $1) / ($(echo "$1" | sed "s/^-//")) * 100" | bc -l; }
