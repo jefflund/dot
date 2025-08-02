@@ -1,5 +1,4 @@
 # Tools
-aichat
 ack-grep
 build-essential
 cmake
@@ -23,6 +22,9 @@ python
 python-numpy
 python-pip
 python-scipy
+
+# Javascript
+nodejs
 
 # Deps
 mesa

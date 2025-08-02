@@ -17,8 +17,6 @@ else
     Plug 'jlund/vtzoom'
     Plug 'kana/vim-arpeggio'
     Plug 'kien/ctrlp.vim'
-    Plug 'madox2/vim-ai'
-    Plug 'madox2/vim-ai-provider-google'
     Plug 'majutsushi/tagbar'
     Plug 'preservim/nerdcommenter'
     Plug 'preservim/nerdtree'
@@ -184,9 +182,6 @@ autocmd BufWritePre *.py silent Black
 
 " Setup indentLine
 let g:indentLine_char='┆'
-
-" Setup vim-ai
-let g:vim_ai_roles_config_file = '~/.config/vim-ai/roles.ini'
 
 " Navigation shortcuts
 nnoremap <s-j> <c-f>zz
