@@ -1,0 +1,8 @@
+{
+  "theme": "Atom One",
+  "selectedAuthType": "gemini-api-key",
+  "preferredEditor": "vim",
+  "fileFilters": {
+    "respectGitIgnore": "true"
+  }
+}
