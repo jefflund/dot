@@ -10,4 +10,4 @@ pkg autoclean -y
 
 sed 's:#.*$::g' $HOME/dot/termux-pip-packages | xargs pip3 install
 
-sed 's:#.*$::g' $HOME/dot/termux-pip-packages | xargs nodejs install -g
+sed 's:#.*$::g' $HOME/dot/termux-pip-packages | xargs nodejs install -g --ignore-scripts

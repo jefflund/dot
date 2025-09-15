@@ -1,11 +1,13 @@
 # Tools
 ack-grep
 build-essential
+clang
 cmake
 ctags
 git
 man
 ncurses-utils
+nodejs
 openssh
 pkg-config
 tmux
@@ -13,24 +15,23 @@ vim-python
 wget
 zip
 
-# Golang
+# Programming
 golang
 golang-doc
-
-# Python
 python
+rust
+
+# Batteries
 python-numpy
 python-pip
 python-scipy
 
-# Javascript
-nodejs
-
 # Deps
-mesa
-mesa-dev
-libxrandr
 libxcursor
 libxi
 libxinerama
+libxrandr
 libxxf86vm
+mesa
+mesa-dev
+ndk-multilib
