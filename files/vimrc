@@ -14,13 +14,13 @@ else
     Plug 'christoomey/vim-tmux-navigator'
     Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
     Plug 'jefflund/termbase16-vim'
-    Plug 'jlund/vtzoom'
+    Plug 'jefflund/vtzoom'
     Plug 'kana/vim-arpeggio'
     Plug 'kien/ctrlp.vim'
     Plug 'majutsushi/tagbar'
     Plug 'preservim/nerdcommenter'
     Plug 'preservim/nerdtree'
-    Plug 'psf/black', { 'tag': '*.*.*' }
+    Plug 'psf/black', { 'branch': 'stable' }
     Plug 'tpope/vim-repeat'
     Plug 'ycm-core/YouCompleteMe', { 'do': 'python3 install.py --go-completer' }
     call plug#end()
@@ -178,7 +178,6 @@ Arpeggio noremap! jk <esc>
 
 " Setup Black
 autocmd BufWritePre *.py silent Black
-
 
 " Setup indentLine
 let g:indentLine_char='┆'
