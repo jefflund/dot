@@ -11,7 +11,7 @@ nodejs
 openssh
 pkg-config
 tmux
-vim-python
+vim
 wget
 zip
 
@@ -29,7 +29,6 @@ python-scipy
 # Deps
 libxcursor
 libxi
-libxinerama
 libxrandr
 libxxf86vm
 mesa
