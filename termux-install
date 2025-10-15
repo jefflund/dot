@@ -1,11 +1,11 @@
 #!/bin/bash
 
-pkg update
-pkg upgrade
+pkg update -y
+pkg upgrade -y
 
 sed 's:#.*$::g' $HOME/dot/termux-packages | xargs pkg install -y
 pkg autoclean -y
 
 sed 's:#.*$::g' $HOME/dot/termux-pip-packages | xargs pip3 install
 
-sed 's:#.*$::g' $HOME/dot/termux-npm-packages | xargs npm install -g --ignore-scripts
+sed 's:#.*$::g' $HOME/dot/npm-packages | xargs npm install -g --ignore-scripts

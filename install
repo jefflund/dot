@@ -1,4 +1,9 @@
 #!/bin/bash
-sudo apt update
+
+sudo apt update -y
+sudo apt upgrade -y
+
 sed 's:#.*$::g' $HOME/dot/packages | xargs sudo apt install -y
 sudo apt autoremove -y
+
+sed 's:#.*$::g' $HOME/dot/npm-packages | xargs sudo npm install -g --ignore-scripts

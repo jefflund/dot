@@ -25,12 +25,4 @@ rust
 python-numpy
 python-pip
 python-scipy
-
-# Deps
-libxcursor
-libxi
-libxrandr
-libxxf86vm
-mesa
-mesa-dev
-ndk-multilib
+matplotlib
