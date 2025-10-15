@@ -178,6 +178,7 @@ Arpeggio noremap! jk <esc>
 
 " Setup Black
 autocmd BufWritePre *.py silent Black
+let g:black_use_virtualenv=0
 
 " Setup indentLine
 let g:indentLine_char='┆'
