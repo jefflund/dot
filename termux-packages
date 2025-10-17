@@ -1,7 +1,6 @@
 # Tools
 ack-grep
 build-essential
-clang
 cmake
 ctags
 git
@@ -16,13 +15,14 @@ wget
 zip
 
 # Programming
+clang
 golang
 golang-doc
 python
 rust
 
 # Batteries
+matplotlib
 python-numpy
 python-pip
 python-scipy
-matplotlib
