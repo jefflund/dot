@@ -1,3 +1,2 @@
 #!/bin/bash
 vim +PlugUpdate +qa
-vim +GoInstallBinaries +qa
