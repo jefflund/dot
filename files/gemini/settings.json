@@ -1,7 +1,15 @@
 {
-  "theme": "Atom One",
-  "selectedAuthType": "gemini-api-key",
-  "preferredEditor": "vim",
+  "general": {
+    "preferredEditor": "vim"
+  },
+  "security": {
+    "auth": {
+      "selectedType": "oauth-personal"
+    }
+  },
+  "ui": {
+    "theme": "Atom One"
+  },
   "fileFilters": {
     "respectGitIgnore": "true"
   }
