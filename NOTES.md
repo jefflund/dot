@@ -4,7 +4,7 @@ Reminders on how to do a few things because I have a terrible memory.
 
 ## generate new ssh keys for github
 
-* ssh-keygen -t ed25519 -C "<email>"
+* ssh-keygen -t ed25519 -C "user@email.com"
 * eval "$(ssh-agent -s)"
 * ssh-add ~/.ssh/id_ed25519
 * cat ~/.ssh/id_ed25519.pub
