@@ -4,5 +4,6 @@ mypy
 pylint
 pytest
 python-dotenv
+term_image
 textual
 textual-dev
