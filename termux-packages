@@ -3,6 +3,7 @@ ack-grep
 build-essential
 cmake
 ctags
+entr
 git
 man
 ncurses-utils
