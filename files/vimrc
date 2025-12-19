@@ -5,26 +5,22 @@ set nocompatible
 filetype off
 
 " Load plugins, either using machine-specific vimrc_plug, or using my defaults
-if filereadable(expand('~/.vimrc_plug'))
-    source ~/.vimrc_plug
-else
-    call plug#begin()
-    Plug 'SirVer/ultisnips'
-    Plug 'Yggdroot/indentLine'
-    Plug 'christoomey/vim-tmux-navigator'
-    Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
-    Plug 'jefflund/termbase16-vim'
-    Plug 'jefflund/vtzoom'
-    Plug 'kana/vim-arpeggio'
-    Plug 'kien/ctrlp.vim'
-    Plug 'majutsushi/tagbar'
-    Plug 'preservim/nerdcommenter'
-    Plug 'preservim/nerdtree'
-    Plug 'psf/black', { 'branch': 'stable' }
-    Plug 'tpope/vim-repeat'
-    Plug 'ycm-core/YouCompleteMe', { 'do': 'python3 install.py --go-completer' }
-    call plug#end()
-endif
+call plug#begin()
+Plug 'SirVer/ultisnips'
+Plug 'Yggdroot/indentLine'
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
+Plug 'jefflund/termbase16-vim'
+Plug 'jefflund/vtzoom'
+Plug 'kana/vim-arpeggio'
+Plug 'kien/ctrlp.vim'
+Plug 'majutsushi/tagbar'
+Plug 'preservim/nerdcommenter'
+Plug 'preservim/nerdtree'
+Plug 'psf/black', { 'branch': 'stable' }
+Plug 'tpope/vim-repeat'
+Plug 'ycm-core/YouCompleteMe', { 'do': 'python3 install.py --go-completer' }
+call plug#end()
 
 " Turn on file type based options
 syntax on
