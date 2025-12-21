@@ -81,6 +81,10 @@ autocmd BufEnter * setlocal cursorline
 autocmd WinLeave * setlocal nocursorline
 setlocal cursorline
 
+" Autoreload
+set autoread
+autocmd CursorHold * checktime
+
 " More sane split openings
 set splitbelow
 set splitright
