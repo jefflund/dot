@@ -10,7 +10,7 @@ Plug 'SirVer/ultisnips'
 Plug 'Yggdroot/indentLine'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
-Plug 'jefflund/termbase16-vim'
+Plug 'jefflund/cterm16'
 Plug 'jefflund/vtzoom'
 Plug 'kana/vim-arpeggio'
 Plug 'kien/ctrlp.vim'
@@ -60,7 +60,7 @@ set hidden
 " Switch up the colors
 set t_Co=256
 set t_ut=
-colorscheme termbase16-ashes
+colorscheme cterm16-ashes
 
 " Setup statusline
 set laststatus=2
