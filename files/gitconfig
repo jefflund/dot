@@ -23,3 +23,7 @@
     email = jefflund@gmail.com
 [init]
     defaultBranch = main
+[diff]
+	tool = vimdiff
+[merge]
+	tool = vimdiff
