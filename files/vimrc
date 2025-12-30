@@ -60,7 +60,7 @@ set hidden
 " Switch up the colors
 set t_Co=256
 set t_ut=
-colorscheme cterm16-ashes
+colorscheme cterm16-lucid
 
 " Setup statusline
 set laststatus=2
