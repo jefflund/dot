@@ -6,7 +6,7 @@ filetype off
 
 " Load plugins, either using machine-specific vimrc_plug, or using my defaults
 if filereadable(expand('~/.vimrc_plug'))
-    source ~/.vim/vimrc_plug
+    source ~/.vimrc_plug
 else
     call plug#begin()
     Plug 'SirVer/ultisnips'
