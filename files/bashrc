@@ -75,3 +75,6 @@ alias foobar="(foobar-attach || foobar-new) > /dev/null 2>&1"
 function altcaps() { echo $@ | sed 's/[a-z].\?/\u\0/g'; }
 function timestamp() { date -d @$1 +'%Y-%m-%d %H:%M:%S'; }
 function percent-change() { echo "($2 - $1) / ($(echo "$1" | sed "s/^-//")) * 100" | bc -l; }
+
+# " Optionally load machine-specific bashrc_extras.
+[[ -f "~/.bashrc_extras" ]] && source "~/.bashrc_extras"
