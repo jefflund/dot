@@ -77,4 +77,6 @@ function timestamp() { date -d @$1 +'%Y-%m-%d %H:%M:%S'; }
 function percent-change() { echo "($2 - $1) / ($(echo "$1" | sed "s/^-//")) * 100" | bc -l; }
 
 # " Optionally load machine-specific bashrc_extras.
-[[ -f "~/.bashrc_extras" ]] && source "~/.bashrc_extras"
+if [ -f $HOME/.bashrc_extras ]; then
+  source $HOME/.bashrc_extras
+fi
