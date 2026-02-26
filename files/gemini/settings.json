@@ -1,6 +1,11 @@
 {
   "general": {
-    "preferredEditor": "vim"
+    "preferredEditor": "vim",
+    "sessionRetention": {
+      "warningAcknowledged": true,
+      "enabled": true,
+      "maxAge": "30d"
+    }
   },
   "security": {
     "auth": {

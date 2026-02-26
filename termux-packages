@@ -10,6 +10,7 @@ ncurses-utils
 nodejs
 openssh
 pkg-config
+ripgrep
 tmux
 vim
 wget
@@ -27,3 +28,7 @@ matplotlib
 python-numpy
 python-pip
 python-scipy
+
+# LLM
+ollama
+ollama-backend-vulkan
