@@ -18,5 +18,8 @@
   },
   "fileFilters": {
     "respectGitIgnore": "true"
+  },
+  "experimental": {
+    "plan": true
   }
 }
