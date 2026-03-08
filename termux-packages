@@ -5,6 +5,7 @@ cmake
 ctags
 entr
 git
+ldd
 man
 ncurses-utils
 nodejs
@@ -14,6 +15,7 @@ ripgrep
 tmux
 vim
 wget
+which
 zip
 
 # Programming
