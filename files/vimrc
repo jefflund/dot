@@ -163,13 +163,6 @@ let g:tagbar_left=1
 let g:tagbar_sort=0
 let g:tagbar_iconchars = ['+', '-']
 
-" Setup vim-tmux-navigator
-let g:tmux_navigator_no_mappings=1
-nnoremap <silent> <c-h> :TmuxNavigateLeft<cr>
-nnoremap <silent> <c-l> :TmuxNavigateRight<cr>
-nnoremap <silent> <c-j> :TmuxNavigateDown<cr>
-nnoremap <silent> <c-k> :TmuxNavigateUp<cr>
-
 " Setup vim-go
 let g:go_template_autocreate=0
 let g:go_snippet_engine=""
@@ -179,6 +172,14 @@ let g:go_doc_keywordprg_enabled=0
 call arpeggio#load()
 Arpeggio noremap jk <esc>
 Arpeggio noremap! jk <esc>
+
+" Setup vim-tmux-navigator (must happen after vim-arpeggio)
+let g:tmux_navigator_no_mappings=1
+Arpeggio nnoremap wh :TmuxNavigateLeft<cr>
+Arpeggio nnoremap wj :TmuxNavigateDown<cr>
+Arpeggio nnoremap wk :TmuxNavigateUp<cr>
+Arpeggio nnoremap wl :TmuxNavigateRight<cr>
+
 
 " Setup Black
 if has_key(g:plugs, 'black')
