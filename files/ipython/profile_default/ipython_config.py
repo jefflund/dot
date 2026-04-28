@@ -42,7 +42,8 @@ c = get_config()
 # lines of code to run at IPython startup.
 c.InteractiveShellApp.exec_lines = [
     'autoreload 2',
-    'import sys, os, datetime',
+    'import sys, os',
+    'import datetime as dt',
     'import numpy as np',
 ]
 
