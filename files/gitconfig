@@ -7,8 +7,8 @@
     ci = commit
     br = branch
     co = checkout
-    df = diff
-    dfc = diff --cached
+    df = difftool
+    dfc = difftool --cached
     l = log --oneline --decorate --name-status
     lg = log --oneline --decorate --name-status --graph
     lo = log --oneline
@@ -25,5 +25,7 @@
     defaultBranch = main
 [diff]
 	tool = vimdiff
+[difftool]
+	prompt = false
 [merge]
 	tool = vimdiff

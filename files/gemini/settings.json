@@ -5,6 +5,9 @@
       "warningAcknowledged": true,
       "enabled": true,
       "maxAge": "30d"
+    },
+    "plan": {
+      "enabled": false
     }
   },
   "security": {
@@ -14,13 +17,15 @@
   },
   "ui": {
     "theme": "Atom One",
-    "useAlternateBuffer": true
+    "useAlternateBuffer": false
   },
   "fileFilters": {
     "respectGitIgnore": "true"
   },
   "experimental": {
-    "plan": true,
     "enableAgents": true
+  },
+  "agents": {
+    "overrides": {}
   }
 }
