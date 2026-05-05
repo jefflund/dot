@@ -1,9 +1,32 @@
 #!/bin/bash
 
-sudo apt update -y
-sudo apt upgrade -y
+# Detect environment
+if [ -n "$PREFIX" ] && [ -f "$PREFIX/bin/termux-info" ]; then
+    echo "Detected Termux environment"
+    PKG_MGR="pkg"
+    PKGS_FILE="$HOME/dot/termux-packages"
+    CLEAN_CMD="pkg autoclean -y"
+    NPM_CMD="npm"
+    PIP_EXTRAS=true
+else
+    echo "Detected standard Linux environment"
+    PKG_MGR="sudo apt"
+    PKGS_FILE="$HOME/dot/apt-packages"
+    CLEAN_CMD="sudo apt autoremove -y"
+    NPM_CMD="sudo npm"
+    PIP_EXTRAS=false
+fi
 
-sed 's:#.*$::g' $HOME/dot/packages | xargs sudo apt install -y
-sudo apt autoremove -y
+# Get system packages.
+$PKG_MGR update -y
+$PKG_MGR upgrade -y
+sed 's:#.*$::g' "$PKGS_FILE" | grep -v '^\s*$' | xargs -r $PKG_MGR install -y
+$CLEAN_CMD
 
-sed 's:#.*$::g' $HOME/dot/npm-packages | xargs sudo npm install -g --ignore-scripts
+# Optionally install pip packages
+if [ "$PIP_EXTRAS" = true ]; then
+    sed 's:#.*$::g' "$HOME/dot/termux-pip-packages" | grep -v '^\s*$' | xargs -r pip3 install
+fi
+
+# Install npm packages.
+sed 's:#.*$::g' "$HOME/dot/npm-packages" | grep -v '^\s*$' | xargs -r $NPM_CMD install -g --ignore-scripts
