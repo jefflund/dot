@@ -46,6 +46,7 @@ set title
 set ttyfast
 set visualbell
 set wrap
+set mouse=a
 
 " Even more options for vsplits
 set winwidth=84
