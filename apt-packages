@@ -4,7 +4,6 @@ build-essential
 cmake
 git
 ipython3
-npm
 pkg-config
 tmux
 universal-ctags

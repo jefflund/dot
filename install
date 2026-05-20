@@ -6,14 +6,12 @@ if [ -n "$PREFIX" ] && [ -f "$PREFIX/bin/termux-info" ]; then
     PKG_MGR="pkg"
     PKGS_FILE="$HOME/dot/termux-packages"
     CLEAN_CMD="pkg autoclean -y"
-    NPM_CMD="npm"
     PIP_EXTRAS=true
 else
     echo "Detected standard Linux environment"
     PKG_MGR="sudo apt"
     PKGS_FILE="$HOME/dot/apt-packages"
     CLEAN_CMD="sudo apt autoremove -y"
-    NPM_CMD="sudo npm"
     PIP_EXTRAS=false
 fi
 
@@ -27,6 +25,3 @@ $CLEAN_CMD
 if [ "$PIP_EXTRAS" = true ]; then
     sed 's:#.*$::g' "$HOME/dot/termux-pip-packages" | grep -v '^\s*$' | xargs -r pip3 install
 fi
-
-# Install npm packages.
-sed 's:#.*$::g' "$HOME/dot/npm-packages" | grep -v '^\s*$' | xargs -r $NPM_CMD install -g --ignore-scripts
