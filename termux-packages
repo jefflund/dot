@@ -8,7 +8,6 @@ git
 ldd
 man
 ncurses-utils
-nodejs
 openssh
 pkg-config
 ripgrep
