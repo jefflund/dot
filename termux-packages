@@ -30,7 +30,3 @@ matplotlib
 python-numpy
 python-pip
 python-scipy
-
-# LLM
-ollama
-ollama-backend-vulkan
