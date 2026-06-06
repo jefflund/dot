@@ -1,3 +1,6 @@
 {
-  "colorScheme": "tokyo night"
+  "colorScheme": "tokyo night",
+  "editor": "vim",
+  "model": "Claude Opus 4.6 (Thinking)",
+  "notifications": true
 }
