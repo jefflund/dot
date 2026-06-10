@@ -1,10 +1,23 @@
 #!/usr/bin/env python3
 import os
+import argparse
 from pathlib import Path
 
 linkdot_path = Path(__file__).resolve()
 dotfile_root = linkdot_path.parent / "files"
 home = Path.home()
+
+parser = argparse.ArgumentParser(
+    description="Link dotfiles from files/ to home directory."
+)
+parser.add_argument(
+    "-n",
+    "--dry-run",
+    action="store_true",
+    help="Show what would be done with making changes.",
+)
+args = parser.parse_args()
+
 
 def get_dest(source: Path) -> Path:
     """Get destination path, adding dot prefix to first directory level."""
@@ -15,20 +28,33 @@ def get_dest(source: Path) -> Path:
         parts[0] = f".{parts[0]}"
     return home / Path(*parts)
 
-# Create directories
-for dotdir in dotfile_root.rglob("*"):
-    if dotdir.is_dir():
-        dest = get_dest(dotdir)
-        dest.mkdir(parents=True, exist_ok=True)
 
-# Symlink files
-for dotfile in dotfile_root.rglob("*"):
-    if dotfile.is_file():
-        dest = get_dest(dotfile)
-        if not dest.exists() or dest.resolve() != dotfile:
-            if not dest.exists():
-                print(f"linking {dest}")
-            else:
-                print(f"could not link {dest} (exists or wrong symlink)")
-                continue
+def ensure_dir(dest: Path) -> None:
+    """Create a directory if it doesn't already exist."""
+    if dest.exists():
+        return
+
+    print(f"Create dir: {dest}")
+    if not args.dry_run:
+        dest.mkdir(parents=True)
+
+
+def ensure_link(dest: Path, dotfile: Path) -> None:
+    """Attempt to create a symlink to a dotfile."""
+    if dest.exists() and dest.resolve() == dotfile:
+        return
+
+    if not dest.exists():
+        print(f"Link {dest}")
+        if not args.dry_run:
             dest.symlink_to(dotfile)
+    else:
+        print(f"Could not link {dest}")
+
+
+if __name__ == "__main__":
+    for dotfile in dotfile_root.rglob("*"):
+        if dotfile.is_file():
+            dest = get_dest(dotfile)
+            ensure_dir(dest.parent)
+            ensure_link(dest, dotfile)
