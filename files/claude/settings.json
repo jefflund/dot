@@ -1,0 +1,6 @@
+{
+  "theme": "auto",
+  "enabledPlugins": {
+    "gopls-lsp@claude-plugins-official": true
+  }
+}
