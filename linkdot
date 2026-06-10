@@ -1,17 +1,34 @@
-#!/bin/bash
-linkdot_path=$(realpath "$0")
-dotfile_root=$(dirname "$linkdot_path")/files
-# create dot directories
-for dotdir in $(find $dotfile_root -mindepth 1 -type d); do
-    mkdir -p ${dotdir/$dotfile_root\//$HOME/.}
-done
-# symlink dot files
-for dotfile in $(find $dotfile_root -mindepth 1 -type f); do
-  dest=${dotfile/$dotfile_root\//$HOME/.}
-  if [ ! -f "$dest" ]; then
-    echo "linking $dest"
-    ln -sf $dotfile $dest
-  elif [ "$(readlink -- "$dest")" != "$dotfile" ]; then
-    echo "could not link $dest"
-  fi
-done
+#!/usr/bin/env python3
+import os
+from pathlib import Path
+
+linkdot_path = Path(__file__).resolve()
+dotfile_root = linkdot_path.parent / "files"
+home = Path.home()
+
+def get_dest(source: Path) -> Path:
+    """Get destination path, adding dot prefix to first directory level."""
+    rel_path = source.relative_to(dotfile_root)
+    parts = list(rel_path.parts)
+    # Add dot prefix to first component
+    if parts:
+        parts[0] = f".{parts[0]}"
+    return home / Path(*parts)
+
+# Create directories
+for dotdir in dotfile_root.rglob("*"):
+    if dotdir.is_dir():
+        dest = get_dest(dotdir)
+        dest.mkdir(parents=True, exist_ok=True)
+
+# Symlink files
+for dotfile in dotfile_root.rglob("*"):
+    if dotfile.is_file():
+        dest = get_dest(dotfile)
+        if not dest.exists() or dest.resolve() != dotfile:
+            if not dest.exists():
+                print(f"linking {dest}")
+            else:
+                print(f"could not link {dest} (exists or wrong symlink)")
+                continue
+            dest.symlink_to(dotfile)
