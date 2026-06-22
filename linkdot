@@ -42,7 +42,7 @@ def ensure_dir(dest: Path) -> None:
 
 def ensure_link(dest: Path, dotfile: Path) -> None:
     """Attempt to create a symlink to a dotfile."""
-    if dest.exists() and dest.resolve() == dotfile:
+    if dest.exists() and dest.resolve() == dotfile.resolve():
         return
 
     if not dest.exists():
