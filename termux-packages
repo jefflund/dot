@@ -29,3 +29,6 @@ matplotlib
 python-numpy
 python-pip
 python-scipy
+
+# Deps
+glibc-repo
