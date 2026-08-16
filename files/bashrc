@@ -23,6 +23,10 @@ alias ll='ls -lh'
 alias la='ls -ah'
 alias l='ls'
 
+# Overcome muscle memory
+alias which='type'
+alias grep='rg'
+
 # I always want color
 [ -z "$TMUX" ] && export TERM="xterm-256color"
 
