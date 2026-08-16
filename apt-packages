@@ -2,9 +2,11 @@
 ack
 build-essential
 cmake
+coreutils
 git
 ipython3
 pkg-config
+ripgrep
 tmux
 universal-ctags
 vim-nox
