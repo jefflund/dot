@@ -26,6 +26,8 @@ alias l='ls'
 # Overcome muscle memory
 alias which='type'
 alias grep='rg'
+alias df='df -h'
+alias du='du -h'
 
 # I always want color
 [ -z "$TMUX" ] && export TERM="xterm-256color"
@@ -80,7 +82,7 @@ function altcaps() { echo $@ | sed 's/[a-z].\?/\u\0/g'; }
 function timestamp() { date -d @$1 +'%Y-%m-%d %H:%M:%S'; }
 function percent-change() { echo "($2 - $1) / ($(echo "$1" | sed "s/^-//")) * 100" | bc -l; }
 
-# " Optionally load machine-specific bashrc_extras.
+# Optionally load machine-specific bashrc_extras.
 if [ -f $HOME/.bashrc_extras ]; then
   source $HOME/.bashrc_extras
 fi
