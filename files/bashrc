@@ -29,6 +29,12 @@ alias grep='rg'
 alias df='df -h'
 alias du='du -h'
 
+# Navgation shortcuts
+alias .='clear'
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ~='cd'
+
 # I always want color
 [ -z "$TMUX" ] && export TERM="xterm-256color"
 
