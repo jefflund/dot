@@ -3,6 +3,7 @@ ack
 build-essential
 cmake
 coreutils
+eza
 git
 ipython3
 pkg-config

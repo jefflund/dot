@@ -4,6 +4,7 @@ build-essential
 cmake
 ctags
 entr
+eza
 git
 ldd
 man
