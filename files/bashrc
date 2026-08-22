@@ -9,6 +9,11 @@ export PATH=`echo $PATH | tr -s ":" "\n" | sort | uniq | paste -s -d ":"`
 # Remove terminal scroll locking
 stty -ixon
 
+# Overcome muscle memory
+command -v eza >/dev/null 2>&1 && alias ls='eza --git --icons' || alias ls='ls --color=auto -h'
+command -v type >/dev/null 2>&1 && alias which='type'
+command -v rg >/dev/null 2>&1 && alias grep='rg'
+
 # Add color to a grep commands
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
@@ -16,18 +21,16 @@ alias egrep='egrep --color=auto'
 alias rgrep='rgrep --color=auto'
 
 # Some ls aliases
-alias ls='ls --color=auto -h'
 alias lal='ls -alh'
 alias lla='ls -lah'
 alias ll='ls -lh'
 alias la='ls -ah'
 alias l='ls'
 
-# Overcome muscle memory
-alias which='type'
-alias grep='rg'
+# Human-readable usage
 alias df='df -h'
 alias du='du -h'
+alias free='free -h'
 
 # Navgation shortcuts
 alias .='clear'
