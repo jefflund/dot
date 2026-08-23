@@ -44,7 +44,7 @@ else
   }
 fi
 function clear() {
-    command clearn "$@" && ls
+    command clear "$@" && ls
 }
 
 # Navgation shortcuts
