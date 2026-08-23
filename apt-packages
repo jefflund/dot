@@ -4,6 +4,7 @@ build-essential
 cmake
 coreutils
 eza
+fzf
 git
 ipython3
 pkg-config
@@ -13,6 +14,7 @@ universal-ctags
 vim-nox
 wget
 zip
+zoxide
 
 # Programming
 clang

@@ -32,6 +32,21 @@ alias df='df -h'
 alias du='du -h'
 alias free='free -h'
 
+# Navigation with ls
+if command -v zoxide &> /dev/null; then
+  eval "$(zoxide init bash)"
+  function cd() {
+    z "$@" && ls
+  }
+else
+  function cd() {
+    builtin cd "$@" && ls
+  }
+fi
+function clear() {
+    command clearn "$@" && ls
+}
+
 # Navgation shortcuts
 alias .='clear'
 alias ..='cd ..'
@@ -45,15 +60,6 @@ alias ~='cd'
 export EDITOR="vim"
 alias vi=vim
 alias vim="vim -O"
-
-# I always seem to ls right after things like cd and clear
-function cd() {
-    builtin cd "$@" && ls
-}
-function clear() {
-    /usr/bin/env clear
-    ls
-}
 
 # Setup prompt
 PS1="\u@\h:\W$ \[\e]2;\u@\H \w\a\]"

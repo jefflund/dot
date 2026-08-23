@@ -5,6 +5,7 @@ cmake
 ctags
 entr
 eza
+fzf
 git
 ldd
 man
@@ -17,6 +18,7 @@ vim
 wget
 which
 zip
+zoxide
 
 # Programming
 clang
