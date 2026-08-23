@@ -22,6 +22,7 @@ else
     Plug 'preservim/nerdtree'
     Plug 'psf/black', { 'branch': 'stable' }
     Plug 'tpope/vim-repeat'
+    Plug 'vim-airline/vim-airline'
     Plug 'ycm-core/YouCompleteMe', { 'do': 'python3 install.py --go-completer' }
     call plug#end()
 endif
@@ -65,6 +66,7 @@ set hidden
 " Switch up the colors
 set t_Co=256
 set t_ut=
+let g:airline_theme = 'cterm16'
 colorscheme cterm16-foundry
 
 " Setup statusline
