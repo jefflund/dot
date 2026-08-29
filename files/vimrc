@@ -160,7 +160,7 @@ let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
 
 " Setup Tagbar
 nnoremap <silent> <leader>t :TagbarToggle<cr>
-let g:tagbar_crags_bin='/usr/bin/ctags-universal'
+let g:tagbar_ctags_bin='/usr/bin/ctags-universal'
 let g:tagbar_autoclose=1
 let g:tagbar_left=1
 let g:tagbar_sort=0

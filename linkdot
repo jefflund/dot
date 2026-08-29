@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 
-import os
 import argparse
 from pathlib import Path
 
@@ -15,7 +14,7 @@ parser.add_argument(
     "-n",
     "--dry-run",
     action="store_true",
-    help="Show what would be done with making changes.",
+    help="Show what would be done without making changes.",
 )
 args = parser.parse_args()
 
@@ -42,10 +41,10 @@ def ensure_dir(dest: Path) -> None:
 
 def ensure_link(dest: Path, dotfile: Path) -> None:
     """Attempt to create a symlink to a dotfile."""
-    if dest.exists() and dest.resolve() == dotfile.resolve():
+    if dest.is_symlink() and dest.resolve() == dotfile.resolve():
         return
 
-    if not dest.exists():
+    if not dest.exists() and not dest.is_symlink():
         print(f"Link {dest}")
         if not args.dry_run:
             dest.symlink_to(dotfile)

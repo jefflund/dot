@@ -4,7 +4,7 @@
 # Add a few things to paths
 export GOPATH="$HOME/go"
 export PATH="$PATH:$HOME/.local/bin:$GOPATH/bin"
-export PATH=`echo $PATH | tr -s ":" "\n" | sort | uniq | paste -s -d ":"`
+export PATH=$(echo -n "$PATH" | awk -v RS=: -v ORS=: '!seen[$0]++' | sed 's/:$//')
 
 # Remove terminal scroll locking
 stty -ixon
@@ -12,10 +12,9 @@ stty -ixon
 # Overcome muscle memory
 command -v eza >/dev/null 2>&1 && alias ls='eza --git --icons' || alias ls='ls --color=auto -h'
 command -v type >/dev/null 2>&1 && alias which='type'
-command -v rg >/dev/null 2>&1 && alias grep='rg'
+command -v rg >/dev/null 2>&1 && alias grep='rg' || alias grep='grep --color=auto'
 
-# Add color to a grep commands
-alias grep='grep --color=auto'
+# Add color to grep commands
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 alias rgrep='rgrep --color=auto'
@@ -47,7 +46,7 @@ function clear() {
     command clear && ls
 }
 
-# Navgation shortcuts
+# Navigation shortcuts
 alias .='clear'
 alias ..='cd ..'
 alias ...='cd ../..'
