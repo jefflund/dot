@@ -1,27 +1,30 @@
 #!/bin/bash
+set -euo pipefail
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 # Detect environment
-if [ -n "$PREFIX" ] && [ -f "$PREFIX/bin/termux-info" ]; then
+if [ -n "${PREFIX:-}" ] && [ -f "$PREFIX/bin/termux-info" ]; then
     echo "Detected Termux environment"
     PKG_MGR="pkg"
-    PKGS_FILE="$HOME/dot/termux-packages"
-    CLEAN_CMD="pkg autoclean -y"
+    PKGS_FILE="$SCRIPT_DIR/termux-packages"
+    CLEAN_CMD="pkg autoclean"
     PIP_EXTRAS=true
 else
     echo "Detected standard Linux environment"
     PKG_MGR="sudo apt"
-    PKGS_FILE="$HOME/dot/apt-packages"
+    PKGS_FILE="$SCRIPT_DIR/apt-packages"
     CLEAN_CMD="sudo apt autoremove -y"
     PIP_EXTRAS=false
 fi
 
 # Get system packages.
-$PKG_MGR update -y
+$PKG_MGR update
 $PKG_MGR upgrade -y
 sed 's:#.*$::g' "$PKGS_FILE" | grep -v '^\s*$' | xargs -r $PKG_MGR install -y
 $CLEAN_CMD
 
 # Optionally install pip packages
 if [ "$PIP_EXTRAS" = true ]; then
-    sed 's:#.*$::g' "$HOME/dot/termux-pip-packages" | grep -v '^\s*$' | xargs -r pip3 install
+    sed 's:#.*$::g' "$SCRIPT_DIR/termux-pip-packages" | grep -v '^\s*$' | xargs -r pip3 install
 fi

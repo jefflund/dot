@@ -1,5 +1,6 @@
 # Tools
 ack
+bc
 build-essential
 cmake
 coreutils

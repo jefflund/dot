@@ -16,7 +16,7 @@ else
     Plug 'jefflund/cterm16'
     Plug 'jefflund/vtzoom'
     Plug 'kana/vim-arpeggio'
-    Plug 'kien/ctrlp.vim'
+    Plug 'ctrlpvim/ctrlp.vim'
     Plug 'majutsushi/tagbar'
     Plug 'preservim/nerdcommenter'
     Plug 'preservim/nerdtree'
@@ -51,8 +51,11 @@ set mouse=a
 
 " Even more options for vsplits
 set winwidth=84
-autocmd WinEnter * setlocal number relativenumber wrap
-autocmd WinLeave * setlocal nonumber norelativenumber nowrap
+augroup splits
+    autocmd!
+    autocmd WinEnter * setlocal number relativenumber wrap
+    autocmd WinLeave * setlocal nonumber norelativenumber nowrap
+augroup END
 
 " Let zoom fullscreen
 set winminheight=0
@@ -83,14 +86,19 @@ set statusline+=%-14.(%l,%v%)
 set statusline+=\ %P
 
 " Setup cursorline
-autocmd WinEnter * setlocal cursorline
-autocmd BufEnter * setlocal cursorline
-autocmd WinLeave * setlocal nocursorline
+augroup cursorline
+    autocmd!
+    autocmd WinEnter,BufEnter * setlocal cursorline
+    autocmd WinLeave * setlocal nocursorline
+augroup END
 setlocal cursorline
 
 " Autoreload
 set autoread
-autocmd CursorHold * checktime
+augroup autoreload
+    autocmd!
+    autocmd CursorHold * checktime
+augroup END
 
 " More sane split openings
 set splitbelow
@@ -112,7 +120,7 @@ set autoindent
 " Handle trailing whitespace
 function! StripTrailingWhitespace()
     let l:win = winsaveview()
-    execute '%s/\(\s\|\)\+$//e'
+    keeppatterns %s/\(\s\|\)\+$//e
     call winrestview(l:win)
 endfunction
 nnoremap <silent> <leader><space> :call StripTrailingWhitespace()<cr>
@@ -160,7 +168,7 @@ let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
 
 " Setup Tagbar
 nnoremap <silent> <leader>t :TagbarToggle<cr>
-let g:tagbar_ctags_bin='/usr/bin/ctags-universal'
+let g:tagbar_ctags_bin = executable('ctags-universal') ? 'ctags-universal' : 'ctags'
 let g:tagbar_autoclose=1
 let g:tagbar_left=1
 let g:tagbar_sort=0
@@ -184,8 +192,11 @@ Arpeggio noremap jk <esc>
 Arpeggio noremap! jk <esc>
 
 " Setup Black
-if has_key(g:plugs, 'black')
-  autocmd BufWritePre *.py silent Black
+if exists('g:plugs') && has_key(g:plugs, 'black')
+  augroup black
+    autocmd!
+    autocmd BufWritePre *.py silent Black
+  augroup END
   let g:black_use_virtualenv=0
 endif
 

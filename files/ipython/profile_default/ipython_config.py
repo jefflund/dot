@@ -6,7 +6,7 @@ c.InteractiveShellApp.exec_lines = [
     '%autoreload 2',
     'import sys, os',
     'import datetime as dt',
-    'import numpy as np',
+    'try:\n    import numpy as np\nexcept ImportError:\n    pass',
 ]
 
 c.TerminalIPythonApp.display_banner = False

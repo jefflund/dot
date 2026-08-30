@@ -7,7 +7,7 @@ export PATH="$PATH:$HOME/.local/bin:$GOPATH/bin"
 export PATH=$(echo -n "$PATH" | awk -v RS=: -v ORS=: '!seen[$0]++' | sed 's/:$//')
 
 # Remove terminal scroll locking
-stty -ixon
+[ -t 0 ] && stty -ixon 2>/dev/null
 
 # Overcome muscle memory
 command -v eza >/dev/null 2>&1 && alias ls='eza --git --icons' || alias ls='ls --color=auto -h'
@@ -47,7 +47,6 @@ function clear() {
 }
 
 # Navigation shortcuts
-alias .='clear'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ~='cd'
@@ -67,7 +66,7 @@ PS1="\u@\h:\W$ \[\e]2;\u@\H \w\a\]"
 HISTCONTROL=ignoreboth
 shopt -s histappend
 shopt -s extglob
-PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
+PROMPT_COMMAND="history -a; history -n; $PROMPT_COMMAND"
 HISTIGNORE="ls@( *|):ll@( *|):la@( *|):cd@( *|):clear:vim:git st"
 HISTSIZE=1000000
 HISTFILESIZE=1000000

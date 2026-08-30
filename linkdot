@@ -44,6 +44,7 @@ def ensure_link(dest: Path, dotfile: Path) -> None:
     if dest.is_symlink() and dest.resolve() == dotfile.resolve():
         return
 
+    # Only link if we're not clobbering anything.
     if not dest.exists() and not dest.is_symlink():
         print(f"Link {dest}")
         if not args.dry_run:

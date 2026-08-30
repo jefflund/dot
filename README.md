@@ -9,7 +9,7 @@ addition to the dotfiles, the repo has the following scripts for setup:
 
 In a few places my dotfiles have hooks for additional machine specific stuff.
 This is mainly so I can have work related config without risk of accidentally
-pushing confidential information to github. The hooks work by checking if an
+pushing confidential information to github. The hooks work by checking for an
 optional file and sourcing that file if it exists. Those special files are:
 
 * $HOME/.bashrc_extras - extra file which gets sourced after $HOME/.bashrc runs

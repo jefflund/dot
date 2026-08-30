@@ -1,5 +1,6 @@
 # Tools
 ack-grep
+bc
 build-essential
 cmake
 ctags
